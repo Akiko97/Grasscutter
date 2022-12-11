@@ -27,7 +27,7 @@ public class HandlerAvatarChangeElementTypeReq extends PacketHandler {
         WorldAreaData area = GameData.getWorldAreaDataMap().get(req.getAreaId());
 
         if (area == null || area.getElementType() == null || area.getElementType().getDepotValue() <= 0) {
-            session.send(new PacketAvatarChangeElementTypeRsp(Retcode.RET_SVR_ERROR_VALUE));
+            session.send(new PacketAvatarChangeElementTypeRsp(Retcode.RETCODE_RET_SVR_ERROR_VALUE));
             return;
         }
 
@@ -40,7 +40,7 @@ public class HandlerAvatarChangeElementTypeReq extends PacketHandler {
             case GameConstants.MAIN_CHARACTER_MALE -> skillDepotId += 500;
             case GameConstants.MAIN_CHARACTER_FEMALE -> skillDepotId += 700;
             default -> {
-                session.send(new PacketAvatarChangeElementTypeRsp(Retcode.RET_SVR_ERROR_VALUE));
+                session.send(new PacketAvatarChangeElementTypeRsp(Retcode.RETCODE_RET_SVR_ERROR_VALUE));
                 return;
             }
         }
@@ -48,7 +48,7 @@ public class HandlerAvatarChangeElementTypeReq extends PacketHandler {
         // Sanity checks for skill depots
         AvatarSkillDepotData skillDepot = GameData.getAvatarSkillDepotDataMap().get(skillDepotId);
         if (skillDepot == null || skillDepot.getId() == mainCharacter.getSkillDepotId()) {
-            session.send(new PacketAvatarChangeElementTypeRsp(Retcode.RET_SVR_ERROR_VALUE));
+            session.send(new PacketAvatarChangeElementTypeRsp(Retcode.RETCODE_RET_SVR_ERROR_VALUE));
             return;
         }
 

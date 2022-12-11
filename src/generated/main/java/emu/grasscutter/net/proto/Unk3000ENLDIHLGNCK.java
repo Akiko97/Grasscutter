@@ -19,34 +19,34 @@ public final class Unk3000ENLDIHLGNCK {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>uint32 Unk3000_CIOLEGEHDAC = 3;</code>
-     * @return The unk3000CIOLEGEHDAC.
-     */
-    int getUnk3000CIOLEGEHDAC();
-
-    /**
-     * <code>repeated .Unk3000_GDDGGJIFNCH Unk3000_NLFPKDOBNCD = 15;</code>
+     * <code>repeated .Unk3000_GDDGGJIFNCH Unk3000_NLFPKDOBNCD = 3;</code>
      */
     java.util.List<emu.grasscutter.net.proto.Unk3000GDDGGJIFNCH.Unk3000_GDDGGJIFNCH> 
         getUnk3000NLFPKDOBNCDList();
     /**
-     * <code>repeated .Unk3000_GDDGGJIFNCH Unk3000_NLFPKDOBNCD = 15;</code>
+     * <code>repeated .Unk3000_GDDGGJIFNCH Unk3000_NLFPKDOBNCD = 3;</code>
      */
     emu.grasscutter.net.proto.Unk3000GDDGGJIFNCH.Unk3000_GDDGGJIFNCH getUnk3000NLFPKDOBNCD(int index);
     /**
-     * <code>repeated .Unk3000_GDDGGJIFNCH Unk3000_NLFPKDOBNCD = 15;</code>
+     * <code>repeated .Unk3000_GDDGGJIFNCH Unk3000_NLFPKDOBNCD = 3;</code>
      */
     int getUnk3000NLFPKDOBNCDCount();
     /**
-     * <code>repeated .Unk3000_GDDGGJIFNCH Unk3000_NLFPKDOBNCD = 15;</code>
+     * <code>repeated .Unk3000_GDDGGJIFNCH Unk3000_NLFPKDOBNCD = 3;</code>
      */
     java.util.List<? extends emu.grasscutter.net.proto.Unk3000GDDGGJIFNCH.Unk3000_GDDGGJIFNCHOrBuilder> 
         getUnk3000NLFPKDOBNCDOrBuilderList();
     /**
-     * <code>repeated .Unk3000_GDDGGJIFNCH Unk3000_NLFPKDOBNCD = 15;</code>
+     * <code>repeated .Unk3000_GDDGGJIFNCH Unk3000_NLFPKDOBNCD = 3;</code>
      */
     emu.grasscutter.net.proto.Unk3000GDDGGJIFNCH.Unk3000_GDDGGJIFNCHOrBuilder getUnk3000NLFPKDOBNCDOrBuilder(
         int index);
+
+    /**
+     * <code>uint32 Unk3000_CIOLEGEHDAC = 10;</code>
+     * @return The unk3000CIOLEGEHDAC.
+     */
+    int getUnk3000CIOLEGEHDAC();
   }
   /**
    * Protobuf type {@code Unk3000_ENLDIHLGNCK}
@@ -95,18 +95,18 @@ public final class Unk3000ENLDIHLGNCK {
             case 0:
               done = true;
               break;
-            case 24: {
-
-              unk3000CIOLEGEHDAC_ = input.readUInt32();
-              break;
-            }
-            case 122: {
+            case 26: {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 unk3000NLFPKDOBNCD_ = new java.util.ArrayList<emu.grasscutter.net.proto.Unk3000GDDGGJIFNCH.Unk3000_GDDGGJIFNCH>();
                 mutable_bitField0_ |= 0x00000001;
               }
               unk3000NLFPKDOBNCD_.add(
                   input.readMessage(emu.grasscutter.net.proto.Unk3000GDDGGJIFNCH.Unk3000_GDDGGJIFNCH.parser(), extensionRegistry));
+              break;
+            }
+            case 80: {
+
+              unk3000CIOLEGEHDAC_ = input.readUInt32();
               break;
             }
             default: {
@@ -144,28 +144,17 @@ public final class Unk3000ENLDIHLGNCK {
               emu.grasscutter.net.proto.Unk3000ENLDIHLGNCK.Unk3000_ENLDIHLGNCK.class, emu.grasscutter.net.proto.Unk3000ENLDIHLGNCK.Unk3000_ENLDIHLGNCK.Builder.class);
     }
 
-    public static final int UNK3000_CIOLEGEHDAC_FIELD_NUMBER = 3;
-    private int unk3000CIOLEGEHDAC_;
-    /**
-     * <code>uint32 Unk3000_CIOLEGEHDAC = 3;</code>
-     * @return The unk3000CIOLEGEHDAC.
-     */
-    @java.lang.Override
-    public int getUnk3000CIOLEGEHDAC() {
-      return unk3000CIOLEGEHDAC_;
-    }
-
-    public static final int UNK3000_NLFPKDOBNCD_FIELD_NUMBER = 15;
+    public static final int UNK3000_NLFPKDOBNCD_FIELD_NUMBER = 3;
     private java.util.List<emu.grasscutter.net.proto.Unk3000GDDGGJIFNCH.Unk3000_GDDGGJIFNCH> unk3000NLFPKDOBNCD_;
     /**
-     * <code>repeated .Unk3000_GDDGGJIFNCH Unk3000_NLFPKDOBNCD = 15;</code>
+     * <code>repeated .Unk3000_GDDGGJIFNCH Unk3000_NLFPKDOBNCD = 3;</code>
      */
     @java.lang.Override
     public java.util.List<emu.grasscutter.net.proto.Unk3000GDDGGJIFNCH.Unk3000_GDDGGJIFNCH> getUnk3000NLFPKDOBNCDList() {
       return unk3000NLFPKDOBNCD_;
     }
     /**
-     * <code>repeated .Unk3000_GDDGGJIFNCH Unk3000_NLFPKDOBNCD = 15;</code>
+     * <code>repeated .Unk3000_GDDGGJIFNCH Unk3000_NLFPKDOBNCD = 3;</code>
      */
     @java.lang.Override
     public java.util.List<? extends emu.grasscutter.net.proto.Unk3000GDDGGJIFNCH.Unk3000_GDDGGJIFNCHOrBuilder> 
@@ -173,26 +162,37 @@ public final class Unk3000ENLDIHLGNCK {
       return unk3000NLFPKDOBNCD_;
     }
     /**
-     * <code>repeated .Unk3000_GDDGGJIFNCH Unk3000_NLFPKDOBNCD = 15;</code>
+     * <code>repeated .Unk3000_GDDGGJIFNCH Unk3000_NLFPKDOBNCD = 3;</code>
      */
     @java.lang.Override
     public int getUnk3000NLFPKDOBNCDCount() {
       return unk3000NLFPKDOBNCD_.size();
     }
     /**
-     * <code>repeated .Unk3000_GDDGGJIFNCH Unk3000_NLFPKDOBNCD = 15;</code>
+     * <code>repeated .Unk3000_GDDGGJIFNCH Unk3000_NLFPKDOBNCD = 3;</code>
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.Unk3000GDDGGJIFNCH.Unk3000_GDDGGJIFNCH getUnk3000NLFPKDOBNCD(int index) {
       return unk3000NLFPKDOBNCD_.get(index);
     }
     /**
-     * <code>repeated .Unk3000_GDDGGJIFNCH Unk3000_NLFPKDOBNCD = 15;</code>
+     * <code>repeated .Unk3000_GDDGGJIFNCH Unk3000_NLFPKDOBNCD = 3;</code>
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.Unk3000GDDGGJIFNCH.Unk3000_GDDGGJIFNCHOrBuilder getUnk3000NLFPKDOBNCDOrBuilder(
         int index) {
       return unk3000NLFPKDOBNCD_.get(index);
+    }
+
+    public static final int UNK3000_CIOLEGEHDAC_FIELD_NUMBER = 10;
+    private int unk3000CIOLEGEHDAC_;
+    /**
+     * <code>uint32 Unk3000_CIOLEGEHDAC = 10;</code>
+     * @return The unk3000CIOLEGEHDAC.
+     */
+    @java.lang.Override
+    public int getUnk3000CIOLEGEHDAC() {
+      return unk3000CIOLEGEHDAC_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -209,11 +209,11 @@ public final class Unk3000ENLDIHLGNCK {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (unk3000CIOLEGEHDAC_ != 0) {
-        output.writeUInt32(3, unk3000CIOLEGEHDAC_);
-      }
       for (int i = 0; i < unk3000NLFPKDOBNCD_.size(); i++) {
-        output.writeMessage(15, unk3000NLFPKDOBNCD_.get(i));
+        output.writeMessage(3, unk3000NLFPKDOBNCD_.get(i));
+      }
+      if (unk3000CIOLEGEHDAC_ != 0) {
+        output.writeUInt32(10, unk3000CIOLEGEHDAC_);
       }
       unknownFields.writeTo(output);
     }
@@ -224,13 +224,13 @@ public final class Unk3000ENLDIHLGNCK {
       if (size != -1) return size;
 
       size = 0;
-      if (unk3000CIOLEGEHDAC_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(3, unk3000CIOLEGEHDAC_);
-      }
       for (int i = 0; i < unk3000NLFPKDOBNCD_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(15, unk3000NLFPKDOBNCD_.get(i));
+          .computeMessageSize(3, unk3000NLFPKDOBNCD_.get(i));
+      }
+      if (unk3000CIOLEGEHDAC_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(10, unk3000CIOLEGEHDAC_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -247,10 +247,10 @@ public final class Unk3000ENLDIHLGNCK {
       }
       emu.grasscutter.net.proto.Unk3000ENLDIHLGNCK.Unk3000_ENLDIHLGNCK other = (emu.grasscutter.net.proto.Unk3000ENLDIHLGNCK.Unk3000_ENLDIHLGNCK) obj;
 
-      if (getUnk3000CIOLEGEHDAC()
-          != other.getUnk3000CIOLEGEHDAC()) return false;
       if (!getUnk3000NLFPKDOBNCDList()
           .equals(other.getUnk3000NLFPKDOBNCDList())) return false;
+      if (getUnk3000CIOLEGEHDAC()
+          != other.getUnk3000CIOLEGEHDAC()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -262,12 +262,12 @@ public final class Unk3000ENLDIHLGNCK {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + UNK3000_CIOLEGEHDAC_FIELD_NUMBER;
-      hash = (53 * hash) + getUnk3000CIOLEGEHDAC();
       if (getUnk3000NLFPKDOBNCDCount() > 0) {
         hash = (37 * hash) + UNK3000_NLFPKDOBNCD_FIELD_NUMBER;
         hash = (53 * hash) + getUnk3000NLFPKDOBNCDList().hashCode();
       }
+      hash = (37 * hash) + UNK3000_CIOLEGEHDAC_FIELD_NUMBER;
+      hash = (53 * hash) + getUnk3000CIOLEGEHDAC();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -402,14 +402,14 @@ public final class Unk3000ENLDIHLGNCK {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        unk3000CIOLEGEHDAC_ = 0;
-
         if (unk3000NLFPKDOBNCDBuilder_ == null) {
           unk3000NLFPKDOBNCD_ = java.util.Collections.emptyList();
           bitField0_ = (bitField0_ & ~0x00000001);
         } else {
           unk3000NLFPKDOBNCDBuilder_.clear();
         }
+        unk3000CIOLEGEHDAC_ = 0;
+
         return this;
       }
 
@@ -437,7 +437,6 @@ public final class Unk3000ENLDIHLGNCK {
       public emu.grasscutter.net.proto.Unk3000ENLDIHLGNCK.Unk3000_ENLDIHLGNCK buildPartial() {
         emu.grasscutter.net.proto.Unk3000ENLDIHLGNCK.Unk3000_ENLDIHLGNCK result = new emu.grasscutter.net.proto.Unk3000ENLDIHLGNCK.Unk3000_ENLDIHLGNCK(this);
         int from_bitField0_ = bitField0_;
-        result.unk3000CIOLEGEHDAC_ = unk3000CIOLEGEHDAC_;
         if (unk3000NLFPKDOBNCDBuilder_ == null) {
           if (((bitField0_ & 0x00000001) != 0)) {
             unk3000NLFPKDOBNCD_ = java.util.Collections.unmodifiableList(unk3000NLFPKDOBNCD_);
@@ -447,6 +446,7 @@ public final class Unk3000ENLDIHLGNCK {
         } else {
           result.unk3000NLFPKDOBNCD_ = unk3000NLFPKDOBNCDBuilder_.build();
         }
+        result.unk3000CIOLEGEHDAC_ = unk3000CIOLEGEHDAC_;
         onBuilt();
         return result;
       }
@@ -495,9 +495,6 @@ public final class Unk3000ENLDIHLGNCK {
 
       public Builder mergeFrom(emu.grasscutter.net.proto.Unk3000ENLDIHLGNCK.Unk3000_ENLDIHLGNCK other) {
         if (other == emu.grasscutter.net.proto.Unk3000ENLDIHLGNCK.Unk3000_ENLDIHLGNCK.getDefaultInstance()) return this;
-        if (other.getUnk3000CIOLEGEHDAC() != 0) {
-          setUnk3000CIOLEGEHDAC(other.getUnk3000CIOLEGEHDAC());
-        }
         if (unk3000NLFPKDOBNCDBuilder_ == null) {
           if (!other.unk3000NLFPKDOBNCD_.isEmpty()) {
             if (unk3000NLFPKDOBNCD_.isEmpty()) {
@@ -523,6 +520,9 @@ public final class Unk3000ENLDIHLGNCK {
               unk3000NLFPKDOBNCDBuilder_.addAllMessages(other.unk3000NLFPKDOBNCD_);
             }
           }
+        }
+        if (other.getUnk3000CIOLEGEHDAC() != 0) {
+          setUnk3000CIOLEGEHDAC(other.getUnk3000CIOLEGEHDAC());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -554,37 +554,6 @@ public final class Unk3000ENLDIHLGNCK {
       }
       private int bitField0_;
 
-      private int unk3000CIOLEGEHDAC_ ;
-      /**
-       * <code>uint32 Unk3000_CIOLEGEHDAC = 3;</code>
-       * @return The unk3000CIOLEGEHDAC.
-       */
-      @java.lang.Override
-      public int getUnk3000CIOLEGEHDAC() {
-        return unk3000CIOLEGEHDAC_;
-      }
-      /**
-       * <code>uint32 Unk3000_CIOLEGEHDAC = 3;</code>
-       * @param value The unk3000CIOLEGEHDAC to set.
-       * @return This builder for chaining.
-       */
-      public Builder setUnk3000CIOLEGEHDAC(int value) {
-        
-        unk3000CIOLEGEHDAC_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>uint32 Unk3000_CIOLEGEHDAC = 3;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearUnk3000CIOLEGEHDAC() {
-        
-        unk3000CIOLEGEHDAC_ = 0;
-        onChanged();
-        return this;
-      }
-
       private java.util.List<emu.grasscutter.net.proto.Unk3000GDDGGJIFNCH.Unk3000_GDDGGJIFNCH> unk3000NLFPKDOBNCD_ =
         java.util.Collections.emptyList();
       private void ensureUnk3000NLFPKDOBNCDIsMutable() {
@@ -598,7 +567,7 @@ public final class Unk3000ENLDIHLGNCK {
           emu.grasscutter.net.proto.Unk3000GDDGGJIFNCH.Unk3000_GDDGGJIFNCH, emu.grasscutter.net.proto.Unk3000GDDGGJIFNCH.Unk3000_GDDGGJIFNCH.Builder, emu.grasscutter.net.proto.Unk3000GDDGGJIFNCH.Unk3000_GDDGGJIFNCHOrBuilder> unk3000NLFPKDOBNCDBuilder_;
 
       /**
-       * <code>repeated .Unk3000_GDDGGJIFNCH Unk3000_NLFPKDOBNCD = 15;</code>
+       * <code>repeated .Unk3000_GDDGGJIFNCH Unk3000_NLFPKDOBNCD = 3;</code>
        */
       public java.util.List<emu.grasscutter.net.proto.Unk3000GDDGGJIFNCH.Unk3000_GDDGGJIFNCH> getUnk3000NLFPKDOBNCDList() {
         if (unk3000NLFPKDOBNCDBuilder_ == null) {
@@ -608,7 +577,7 @@ public final class Unk3000ENLDIHLGNCK {
         }
       }
       /**
-       * <code>repeated .Unk3000_GDDGGJIFNCH Unk3000_NLFPKDOBNCD = 15;</code>
+       * <code>repeated .Unk3000_GDDGGJIFNCH Unk3000_NLFPKDOBNCD = 3;</code>
        */
       public int getUnk3000NLFPKDOBNCDCount() {
         if (unk3000NLFPKDOBNCDBuilder_ == null) {
@@ -618,7 +587,7 @@ public final class Unk3000ENLDIHLGNCK {
         }
       }
       /**
-       * <code>repeated .Unk3000_GDDGGJIFNCH Unk3000_NLFPKDOBNCD = 15;</code>
+       * <code>repeated .Unk3000_GDDGGJIFNCH Unk3000_NLFPKDOBNCD = 3;</code>
        */
       public emu.grasscutter.net.proto.Unk3000GDDGGJIFNCH.Unk3000_GDDGGJIFNCH getUnk3000NLFPKDOBNCD(int index) {
         if (unk3000NLFPKDOBNCDBuilder_ == null) {
@@ -628,7 +597,7 @@ public final class Unk3000ENLDIHLGNCK {
         }
       }
       /**
-       * <code>repeated .Unk3000_GDDGGJIFNCH Unk3000_NLFPKDOBNCD = 15;</code>
+       * <code>repeated .Unk3000_GDDGGJIFNCH Unk3000_NLFPKDOBNCD = 3;</code>
        */
       public Builder setUnk3000NLFPKDOBNCD(
           int index, emu.grasscutter.net.proto.Unk3000GDDGGJIFNCH.Unk3000_GDDGGJIFNCH value) {
@@ -645,7 +614,7 @@ public final class Unk3000ENLDIHLGNCK {
         return this;
       }
       /**
-       * <code>repeated .Unk3000_GDDGGJIFNCH Unk3000_NLFPKDOBNCD = 15;</code>
+       * <code>repeated .Unk3000_GDDGGJIFNCH Unk3000_NLFPKDOBNCD = 3;</code>
        */
       public Builder setUnk3000NLFPKDOBNCD(
           int index, emu.grasscutter.net.proto.Unk3000GDDGGJIFNCH.Unk3000_GDDGGJIFNCH.Builder builderForValue) {
@@ -659,7 +628,7 @@ public final class Unk3000ENLDIHLGNCK {
         return this;
       }
       /**
-       * <code>repeated .Unk3000_GDDGGJIFNCH Unk3000_NLFPKDOBNCD = 15;</code>
+       * <code>repeated .Unk3000_GDDGGJIFNCH Unk3000_NLFPKDOBNCD = 3;</code>
        */
       public Builder addUnk3000NLFPKDOBNCD(emu.grasscutter.net.proto.Unk3000GDDGGJIFNCH.Unk3000_GDDGGJIFNCH value) {
         if (unk3000NLFPKDOBNCDBuilder_ == null) {
@@ -675,7 +644,7 @@ public final class Unk3000ENLDIHLGNCK {
         return this;
       }
       /**
-       * <code>repeated .Unk3000_GDDGGJIFNCH Unk3000_NLFPKDOBNCD = 15;</code>
+       * <code>repeated .Unk3000_GDDGGJIFNCH Unk3000_NLFPKDOBNCD = 3;</code>
        */
       public Builder addUnk3000NLFPKDOBNCD(
           int index, emu.grasscutter.net.proto.Unk3000GDDGGJIFNCH.Unk3000_GDDGGJIFNCH value) {
@@ -692,7 +661,7 @@ public final class Unk3000ENLDIHLGNCK {
         return this;
       }
       /**
-       * <code>repeated .Unk3000_GDDGGJIFNCH Unk3000_NLFPKDOBNCD = 15;</code>
+       * <code>repeated .Unk3000_GDDGGJIFNCH Unk3000_NLFPKDOBNCD = 3;</code>
        */
       public Builder addUnk3000NLFPKDOBNCD(
           emu.grasscutter.net.proto.Unk3000GDDGGJIFNCH.Unk3000_GDDGGJIFNCH.Builder builderForValue) {
@@ -706,7 +675,7 @@ public final class Unk3000ENLDIHLGNCK {
         return this;
       }
       /**
-       * <code>repeated .Unk3000_GDDGGJIFNCH Unk3000_NLFPKDOBNCD = 15;</code>
+       * <code>repeated .Unk3000_GDDGGJIFNCH Unk3000_NLFPKDOBNCD = 3;</code>
        */
       public Builder addUnk3000NLFPKDOBNCD(
           int index, emu.grasscutter.net.proto.Unk3000GDDGGJIFNCH.Unk3000_GDDGGJIFNCH.Builder builderForValue) {
@@ -720,7 +689,7 @@ public final class Unk3000ENLDIHLGNCK {
         return this;
       }
       /**
-       * <code>repeated .Unk3000_GDDGGJIFNCH Unk3000_NLFPKDOBNCD = 15;</code>
+       * <code>repeated .Unk3000_GDDGGJIFNCH Unk3000_NLFPKDOBNCD = 3;</code>
        */
       public Builder addAllUnk3000NLFPKDOBNCD(
           java.lang.Iterable<? extends emu.grasscutter.net.proto.Unk3000GDDGGJIFNCH.Unk3000_GDDGGJIFNCH> values) {
@@ -735,7 +704,7 @@ public final class Unk3000ENLDIHLGNCK {
         return this;
       }
       /**
-       * <code>repeated .Unk3000_GDDGGJIFNCH Unk3000_NLFPKDOBNCD = 15;</code>
+       * <code>repeated .Unk3000_GDDGGJIFNCH Unk3000_NLFPKDOBNCD = 3;</code>
        */
       public Builder clearUnk3000NLFPKDOBNCD() {
         if (unk3000NLFPKDOBNCDBuilder_ == null) {
@@ -748,7 +717,7 @@ public final class Unk3000ENLDIHLGNCK {
         return this;
       }
       /**
-       * <code>repeated .Unk3000_GDDGGJIFNCH Unk3000_NLFPKDOBNCD = 15;</code>
+       * <code>repeated .Unk3000_GDDGGJIFNCH Unk3000_NLFPKDOBNCD = 3;</code>
        */
       public Builder removeUnk3000NLFPKDOBNCD(int index) {
         if (unk3000NLFPKDOBNCDBuilder_ == null) {
@@ -761,14 +730,14 @@ public final class Unk3000ENLDIHLGNCK {
         return this;
       }
       /**
-       * <code>repeated .Unk3000_GDDGGJIFNCH Unk3000_NLFPKDOBNCD = 15;</code>
+       * <code>repeated .Unk3000_GDDGGJIFNCH Unk3000_NLFPKDOBNCD = 3;</code>
        */
       public emu.grasscutter.net.proto.Unk3000GDDGGJIFNCH.Unk3000_GDDGGJIFNCH.Builder getUnk3000NLFPKDOBNCDBuilder(
           int index) {
         return getUnk3000NLFPKDOBNCDFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .Unk3000_GDDGGJIFNCH Unk3000_NLFPKDOBNCD = 15;</code>
+       * <code>repeated .Unk3000_GDDGGJIFNCH Unk3000_NLFPKDOBNCD = 3;</code>
        */
       public emu.grasscutter.net.proto.Unk3000GDDGGJIFNCH.Unk3000_GDDGGJIFNCHOrBuilder getUnk3000NLFPKDOBNCDOrBuilder(
           int index) {
@@ -778,7 +747,7 @@ public final class Unk3000ENLDIHLGNCK {
         }
       }
       /**
-       * <code>repeated .Unk3000_GDDGGJIFNCH Unk3000_NLFPKDOBNCD = 15;</code>
+       * <code>repeated .Unk3000_GDDGGJIFNCH Unk3000_NLFPKDOBNCD = 3;</code>
        */
       public java.util.List<? extends emu.grasscutter.net.proto.Unk3000GDDGGJIFNCH.Unk3000_GDDGGJIFNCHOrBuilder> 
            getUnk3000NLFPKDOBNCDOrBuilderList() {
@@ -789,14 +758,14 @@ public final class Unk3000ENLDIHLGNCK {
         }
       }
       /**
-       * <code>repeated .Unk3000_GDDGGJIFNCH Unk3000_NLFPKDOBNCD = 15;</code>
+       * <code>repeated .Unk3000_GDDGGJIFNCH Unk3000_NLFPKDOBNCD = 3;</code>
        */
       public emu.grasscutter.net.proto.Unk3000GDDGGJIFNCH.Unk3000_GDDGGJIFNCH.Builder addUnk3000NLFPKDOBNCDBuilder() {
         return getUnk3000NLFPKDOBNCDFieldBuilder().addBuilder(
             emu.grasscutter.net.proto.Unk3000GDDGGJIFNCH.Unk3000_GDDGGJIFNCH.getDefaultInstance());
       }
       /**
-       * <code>repeated .Unk3000_GDDGGJIFNCH Unk3000_NLFPKDOBNCD = 15;</code>
+       * <code>repeated .Unk3000_GDDGGJIFNCH Unk3000_NLFPKDOBNCD = 3;</code>
        */
       public emu.grasscutter.net.proto.Unk3000GDDGGJIFNCH.Unk3000_GDDGGJIFNCH.Builder addUnk3000NLFPKDOBNCDBuilder(
           int index) {
@@ -804,7 +773,7 @@ public final class Unk3000ENLDIHLGNCK {
             index, emu.grasscutter.net.proto.Unk3000GDDGGJIFNCH.Unk3000_GDDGGJIFNCH.getDefaultInstance());
       }
       /**
-       * <code>repeated .Unk3000_GDDGGJIFNCH Unk3000_NLFPKDOBNCD = 15;</code>
+       * <code>repeated .Unk3000_GDDGGJIFNCH Unk3000_NLFPKDOBNCD = 3;</code>
        */
       public java.util.List<emu.grasscutter.net.proto.Unk3000GDDGGJIFNCH.Unk3000_GDDGGJIFNCH.Builder> 
            getUnk3000NLFPKDOBNCDBuilderList() {
@@ -823,6 +792,37 @@ public final class Unk3000ENLDIHLGNCK {
           unk3000NLFPKDOBNCD_ = null;
         }
         return unk3000NLFPKDOBNCDBuilder_;
+      }
+
+      private int unk3000CIOLEGEHDAC_ ;
+      /**
+       * <code>uint32 Unk3000_CIOLEGEHDAC = 10;</code>
+       * @return The unk3000CIOLEGEHDAC.
+       */
+      @java.lang.Override
+      public int getUnk3000CIOLEGEHDAC() {
+        return unk3000CIOLEGEHDAC_;
+      }
+      /**
+       * <code>uint32 Unk3000_CIOLEGEHDAC = 10;</code>
+       * @param value The unk3000CIOLEGEHDAC to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUnk3000CIOLEGEHDAC(int value) {
+        
+        unk3000CIOLEGEHDAC_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 Unk3000_CIOLEGEHDAC = 10;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUnk3000CIOLEGEHDAC() {
+        
+        unk3000CIOLEGEHDAC_ = 0;
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -892,9 +892,9 @@ public final class Unk3000ENLDIHLGNCK {
   static {
     java.lang.String[] descriptorData = {
       "\n\031Unk3000_ENLDIHLGNCK.proto\032\031Unk3000_GDD" +
-      "GGJIFNCH.proto\"e\n\023Unk3000_ENLDIHLGNCK\022\033\n" +
-      "\023Unk3000_CIOLEGEHDAC\030\003 \001(\r\0221\n\023Unk3000_NL" +
-      "FPKDOBNCD\030\017 \003(\0132\024.Unk3000_GDDGGJIFNCHB\033\n" +
+      "GGJIFNCH.proto\"e\n\023Unk3000_ENLDIHLGNCK\0221\n" +
+      "\023Unk3000_NLFPKDOBNCD\030\003 \003(\0132\024.Unk3000_GDD" +
+      "GGJIFNCH\022\033\n\023Unk3000_CIOLEGEHDAC\030\n \001(\rB\033\n" +
       "\031emu.grasscutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
@@ -907,7 +907,7 @@ public final class Unk3000ENLDIHLGNCK {
     internal_static_Unk3000_ENLDIHLGNCK_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_Unk3000_ENLDIHLGNCK_descriptor,
-        new java.lang.String[] { "Unk3000CIOLEGEHDAC", "Unk3000NLFPKDOBNCD", });
+        new java.lang.String[] { "Unk3000NLFPKDOBNCD", "Unk3000CIOLEGEHDAC", });
     emu.grasscutter.net.proto.Unk3000GDDGGJIFNCH.getDescriptor();
   }
 

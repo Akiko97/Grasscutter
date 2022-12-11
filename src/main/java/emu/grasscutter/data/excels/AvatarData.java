@@ -44,7 +44,6 @@ public class AvatarData extends GameResource {
     private float criticalHurt;
 
     private List<PropGrowCurve> propGrowCurves;
-    @Getter(onMethod = @__(@Override))
     private int id;
 
     // Transient
@@ -60,6 +59,11 @@ public class AvatarData extends GameResource {
     @Getter private List<Integer> fetters;
     @Getter private int nameCardRewardId;
     @Getter private int nameCardId;
+
+    @Override
+    public int getId() {
+        return this.id;
+    }
 
     public float getBaseHp(int level) {
         try {
@@ -127,7 +131,7 @@ public class AvatarData extends GameResource {
         for (AvatarCurveData curveData : GameData.getAvatarCurveDataMap().values()) {
             int level = curveData.getLevel() - 1;
             for (PropGrowCurve growCurve : this.propGrowCurves) {
-                FightProperty prop = FightProperty.getPropByName(growCurve.getType());
+                FightProperty prop = growCurve.getType();
                 switch (prop) {
                     case FIGHT_PROP_BASE_HP:
                         this.hpGrowthCurve[level] = curveData.getCurveInfos().get(growCurve.getGrowCurve());

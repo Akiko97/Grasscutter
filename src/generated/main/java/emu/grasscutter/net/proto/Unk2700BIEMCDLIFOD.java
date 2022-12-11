@@ -19,38 +19,38 @@ public final class Unk2700BIEMCDLIFOD {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>uint32 guid = 11;</code>
+     * <code>uint32 guid = 10;</code>
      * @return The guid.
      */
     int getGuid();
 
     /**
-     * <code>.Vector spawn_pos = 14;</code>
+     * <code>.Vector spawn_pos = 2;</code>
      * @return Whether the spawnPos field is set.
      */
     boolean hasSpawnPos();
     /**
-     * <code>.Vector spawn_pos = 14;</code>
+     * <code>.Vector spawn_pos = 2;</code>
      * @return The spawnPos.
      */
     emu.grasscutter.net.proto.VectorOuterClass.Vector getSpawnPos();
     /**
-     * <code>.Vector spawn_pos = 14;</code>
+     * <code>.Vector spawn_pos = 2;</code>
      */
     emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder getSpawnPosOrBuilder();
 
     /**
-     * <code>repeated int32 included_furniture_index_list = 12;</code>
+     * <code>repeated int32 included_furniture_index_list = 15;</code>
      * @return A list containing the includedFurnitureIndexList.
      */
     java.util.List<java.lang.Integer> getIncludedFurnitureIndexListList();
     /**
-     * <code>repeated int32 included_furniture_index_list = 12;</code>
+     * <code>repeated int32 included_furniture_index_list = 15;</code>
      * @return The count of includedFurnitureIndexList.
      */
     int getIncludedFurnitureIndexListCount();
     /**
-     * <code>repeated int32 included_furniture_index_list = 12;</code>
+     * <code>repeated int32 included_furniture_index_list = 15;</code>
      * @param index The index of the element to return.
      * @return The includedFurnitureIndexList at the given index.
      */
@@ -103,33 +103,7 @@ public final class Unk2700BIEMCDLIFOD {
             case 0:
               done = true;
               break;
-            case 88: {
-
-              guid_ = input.readUInt32();
-              break;
-            }
-            case 96: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                includedFurnitureIndexList_ = newIntList();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              includedFurnitureIndexList_.addInt(input.readInt32());
-              break;
-            }
-            case 98: {
-              int length = input.readRawVarint32();
-              int limit = input.pushLimit(length);
-              if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
-                includedFurnitureIndexList_ = newIntList();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              while (input.getBytesUntilLimit() > 0) {
-                includedFurnitureIndexList_.addInt(input.readInt32());
-              }
-              input.popLimit(limit);
-              break;
-            }
-            case 114: {
+            case 18: {
               emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder subBuilder = null;
               if (spawnPos_ != null) {
                 subBuilder = spawnPos_.toBuilder();
@@ -140,6 +114,32 @@ public final class Unk2700BIEMCDLIFOD {
                 spawnPos_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 80: {
+
+              guid_ = input.readUInt32();
+              break;
+            }
+            case 120: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                includedFurnitureIndexList_ = newIntList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              includedFurnitureIndexList_.addInt(input.readInt32());
+              break;
+            }
+            case 122: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
+                includedFurnitureIndexList_ = newIntList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                includedFurnitureIndexList_.addInt(input.readInt32());
+              }
+              input.popLimit(limit);
               break;
             }
             default: {
@@ -177,10 +177,10 @@ public final class Unk2700BIEMCDLIFOD {
               emu.grasscutter.net.proto.Unk2700BIEMCDLIFOD.Unk2700_BIEMCDLIFOD.class, emu.grasscutter.net.proto.Unk2700BIEMCDLIFOD.Unk2700_BIEMCDLIFOD.Builder.class);
     }
 
-    public static final int GUID_FIELD_NUMBER = 11;
+    public static final int GUID_FIELD_NUMBER = 10;
     private int guid_;
     /**
-     * <code>uint32 guid = 11;</code>
+     * <code>uint32 guid = 10;</code>
      * @return The guid.
      */
     @java.lang.Override
@@ -188,10 +188,10 @@ public final class Unk2700BIEMCDLIFOD {
       return guid_;
     }
 
-    public static final int SPAWN_POS_FIELD_NUMBER = 14;
+    public static final int SPAWN_POS_FIELD_NUMBER = 2;
     private emu.grasscutter.net.proto.VectorOuterClass.Vector spawnPos_;
     /**
-     * <code>.Vector spawn_pos = 14;</code>
+     * <code>.Vector spawn_pos = 2;</code>
      * @return Whether the spawnPos field is set.
      */
     @java.lang.Override
@@ -199,7 +199,7 @@ public final class Unk2700BIEMCDLIFOD {
       return spawnPos_ != null;
     }
     /**
-     * <code>.Vector spawn_pos = 14;</code>
+     * <code>.Vector spawn_pos = 2;</code>
      * @return The spawnPos.
      */
     @java.lang.Override
@@ -207,17 +207,17 @@ public final class Unk2700BIEMCDLIFOD {
       return spawnPos_ == null ? emu.grasscutter.net.proto.VectorOuterClass.Vector.getDefaultInstance() : spawnPos_;
     }
     /**
-     * <code>.Vector spawn_pos = 14;</code>
+     * <code>.Vector spawn_pos = 2;</code>
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder getSpawnPosOrBuilder() {
       return getSpawnPos();
     }
 
-    public static final int INCLUDED_FURNITURE_INDEX_LIST_FIELD_NUMBER = 12;
+    public static final int INCLUDED_FURNITURE_INDEX_LIST_FIELD_NUMBER = 15;
     private com.google.protobuf.Internal.IntList includedFurnitureIndexList_;
     /**
-     * <code>repeated int32 included_furniture_index_list = 12;</code>
+     * <code>repeated int32 included_furniture_index_list = 15;</code>
      * @return A list containing the includedFurnitureIndexList.
      */
     @java.lang.Override
@@ -226,14 +226,14 @@ public final class Unk2700BIEMCDLIFOD {
       return includedFurnitureIndexList_;
     }
     /**
-     * <code>repeated int32 included_furniture_index_list = 12;</code>
+     * <code>repeated int32 included_furniture_index_list = 15;</code>
      * @return The count of includedFurnitureIndexList.
      */
     public int getIncludedFurnitureIndexListCount() {
       return includedFurnitureIndexList_.size();
     }
     /**
-     * <code>repeated int32 included_furniture_index_list = 12;</code>
+     * <code>repeated int32 included_furniture_index_list = 15;</code>
      * @param index The index of the element to return.
      * @return The includedFurnitureIndexList at the given index.
      */
@@ -257,18 +257,18 @@ public final class Unk2700BIEMCDLIFOD {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
+      if (spawnPos_ != null) {
+        output.writeMessage(2, getSpawnPos());
+      }
       if (guid_ != 0) {
-        output.writeUInt32(11, guid_);
+        output.writeUInt32(10, guid_);
       }
       if (getIncludedFurnitureIndexListList().size() > 0) {
-        output.writeUInt32NoTag(98);
+        output.writeUInt32NoTag(122);
         output.writeUInt32NoTag(includedFurnitureIndexListMemoizedSerializedSize);
       }
       for (int i = 0; i < includedFurnitureIndexList_.size(); i++) {
         output.writeInt32NoTag(includedFurnitureIndexList_.getInt(i));
-      }
-      if (spawnPos_ != null) {
-        output.writeMessage(14, getSpawnPos());
       }
       unknownFields.writeTo(output);
     }
@@ -279,9 +279,13 @@ public final class Unk2700BIEMCDLIFOD {
       if (size != -1) return size;
 
       size = 0;
+      if (spawnPos_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getSpawnPos());
+      }
       if (guid_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(11, guid_);
+          .computeUInt32Size(10, guid_);
       }
       {
         int dataSize = 0;
@@ -296,10 +300,6 @@ public final class Unk2700BIEMCDLIFOD {
               .computeInt32SizeNoTag(dataSize);
         }
         includedFurnitureIndexListMemoizedSerializedSize = dataSize;
-      }
-      if (spawnPos_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(14, getSpawnPos());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -623,7 +623,7 @@ public final class Unk2700BIEMCDLIFOD {
 
       private int guid_ ;
       /**
-       * <code>uint32 guid = 11;</code>
+       * <code>uint32 guid = 10;</code>
        * @return The guid.
        */
       @java.lang.Override
@@ -631,7 +631,7 @@ public final class Unk2700BIEMCDLIFOD {
         return guid_;
       }
       /**
-       * <code>uint32 guid = 11;</code>
+       * <code>uint32 guid = 10;</code>
        * @param value The guid to set.
        * @return This builder for chaining.
        */
@@ -642,7 +642,7 @@ public final class Unk2700BIEMCDLIFOD {
         return this;
       }
       /**
-       * <code>uint32 guid = 11;</code>
+       * <code>uint32 guid = 10;</code>
        * @return This builder for chaining.
        */
       public Builder clearGuid() {
@@ -656,14 +656,14 @@ public final class Unk2700BIEMCDLIFOD {
       private com.google.protobuf.SingleFieldBuilderV3<
           emu.grasscutter.net.proto.VectorOuterClass.Vector, emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder, emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder> spawnPosBuilder_;
       /**
-       * <code>.Vector spawn_pos = 14;</code>
+       * <code>.Vector spawn_pos = 2;</code>
        * @return Whether the spawnPos field is set.
        */
       public boolean hasSpawnPos() {
         return spawnPosBuilder_ != null || spawnPos_ != null;
       }
       /**
-       * <code>.Vector spawn_pos = 14;</code>
+       * <code>.Vector spawn_pos = 2;</code>
        * @return The spawnPos.
        */
       public emu.grasscutter.net.proto.VectorOuterClass.Vector getSpawnPos() {
@@ -674,7 +674,7 @@ public final class Unk2700BIEMCDLIFOD {
         }
       }
       /**
-       * <code>.Vector spawn_pos = 14;</code>
+       * <code>.Vector spawn_pos = 2;</code>
        */
       public Builder setSpawnPos(emu.grasscutter.net.proto.VectorOuterClass.Vector value) {
         if (spawnPosBuilder_ == null) {
@@ -690,7 +690,7 @@ public final class Unk2700BIEMCDLIFOD {
         return this;
       }
       /**
-       * <code>.Vector spawn_pos = 14;</code>
+       * <code>.Vector spawn_pos = 2;</code>
        */
       public Builder setSpawnPos(
           emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder builderForValue) {
@@ -704,7 +704,7 @@ public final class Unk2700BIEMCDLIFOD {
         return this;
       }
       /**
-       * <code>.Vector spawn_pos = 14;</code>
+       * <code>.Vector spawn_pos = 2;</code>
        */
       public Builder mergeSpawnPos(emu.grasscutter.net.proto.VectorOuterClass.Vector value) {
         if (spawnPosBuilder_ == null) {
@@ -722,7 +722,7 @@ public final class Unk2700BIEMCDLIFOD {
         return this;
       }
       /**
-       * <code>.Vector spawn_pos = 14;</code>
+       * <code>.Vector spawn_pos = 2;</code>
        */
       public Builder clearSpawnPos() {
         if (spawnPosBuilder_ == null) {
@@ -736,7 +736,7 @@ public final class Unk2700BIEMCDLIFOD {
         return this;
       }
       /**
-       * <code>.Vector spawn_pos = 14;</code>
+       * <code>.Vector spawn_pos = 2;</code>
        */
       public emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder getSpawnPosBuilder() {
         
@@ -744,7 +744,7 @@ public final class Unk2700BIEMCDLIFOD {
         return getSpawnPosFieldBuilder().getBuilder();
       }
       /**
-       * <code>.Vector spawn_pos = 14;</code>
+       * <code>.Vector spawn_pos = 2;</code>
        */
       public emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder getSpawnPosOrBuilder() {
         if (spawnPosBuilder_ != null) {
@@ -755,7 +755,7 @@ public final class Unk2700BIEMCDLIFOD {
         }
       }
       /**
-       * <code>.Vector spawn_pos = 14;</code>
+       * <code>.Vector spawn_pos = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           emu.grasscutter.net.proto.VectorOuterClass.Vector, emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder, emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder> 
@@ -779,7 +779,7 @@ public final class Unk2700BIEMCDLIFOD {
          }
       }
       /**
-       * <code>repeated int32 included_furniture_index_list = 12;</code>
+       * <code>repeated int32 included_furniture_index_list = 15;</code>
        * @return A list containing the includedFurnitureIndexList.
        */
       public java.util.List<java.lang.Integer>
@@ -788,14 +788,14 @@ public final class Unk2700BIEMCDLIFOD {
                  java.util.Collections.unmodifiableList(includedFurnitureIndexList_) : includedFurnitureIndexList_;
       }
       /**
-       * <code>repeated int32 included_furniture_index_list = 12;</code>
+       * <code>repeated int32 included_furniture_index_list = 15;</code>
        * @return The count of includedFurnitureIndexList.
        */
       public int getIncludedFurnitureIndexListCount() {
         return includedFurnitureIndexList_.size();
       }
       /**
-       * <code>repeated int32 included_furniture_index_list = 12;</code>
+       * <code>repeated int32 included_furniture_index_list = 15;</code>
        * @param index The index of the element to return.
        * @return The includedFurnitureIndexList at the given index.
        */
@@ -803,7 +803,7 @@ public final class Unk2700BIEMCDLIFOD {
         return includedFurnitureIndexList_.getInt(index);
       }
       /**
-       * <code>repeated int32 included_furniture_index_list = 12;</code>
+       * <code>repeated int32 included_furniture_index_list = 15;</code>
        * @param index The index to set the value at.
        * @param value The includedFurnitureIndexList to set.
        * @return This builder for chaining.
@@ -816,7 +816,7 @@ public final class Unk2700BIEMCDLIFOD {
         return this;
       }
       /**
-       * <code>repeated int32 included_furniture_index_list = 12;</code>
+       * <code>repeated int32 included_furniture_index_list = 15;</code>
        * @param value The includedFurnitureIndexList to add.
        * @return This builder for chaining.
        */
@@ -827,7 +827,7 @@ public final class Unk2700BIEMCDLIFOD {
         return this;
       }
       /**
-       * <code>repeated int32 included_furniture_index_list = 12;</code>
+       * <code>repeated int32 included_furniture_index_list = 15;</code>
        * @param values The includedFurnitureIndexList to add.
        * @return This builder for chaining.
        */
@@ -840,7 +840,7 @@ public final class Unk2700BIEMCDLIFOD {
         return this;
       }
       /**
-       * <code>repeated int32 included_furniture_index_list = 12;</code>
+       * <code>repeated int32 included_furniture_index_list = 15;</code>
        * @return This builder for chaining.
        */
       public Builder clearIncludedFurnitureIndexList() {
@@ -917,9 +917,9 @@ public final class Unk2700BIEMCDLIFOD {
   static {
     java.lang.String[] descriptorData = {
       "\n\031Unk2700_BIEMCDLIFOD.proto\032\014Vector.prot" +
-      "o\"f\n\023Unk2700_BIEMCDLIFOD\022\014\n\004guid\030\013 \001(\r\022\032" +
-      "\n\tspawn_pos\030\016 \001(\0132\007.Vector\022%\n\035included_f" +
-      "urniture_index_list\030\014 \003(\005B\033\n\031emu.grasscu" +
+      "o\"f\n\023Unk2700_BIEMCDLIFOD\022\014\n\004guid\030\n \001(\r\022\032" +
+      "\n\tspawn_pos\030\002 \001(\0132\007.Vector\022%\n\035included_f" +
+      "urniture_index_list\030\017 \003(\005B\033\n\031emu.grasscu" +
       "tter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor

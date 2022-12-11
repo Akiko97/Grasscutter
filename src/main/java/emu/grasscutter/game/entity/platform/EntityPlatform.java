@@ -20,12 +20,12 @@ import javax.annotation.Nullable;
 public class EntityPlatform extends EntityBaseGadget {
     @Getter
     private final Player owner;
-    @Getter(onMethod = @__(@Override))
     private final int gadgetId;
     @Getter
     private final EntityClientGadget gadget;
-    @Getter(onMethod = @__(@Override))
-    private final Int2FloatMap fightProperties;
+    private final Int2FloatMap fightProp;
+    private final Position pos;
+    private final Position rot;
     @Nullable
     @Getter
     private ConfigGadget configGadget;
@@ -39,11 +39,13 @@ public class EntityPlatform extends EntityBaseGadget {
     private boolean isActive;
 
     public EntityPlatform(EntityClientGadget gadget, Scene scene, Player player, int gadgetId, Position pos, Position rot, MovingPlatformTypeOuterClass.MovingPlatformType movingPlatformType) {
-        super(scene, pos, rot);
+        super(scene);
         this.gadget = gadget;
         this.owner = player;
         this.id = getScene().getWorld().getNextEntityId(EntityIdType.GADGET);
-        this.fightProperties = new Int2FloatOpenHashMap();
+        this.fightProp = new Int2FloatOpenHashMap();
+        this.pos = new Position(pos);
+        this.rot = new Position(rot);
         this.movingPlatformType = movingPlatformType;
         this.gadgetId = gadgetId;
         GadgetData data = GameData.getGadgetDataMap().get(gadgetId);
@@ -52,6 +54,26 @@ public class EntityPlatform extends EntityBaseGadget {
         }
 
         fillFightProps(configGadget);
+    }
+
+    @Override
+    public int getGadgetId() {
+        return gadgetId;
+    }
+
+    @Override
+    public Int2FloatMap getFightProperties() {
+        return fightProp;
+    }
+
+    @Override
+    public Position getPosition() {
+        return pos;
+    }
+
+    @Override
+    public Position getRotation() {
+        return rot;
     }
 
     @Override

@@ -64,23 +64,23 @@ public class MusicGamePlayerData {
         public MusicBriefInfoOuterClass.MusicBriefInfo.Builder toPersonalBriefProto() {
             var musicGameBeatmap = MusicGameBeatmap.getByShareId(musicShareId);
 
-            return MusicBriefInfoOuterClass.MusicBriefInfo.newBuilder()
+            return null; /* MusicBriefInfoOuterClass.MusicBriefInfo.newBuilder()
                 .setCanShare(true)
                 .setCreateTime(musicGameBeatmap.getCreateTime())
                 .setMusicId(musicGameBeatmap.getMusicId())
                 .setMaxScore(musicGameBeatmap.getMaxScore())
                 .setPosition(musicGameBeatmap.getSavePosition())
                 .setMusicNoteCount(musicGameBeatmap.getMusicNoteCount())
-                .setMusicShareId(musicShareId);
+                .setMusicShareId(musicShareId);*/
         }
 
         public MusicBriefInfoOuterClass.MusicBriefInfo.Builder toOthersBriefProto() {
             var musicGameBeatmap = MusicGameBeatmap.getByShareId(musicShareId);
 
-            return musicGameBeatmap.toBriefProto()
+            return null; /*musicGameBeatmap.toBriefProto()
                 .setScore(score)
                 .setSettle(settle)
-                ;
+                ;*/
         }
 
     }

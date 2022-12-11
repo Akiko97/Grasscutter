@@ -52,19 +52,19 @@ public class PacketPlayerLoginRsp extends BasePacket {
         }
 
         PlayerLoginRsp p = PlayerLoginRsp.newBuilder()
-                .setIsUseAbilityHash(true) // true
+                .setUnk3250LLIJKLDBHNN(true) // true
                 .setAbilityHashCode(1844674) // 1844674
                 .setGameBiz("hk4e_global")
                 .setClientDataVersion(info.getClientDataVersion())
                 .setClientSilenceDataVersion(info.getClientSilenceDataVersion())
-                .setClientMd5(info.getClientDataMd5())
-                .setClientSilenceMd5(info.getClientSilenceDataMd5())
+                .setUnk3250OPGDBOLKLJA(info.getClientDataMd5())
+                .setUnk3250HMGCPAGLDHB(info.getClientSilenceDataMd5())
                 .setResVersionConfig(info.getResVersionConfig())
                 .setClientVersionSuffix(info.getClientVersionSuffix())
                 .setClientSilenceVersionSuffix(info.getClientSilenceVersionSuffix())
-                .setIsScOpen(false)
+                .setUnk3250HGFNECIJDLN(false)
                 //.setScInfo(ByteString.copyFrom(new byte[] {}))
-                .setRegisterCps("mihoyo")
+                .setUnk3250NEICPFBPNPD("mihoyo")
                 .setCountryCode("US")
                 .build();
 

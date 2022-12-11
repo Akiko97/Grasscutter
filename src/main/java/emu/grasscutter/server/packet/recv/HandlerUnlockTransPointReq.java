@@ -14,6 +14,6 @@ public class HandlerUnlockTransPointReq extends PacketHandler {
     public void handle(GameSession session, byte[] header, byte[] payload) throws Exception {
         UnlockTransPointReq req = UnlockTransPointReq.parseFrom(payload);
         boolean unlocked = session.getPlayer().getProgressManager().unlockTransPoint(req.getSceneId(), req.getPointId(), false);
-        session.getPlayer().sendPacket(new PacketUnlockTransPointRsp(unlocked ? RetcodeOuterClass.Retcode.RET_SUCC : RetcodeOuterClass.Retcode.RET_FAIL));
+        session.getPlayer().sendPacket(new PacketUnlockTransPointRsp(unlocked ? RetcodeOuterClass.Retcode.RETCODE_RET_SUCC : RetcodeOuterClass.Retcode.RETCODE_RET_FAIL));
     }
 }

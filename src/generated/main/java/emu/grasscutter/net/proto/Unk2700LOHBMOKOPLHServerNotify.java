@@ -19,17 +19,17 @@ public final class Unk2700LOHBMOKOPLHServerNotify {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated uint32 Unk2700_KMEKMNONMGE = 11;</code>
+     * <code>repeated uint32 Unk2700_KMEKMNONMGE = 5;</code>
      * @return A list containing the unk2700KMEKMNONMGE.
      */
     java.util.List<java.lang.Integer> getUnk2700KMEKMNONMGEList();
     /**
-     * <code>repeated uint32 Unk2700_KMEKMNONMGE = 11;</code>
+     * <code>repeated uint32 Unk2700_KMEKMNONMGE = 5;</code>
      * @return The count of unk2700KMEKMNONMGE.
      */
     int getUnk2700KMEKMNONMGECount();
     /**
-     * <code>repeated uint32 Unk2700_KMEKMNONMGE = 11;</code>
+     * <code>repeated uint32 Unk2700_KMEKMNONMGE = 5;</code>
      * @param index The index of the element to return.
      * @return The unk2700KMEKMNONMGE at the given index.
      */
@@ -37,7 +37,7 @@ public final class Unk2700LOHBMOKOPLHServerNotify {
   }
   /**
    * <pre>
-   * CmdId: 4608
+   * CmdId: 4531
    * EnetChannelId: 0
    * EnetIsReliable: true
    * </pre>
@@ -88,7 +88,7 @@ public final class Unk2700LOHBMOKOPLHServerNotify {
             case 0:
               done = true;
               break;
-            case 88: {
+            case 40: {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 unk2700KMEKMNONMGE_ = newIntList();
                 mutable_bitField0_ |= 0x00000001;
@@ -96,7 +96,7 @@ public final class Unk2700LOHBMOKOPLHServerNotify {
               unk2700KMEKMNONMGE_.addInt(input.readUInt32());
               break;
             }
-            case 90: {
+            case 42: {
               int length = input.readRawVarint32();
               int limit = input.pushLimit(length);
               if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
@@ -144,10 +144,10 @@ public final class Unk2700LOHBMOKOPLHServerNotify {
               emu.grasscutter.net.proto.Unk2700LOHBMOKOPLHServerNotify.Unk2700_LOHBMOKOPLH_ServerNotify.class, emu.grasscutter.net.proto.Unk2700LOHBMOKOPLHServerNotify.Unk2700_LOHBMOKOPLH_ServerNotify.Builder.class);
     }
 
-    public static final int UNK2700_KMEKMNONMGE_FIELD_NUMBER = 11;
+    public static final int UNK2700_KMEKMNONMGE_FIELD_NUMBER = 5;
     private com.google.protobuf.Internal.IntList unk2700KMEKMNONMGE_;
     /**
-     * <code>repeated uint32 Unk2700_KMEKMNONMGE = 11;</code>
+     * <code>repeated uint32 Unk2700_KMEKMNONMGE = 5;</code>
      * @return A list containing the unk2700KMEKMNONMGE.
      */
     @java.lang.Override
@@ -156,14 +156,14 @@ public final class Unk2700LOHBMOKOPLHServerNotify {
       return unk2700KMEKMNONMGE_;
     }
     /**
-     * <code>repeated uint32 Unk2700_KMEKMNONMGE = 11;</code>
+     * <code>repeated uint32 Unk2700_KMEKMNONMGE = 5;</code>
      * @return The count of unk2700KMEKMNONMGE.
      */
     public int getUnk2700KMEKMNONMGECount() {
       return unk2700KMEKMNONMGE_.size();
     }
     /**
-     * <code>repeated uint32 Unk2700_KMEKMNONMGE = 11;</code>
+     * <code>repeated uint32 Unk2700_KMEKMNONMGE = 5;</code>
      * @param index The index of the element to return.
      * @return The unk2700KMEKMNONMGE at the given index.
      */
@@ -188,7 +188,7 @@ public final class Unk2700LOHBMOKOPLHServerNotify {
                         throws java.io.IOException {
       getSerializedSize();
       if (getUnk2700KMEKMNONMGEList().size() > 0) {
-        output.writeUInt32NoTag(90);
+        output.writeUInt32NoTag(42);
         output.writeUInt32NoTag(unk2700KMEKMNONMGEMemoizedSerializedSize);
       }
       for (int i = 0; i < unk2700KMEKMNONMGE_.size(); i++) {
@@ -346,7 +346,7 @@ public final class Unk2700LOHBMOKOPLHServerNotify {
     }
     /**
      * <pre>
-     * CmdId: 4608
+     * CmdId: 4531
      * EnetChannelId: 0
      * EnetIsReliable: true
      * </pre>
@@ -518,7 +518,7 @@ public final class Unk2700LOHBMOKOPLHServerNotify {
          }
       }
       /**
-       * <code>repeated uint32 Unk2700_KMEKMNONMGE = 11;</code>
+       * <code>repeated uint32 Unk2700_KMEKMNONMGE = 5;</code>
        * @return A list containing the unk2700KMEKMNONMGE.
        */
       public java.util.List<java.lang.Integer>
@@ -527,14 +527,14 @@ public final class Unk2700LOHBMOKOPLHServerNotify {
                  java.util.Collections.unmodifiableList(unk2700KMEKMNONMGE_) : unk2700KMEKMNONMGE_;
       }
       /**
-       * <code>repeated uint32 Unk2700_KMEKMNONMGE = 11;</code>
+       * <code>repeated uint32 Unk2700_KMEKMNONMGE = 5;</code>
        * @return The count of unk2700KMEKMNONMGE.
        */
       public int getUnk2700KMEKMNONMGECount() {
         return unk2700KMEKMNONMGE_.size();
       }
       /**
-       * <code>repeated uint32 Unk2700_KMEKMNONMGE = 11;</code>
+       * <code>repeated uint32 Unk2700_KMEKMNONMGE = 5;</code>
        * @param index The index of the element to return.
        * @return The unk2700KMEKMNONMGE at the given index.
        */
@@ -542,7 +542,7 @@ public final class Unk2700LOHBMOKOPLHServerNotify {
         return unk2700KMEKMNONMGE_.getInt(index);
       }
       /**
-       * <code>repeated uint32 Unk2700_KMEKMNONMGE = 11;</code>
+       * <code>repeated uint32 Unk2700_KMEKMNONMGE = 5;</code>
        * @param index The index to set the value at.
        * @param value The unk2700KMEKMNONMGE to set.
        * @return This builder for chaining.
@@ -555,7 +555,7 @@ public final class Unk2700LOHBMOKOPLHServerNotify {
         return this;
       }
       /**
-       * <code>repeated uint32 Unk2700_KMEKMNONMGE = 11;</code>
+       * <code>repeated uint32 Unk2700_KMEKMNONMGE = 5;</code>
        * @param value The unk2700KMEKMNONMGE to add.
        * @return This builder for chaining.
        */
@@ -566,7 +566,7 @@ public final class Unk2700LOHBMOKOPLHServerNotify {
         return this;
       }
       /**
-       * <code>repeated uint32 Unk2700_KMEKMNONMGE = 11;</code>
+       * <code>repeated uint32 Unk2700_KMEKMNONMGE = 5;</code>
        * @param values The unk2700KMEKMNONMGE to add.
        * @return This builder for chaining.
        */
@@ -579,7 +579,7 @@ public final class Unk2700LOHBMOKOPLHServerNotify {
         return this;
       }
       /**
-       * <code>repeated uint32 Unk2700_KMEKMNONMGE = 11;</code>
+       * <code>repeated uint32 Unk2700_KMEKMNONMGE = 5;</code>
        * @return This builder for chaining.
        */
       public Builder clearUnk2700KMEKMNONMGE() {
@@ -657,7 +657,7 @@ public final class Unk2700LOHBMOKOPLHServerNotify {
     java.lang.String[] descriptorData = {
       "\n&Unk2700_LOHBMOKOPLH_ServerNotify.proto" +
       "\"?\n Unk2700_LOHBMOKOPLH_ServerNotify\022\033\n\023" +
-      "Unk2700_KMEKMNONMGE\030\013 \003(\rB\033\n\031emu.grasscu" +
+      "Unk2700_KMEKMNONMGE\030\005 \003(\rB\033\n\031emu.grasscu" +
       "tter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor

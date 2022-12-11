@@ -97,7 +97,7 @@ public class ForgingManager extends BasePlayerManager {
         var queueData = this.determineCurrentForgeQueueData();
 
         // Reply.
-        this.player.sendPacket(new PacketForgeGetQueueDataRsp(Retcode.RET_SUCC, numQueues, queueData));
+        this.player.sendPacket(new PacketForgeGetQueueDataRsp(Retcode.RETCODE_RET_SUCC, numQueues, queueData));
     }
 
     /**********
@@ -120,13 +120,13 @@ public class ForgingManager extends BasePlayerManager {
     public synchronized void handleForgeStartReq(ForgeStartReq req) {
         // Refuse if all queues are already full.
         if (this.player.getActiveForges().size() >= this.determineNumberOfQueues()) {
-            this.player.sendPacket(new PacketForgeStartRsp(Retcode.RET_FORGE_QUEUE_FULL));
+            this.player.sendPacket(new PacketForgeStartRsp(Retcode.RETCODE_RET_FORGE_QUEUE_FULL));
             return;
         }
 
         // Get the required forging information for the target item.
         if (!GameData.getForgeDataMap().containsKey(req.getForgeId())) {
-            this.player.sendPacket(new PacketForgeStartRsp(Retcode.RET_FAIL)); //ToDo: Probably the wrong return code.
+            this.player.sendPacket(new PacketForgeStartRsp(Retcode.RETCODE_RET_FAIL)); //ToDo: Probably the wrong return code.
             return;
         }
 
@@ -135,7 +135,7 @@ public class ForgingManager extends BasePlayerManager {
         //Check if the player has sufficient forge points.
         int requiredPoints = forgeData.getForgePoint() * req.getForgeCount();
         if (requiredPoints > this.player.getForgePoints()) {
-            this.player.sendPacket(new PacketForgeStartRsp(Retcode.RET_FORGE_POINT_NOT_ENOUGH));
+            this.player.sendPacket(new PacketForgeStartRsp(Retcode.RETCODE_RET_FORGE_POINT_NOT_ENOUGH));
             return;
         }
 
@@ -147,7 +147,7 @@ public class ForgingManager extends BasePlayerManager {
 
         if (!success) {
             //TODO:I'm not sure this one is correct.
-            this.player.sendPacket(new PacketForgeStartRsp(Retcode.RET_ITEM_COUNT_NOT_ENOUGH)); //ToDo: Probably the wrong return code.
+            this.player.sendPacket(new PacketForgeStartRsp(Retcode.RETCODE_RET_ITEM_COUNT_NOT_ENOUGH)); //ToDo: Probably the wrong return code.
         }
 
         // Consume forge points.
@@ -165,7 +165,7 @@ public class ForgingManager extends BasePlayerManager {
 
         // Done.
         this.sendForgeQueueDataNotify();
-        this.player.sendPacket(new PacketForgeStartRsp(Retcode.RET_SUCC));
+        this.player.sendPacket(new PacketForgeStartRsp(Retcode.RETCODE_RET_SUCC));
     }
 
     /**********
@@ -216,7 +216,7 @@ public class ForgingManager extends BasePlayerManager {
         }
 
         // Send response.
-        this.player.sendPacket(new PacketForgeQueueManipulateRsp(Retcode.RET_SUCC, ForgeQueueManipulateType.FORGE_QUEUE_MANIPULATE_TYPE_RECEIVE_OUTPUT, List.of(addItem), List.of(), List.of()));
+        this.player.sendPacket(new PacketForgeQueueManipulateRsp(Retcode.RETCODE_RET_SUCC, ForgeQueueManipulateType.FORGE_QUEUE_MANIPULATE_TYPE_RECEIVE_OUTPUT, List.of(addItem), List.of(), List.of()));
     }
 
     private synchronized void cancelForge(int queueId) {
@@ -262,7 +262,7 @@ public class ForgingManager extends BasePlayerManager {
         this.sendForgeQueueDataNotify(true);
 
         // Send response.
-        this.player.sendPacket(new PacketForgeQueueManipulateRsp(Retcode.RET_SUCC, ForgeQueueManipulateType.FORGE_QUEUE_MANIPULATE_TYPE_STOP_FORGE, List.of(), returnItems, List.of()));
+        this.player.sendPacket(new PacketForgeQueueManipulateRsp(Retcode.RETCODE_RET_SUCC, ForgeQueueManipulateType.FORGE_QUEUE_MANIPULATE_TYPE_STOP_FORGE, List.of(), returnItems, List.of()));
     }
 
     public synchronized void handleForgeQueueManipulateReq(ForgeQueueManipulateReq req) {

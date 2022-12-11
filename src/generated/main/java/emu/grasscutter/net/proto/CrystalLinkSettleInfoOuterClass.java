@@ -19,28 +19,28 @@ public final class CrystalLinkSettleInfoOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>uint32 kill_elite_monster_num = 2;</code>
+     * <code>uint32 Unk3250_PPIHJFNMEFB = 2;</code>
+     * @return The unk3250PPIHJFNMEFB.
+     */
+    int getUnk3250PPIHJFNMEFB();
+
+    /**
+     * <code>uint32 kill_elite_monster_num = 10;</code>
      * @return The killEliteMonsterNum.
      */
     int getKillEliteMonsterNum();
 
     /**
-     * <code>uint32 final_score = 6;</code>
+     * <code>uint32 kill_normal_mosnter_num = 14;</code>
+     * @return The killNormalMosnterNum.
+     */
+    int getKillNormalMosnterNum();
+
+    /**
+     * <code>uint32 final_score = 8;</code>
      * @return The finalScore.
      */
     int getFinalScore();
-
-    /**
-     * <code>uint32 level_id = 12;</code>
-     * @return The levelId.
-     */
-    int getLevelId();
-
-    /**
-     * <code>bool is_new_record = 13;</code>
-     * @return The isNewRecord.
-     */
-    boolean getIsNewRecord();
 
     /**
      * <code>uint32 difficulty_id = 9;</code>
@@ -49,10 +49,10 @@ public final class CrystalLinkSettleInfoOuterClass {
     int getDifficultyId();
 
     /**
-     * <code>uint32 kill_normal_mosnter_num = 3;</code>
-     * @return The killNormalMosnterNum.
+     * <code>bool Unk3250_PNLJLLCACHA = 3;</code>
+     * @return The unk3250PNLJLLCACHA.
      */
-    int getKillNormalMosnterNum();
+    boolean getUnk3250PNLJLLCACHA();
   }
   /**
    * Protobuf type {@code CrystalLinkSettleInfo}
@@ -101,15 +101,15 @@ public final class CrystalLinkSettleInfoOuterClass {
               break;
             case 16: {
 
-              killEliteMonsterNum_ = input.readUInt32();
+              unk3250PPIHJFNMEFB_ = input.readUInt32();
               break;
             }
             case 24: {
 
-              killNormalMosnterNum_ = input.readUInt32();
+              unk3250PNLJLLCACHA_ = input.readBool();
               break;
             }
-            case 48: {
+            case 64: {
 
               finalScore_ = input.readUInt32();
               break;
@@ -119,14 +119,14 @@ public final class CrystalLinkSettleInfoOuterClass {
               difficultyId_ = input.readUInt32();
               break;
             }
-            case 96: {
+            case 80: {
 
-              levelId_ = input.readUInt32();
+              killEliteMonsterNum_ = input.readUInt32();
               break;
             }
-            case 104: {
+            case 112: {
 
-              isNewRecord_ = input.readBool();
+              killNormalMosnterNum_ = input.readUInt32();
               break;
             }
             default: {
@@ -161,10 +161,21 @@ public final class CrystalLinkSettleInfoOuterClass {
               emu.grasscutter.net.proto.CrystalLinkSettleInfoOuterClass.CrystalLinkSettleInfo.class, emu.grasscutter.net.proto.CrystalLinkSettleInfoOuterClass.CrystalLinkSettleInfo.Builder.class);
     }
 
-    public static final int KILL_ELITE_MONSTER_NUM_FIELD_NUMBER = 2;
+    public static final int UNK3250_PPIHJFNMEFB_FIELD_NUMBER = 2;
+    private int unk3250PPIHJFNMEFB_;
+    /**
+     * <code>uint32 Unk3250_PPIHJFNMEFB = 2;</code>
+     * @return The unk3250PPIHJFNMEFB.
+     */
+    @java.lang.Override
+    public int getUnk3250PPIHJFNMEFB() {
+      return unk3250PPIHJFNMEFB_;
+    }
+
+    public static final int KILL_ELITE_MONSTER_NUM_FIELD_NUMBER = 10;
     private int killEliteMonsterNum_;
     /**
-     * <code>uint32 kill_elite_monster_num = 2;</code>
+     * <code>uint32 kill_elite_monster_num = 10;</code>
      * @return The killEliteMonsterNum.
      */
     @java.lang.Override
@@ -172,37 +183,26 @@ public final class CrystalLinkSettleInfoOuterClass {
       return killEliteMonsterNum_;
     }
 
-    public static final int FINAL_SCORE_FIELD_NUMBER = 6;
+    public static final int KILL_NORMAL_MOSNTER_NUM_FIELD_NUMBER = 14;
+    private int killNormalMosnterNum_;
+    /**
+     * <code>uint32 kill_normal_mosnter_num = 14;</code>
+     * @return The killNormalMosnterNum.
+     */
+    @java.lang.Override
+    public int getKillNormalMosnterNum() {
+      return killNormalMosnterNum_;
+    }
+
+    public static final int FINAL_SCORE_FIELD_NUMBER = 8;
     private int finalScore_;
     /**
-     * <code>uint32 final_score = 6;</code>
+     * <code>uint32 final_score = 8;</code>
      * @return The finalScore.
      */
     @java.lang.Override
     public int getFinalScore() {
       return finalScore_;
-    }
-
-    public static final int LEVEL_ID_FIELD_NUMBER = 12;
-    private int levelId_;
-    /**
-     * <code>uint32 level_id = 12;</code>
-     * @return The levelId.
-     */
-    @java.lang.Override
-    public int getLevelId() {
-      return levelId_;
-    }
-
-    public static final int IS_NEW_RECORD_FIELD_NUMBER = 13;
-    private boolean isNewRecord_;
-    /**
-     * <code>bool is_new_record = 13;</code>
-     * @return The isNewRecord.
-     */
-    @java.lang.Override
-    public boolean getIsNewRecord() {
-      return isNewRecord_;
     }
 
     public static final int DIFFICULTY_ID_FIELD_NUMBER = 9;
@@ -216,15 +216,15 @@ public final class CrystalLinkSettleInfoOuterClass {
       return difficultyId_;
     }
 
-    public static final int KILL_NORMAL_MOSNTER_NUM_FIELD_NUMBER = 3;
-    private int killNormalMosnterNum_;
+    public static final int UNK3250_PNLJLLCACHA_FIELD_NUMBER = 3;
+    private boolean unk3250PNLJLLCACHA_;
     /**
-     * <code>uint32 kill_normal_mosnter_num = 3;</code>
-     * @return The killNormalMosnterNum.
+     * <code>bool Unk3250_PNLJLLCACHA = 3;</code>
+     * @return The unk3250PNLJLLCACHA.
      */
     @java.lang.Override
-    public int getKillNormalMosnterNum() {
-      return killNormalMosnterNum_;
+    public boolean getUnk3250PNLJLLCACHA() {
+      return unk3250PNLJLLCACHA_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -241,23 +241,23 @@ public final class CrystalLinkSettleInfoOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (killEliteMonsterNum_ != 0) {
-        output.writeUInt32(2, killEliteMonsterNum_);
+      if (unk3250PPIHJFNMEFB_ != 0) {
+        output.writeUInt32(2, unk3250PPIHJFNMEFB_);
       }
-      if (killNormalMosnterNum_ != 0) {
-        output.writeUInt32(3, killNormalMosnterNum_);
+      if (unk3250PNLJLLCACHA_ != false) {
+        output.writeBool(3, unk3250PNLJLLCACHA_);
       }
       if (finalScore_ != 0) {
-        output.writeUInt32(6, finalScore_);
+        output.writeUInt32(8, finalScore_);
       }
       if (difficultyId_ != 0) {
         output.writeUInt32(9, difficultyId_);
       }
-      if (levelId_ != 0) {
-        output.writeUInt32(12, levelId_);
+      if (killEliteMonsterNum_ != 0) {
+        output.writeUInt32(10, killEliteMonsterNum_);
       }
-      if (isNewRecord_ != false) {
-        output.writeBool(13, isNewRecord_);
+      if (killNormalMosnterNum_ != 0) {
+        output.writeUInt32(14, killNormalMosnterNum_);
       }
       unknownFields.writeTo(output);
     }
@@ -268,29 +268,29 @@ public final class CrystalLinkSettleInfoOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (killEliteMonsterNum_ != 0) {
+      if (unk3250PPIHJFNMEFB_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(2, killEliteMonsterNum_);
+          .computeUInt32Size(2, unk3250PPIHJFNMEFB_);
       }
-      if (killNormalMosnterNum_ != 0) {
+      if (unk3250PNLJLLCACHA_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(3, killNormalMosnterNum_);
+          .computeBoolSize(3, unk3250PNLJLLCACHA_);
       }
       if (finalScore_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(6, finalScore_);
+          .computeUInt32Size(8, finalScore_);
       }
       if (difficultyId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(9, difficultyId_);
       }
-      if (levelId_ != 0) {
+      if (killEliteMonsterNum_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(12, levelId_);
+          .computeUInt32Size(10, killEliteMonsterNum_);
       }
-      if (isNewRecord_ != false) {
+      if (killNormalMosnterNum_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(13, isNewRecord_);
+          .computeUInt32Size(14, killNormalMosnterNum_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -307,18 +307,18 @@ public final class CrystalLinkSettleInfoOuterClass {
       }
       emu.grasscutter.net.proto.CrystalLinkSettleInfoOuterClass.CrystalLinkSettleInfo other = (emu.grasscutter.net.proto.CrystalLinkSettleInfoOuterClass.CrystalLinkSettleInfo) obj;
 
+      if (getUnk3250PPIHJFNMEFB()
+          != other.getUnk3250PPIHJFNMEFB()) return false;
       if (getKillEliteMonsterNum()
           != other.getKillEliteMonsterNum()) return false;
-      if (getFinalScore()
-          != other.getFinalScore()) return false;
-      if (getLevelId()
-          != other.getLevelId()) return false;
-      if (getIsNewRecord()
-          != other.getIsNewRecord()) return false;
-      if (getDifficultyId()
-          != other.getDifficultyId()) return false;
       if (getKillNormalMosnterNum()
           != other.getKillNormalMosnterNum()) return false;
+      if (getFinalScore()
+          != other.getFinalScore()) return false;
+      if (getDifficultyId()
+          != other.getDifficultyId()) return false;
+      if (getUnk3250PNLJLLCACHA()
+          != other.getUnk3250PNLJLLCACHA()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -330,19 +330,19 @@ public final class CrystalLinkSettleInfoOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + UNK3250_PPIHJFNMEFB_FIELD_NUMBER;
+      hash = (53 * hash) + getUnk3250PPIHJFNMEFB();
       hash = (37 * hash) + KILL_ELITE_MONSTER_NUM_FIELD_NUMBER;
       hash = (53 * hash) + getKillEliteMonsterNum();
-      hash = (37 * hash) + FINAL_SCORE_FIELD_NUMBER;
-      hash = (53 * hash) + getFinalScore();
-      hash = (37 * hash) + LEVEL_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getLevelId();
-      hash = (37 * hash) + IS_NEW_RECORD_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getIsNewRecord());
-      hash = (37 * hash) + DIFFICULTY_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getDifficultyId();
       hash = (37 * hash) + KILL_NORMAL_MOSNTER_NUM_FIELD_NUMBER;
       hash = (53 * hash) + getKillNormalMosnterNum();
+      hash = (37 * hash) + FINAL_SCORE_FIELD_NUMBER;
+      hash = (53 * hash) + getFinalScore();
+      hash = (37 * hash) + DIFFICULTY_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getDifficultyId();
+      hash = (37 * hash) + UNK3250_PNLJLLCACHA_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getUnk3250PNLJLLCACHA());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -476,17 +476,17 @@ public final class CrystalLinkSettleInfoOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        unk3250PPIHJFNMEFB_ = 0;
+
         killEliteMonsterNum_ = 0;
+
+        killNormalMosnterNum_ = 0;
 
         finalScore_ = 0;
 
-        levelId_ = 0;
-
-        isNewRecord_ = false;
-
         difficultyId_ = 0;
 
-        killNormalMosnterNum_ = 0;
+        unk3250PNLJLLCACHA_ = false;
 
         return this;
       }
@@ -514,12 +514,12 @@ public final class CrystalLinkSettleInfoOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.CrystalLinkSettleInfoOuterClass.CrystalLinkSettleInfo buildPartial() {
         emu.grasscutter.net.proto.CrystalLinkSettleInfoOuterClass.CrystalLinkSettleInfo result = new emu.grasscutter.net.proto.CrystalLinkSettleInfoOuterClass.CrystalLinkSettleInfo(this);
+        result.unk3250PPIHJFNMEFB_ = unk3250PPIHJFNMEFB_;
         result.killEliteMonsterNum_ = killEliteMonsterNum_;
-        result.finalScore_ = finalScore_;
-        result.levelId_ = levelId_;
-        result.isNewRecord_ = isNewRecord_;
-        result.difficultyId_ = difficultyId_;
         result.killNormalMosnterNum_ = killNormalMosnterNum_;
+        result.finalScore_ = finalScore_;
+        result.difficultyId_ = difficultyId_;
+        result.unk3250PNLJLLCACHA_ = unk3250PNLJLLCACHA_;
         onBuilt();
         return result;
       }
@@ -568,23 +568,23 @@ public final class CrystalLinkSettleInfoOuterClass {
 
       public Builder mergeFrom(emu.grasscutter.net.proto.CrystalLinkSettleInfoOuterClass.CrystalLinkSettleInfo other) {
         if (other == emu.grasscutter.net.proto.CrystalLinkSettleInfoOuterClass.CrystalLinkSettleInfo.getDefaultInstance()) return this;
+        if (other.getUnk3250PPIHJFNMEFB() != 0) {
+          setUnk3250PPIHJFNMEFB(other.getUnk3250PPIHJFNMEFB());
+        }
         if (other.getKillEliteMonsterNum() != 0) {
           setKillEliteMonsterNum(other.getKillEliteMonsterNum());
+        }
+        if (other.getKillNormalMosnterNum() != 0) {
+          setKillNormalMosnterNum(other.getKillNormalMosnterNum());
         }
         if (other.getFinalScore() != 0) {
           setFinalScore(other.getFinalScore());
         }
-        if (other.getLevelId() != 0) {
-          setLevelId(other.getLevelId());
-        }
-        if (other.getIsNewRecord() != false) {
-          setIsNewRecord(other.getIsNewRecord());
-        }
         if (other.getDifficultyId() != 0) {
           setDifficultyId(other.getDifficultyId());
         }
-        if (other.getKillNormalMosnterNum() != 0) {
-          setKillNormalMosnterNum(other.getKillNormalMosnterNum());
+        if (other.getUnk3250PNLJLLCACHA() != false) {
+          setUnk3250PNLJLLCACHA(other.getUnk3250PNLJLLCACHA());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -615,9 +615,40 @@ public final class CrystalLinkSettleInfoOuterClass {
         return this;
       }
 
+      private int unk3250PPIHJFNMEFB_ ;
+      /**
+       * <code>uint32 Unk3250_PPIHJFNMEFB = 2;</code>
+       * @return The unk3250PPIHJFNMEFB.
+       */
+      @java.lang.Override
+      public int getUnk3250PPIHJFNMEFB() {
+        return unk3250PPIHJFNMEFB_;
+      }
+      /**
+       * <code>uint32 Unk3250_PPIHJFNMEFB = 2;</code>
+       * @param value The unk3250PPIHJFNMEFB to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUnk3250PPIHJFNMEFB(int value) {
+        
+        unk3250PPIHJFNMEFB_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 Unk3250_PPIHJFNMEFB = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUnk3250PPIHJFNMEFB() {
+        
+        unk3250PPIHJFNMEFB_ = 0;
+        onChanged();
+        return this;
+      }
+
       private int killEliteMonsterNum_ ;
       /**
-       * <code>uint32 kill_elite_monster_num = 2;</code>
+       * <code>uint32 kill_elite_monster_num = 10;</code>
        * @return The killEliteMonsterNum.
        */
       @java.lang.Override
@@ -625,7 +656,7 @@ public final class CrystalLinkSettleInfoOuterClass {
         return killEliteMonsterNum_;
       }
       /**
-       * <code>uint32 kill_elite_monster_num = 2;</code>
+       * <code>uint32 kill_elite_monster_num = 10;</code>
        * @param value The killEliteMonsterNum to set.
        * @return This builder for chaining.
        */
@@ -636,7 +667,7 @@ public final class CrystalLinkSettleInfoOuterClass {
         return this;
       }
       /**
-       * <code>uint32 kill_elite_monster_num = 2;</code>
+       * <code>uint32 kill_elite_monster_num = 10;</code>
        * @return This builder for chaining.
        */
       public Builder clearKillEliteMonsterNum() {
@@ -646,9 +677,40 @@ public final class CrystalLinkSettleInfoOuterClass {
         return this;
       }
 
+      private int killNormalMosnterNum_ ;
+      /**
+       * <code>uint32 kill_normal_mosnter_num = 14;</code>
+       * @return The killNormalMosnterNum.
+       */
+      @java.lang.Override
+      public int getKillNormalMosnterNum() {
+        return killNormalMosnterNum_;
+      }
+      /**
+       * <code>uint32 kill_normal_mosnter_num = 14;</code>
+       * @param value The killNormalMosnterNum to set.
+       * @return This builder for chaining.
+       */
+      public Builder setKillNormalMosnterNum(int value) {
+        
+        killNormalMosnterNum_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 kill_normal_mosnter_num = 14;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearKillNormalMosnterNum() {
+        
+        killNormalMosnterNum_ = 0;
+        onChanged();
+        return this;
+      }
+
       private int finalScore_ ;
       /**
-       * <code>uint32 final_score = 6;</code>
+       * <code>uint32 final_score = 8;</code>
        * @return The finalScore.
        */
       @java.lang.Override
@@ -656,7 +718,7 @@ public final class CrystalLinkSettleInfoOuterClass {
         return finalScore_;
       }
       /**
-       * <code>uint32 final_score = 6;</code>
+       * <code>uint32 final_score = 8;</code>
        * @param value The finalScore to set.
        * @return This builder for chaining.
        */
@@ -667,74 +729,12 @@ public final class CrystalLinkSettleInfoOuterClass {
         return this;
       }
       /**
-       * <code>uint32 final_score = 6;</code>
+       * <code>uint32 final_score = 8;</code>
        * @return This builder for chaining.
        */
       public Builder clearFinalScore() {
         
         finalScore_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private int levelId_ ;
-      /**
-       * <code>uint32 level_id = 12;</code>
-       * @return The levelId.
-       */
-      @java.lang.Override
-      public int getLevelId() {
-        return levelId_;
-      }
-      /**
-       * <code>uint32 level_id = 12;</code>
-       * @param value The levelId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setLevelId(int value) {
-        
-        levelId_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>uint32 level_id = 12;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearLevelId() {
-        
-        levelId_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private boolean isNewRecord_ ;
-      /**
-       * <code>bool is_new_record = 13;</code>
-       * @return The isNewRecord.
-       */
-      @java.lang.Override
-      public boolean getIsNewRecord() {
-        return isNewRecord_;
-      }
-      /**
-       * <code>bool is_new_record = 13;</code>
-       * @param value The isNewRecord to set.
-       * @return This builder for chaining.
-       */
-      public Builder setIsNewRecord(boolean value) {
-        
-        isNewRecord_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>bool is_new_record = 13;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearIsNewRecord() {
-        
-        isNewRecord_ = false;
         onChanged();
         return this;
       }
@@ -770,33 +770,33 @@ public final class CrystalLinkSettleInfoOuterClass {
         return this;
       }
 
-      private int killNormalMosnterNum_ ;
+      private boolean unk3250PNLJLLCACHA_ ;
       /**
-       * <code>uint32 kill_normal_mosnter_num = 3;</code>
-       * @return The killNormalMosnterNum.
+       * <code>bool Unk3250_PNLJLLCACHA = 3;</code>
+       * @return The unk3250PNLJLLCACHA.
        */
       @java.lang.Override
-      public int getKillNormalMosnterNum() {
-        return killNormalMosnterNum_;
+      public boolean getUnk3250PNLJLLCACHA() {
+        return unk3250PNLJLLCACHA_;
       }
       /**
-       * <code>uint32 kill_normal_mosnter_num = 3;</code>
-       * @param value The killNormalMosnterNum to set.
+       * <code>bool Unk3250_PNLJLLCACHA = 3;</code>
+       * @param value The unk3250PNLJLLCACHA to set.
        * @return This builder for chaining.
        */
-      public Builder setKillNormalMosnterNum(int value) {
+      public Builder setUnk3250PNLJLLCACHA(boolean value) {
         
-        killNormalMosnterNum_ = value;
+        unk3250PNLJLLCACHA_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>uint32 kill_normal_mosnter_num = 3;</code>
+       * <code>bool Unk3250_PNLJLLCACHA = 3;</code>
        * @return This builder for chaining.
        */
-      public Builder clearKillNormalMosnterNum() {
+      public Builder clearUnk3250PNLJLLCACHA() {
         
-        killNormalMosnterNum_ = 0;
+        unk3250PNLJLLCACHA_ = false;
         onChanged();
         return this;
       }
@@ -867,13 +867,13 @@ public final class CrystalLinkSettleInfoOuterClass {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\033CrystalLinkSettleInfo.proto\"\255\001\n\025Crysta" +
-      "lLinkSettleInfo\022\036\n\026kill_elite_monster_nu" +
-      "m\030\002 \001(\r\022\023\n\013final_score\030\006 \001(\r\022\020\n\010level_id" +
-      "\030\014 \001(\r\022\025\n\ris_new_record\030\r \001(\010\022\025\n\rdifficu" +
-      "lty_id\030\t \001(\r\022\037\n\027kill_normal_mosnter_num\030" +
-      "\003 \001(\rB\033\n\031emu.grasscutter.net.protob\006prot" +
-      "o3"
+      "\n\033CrystalLinkSettleInfo.proto\"\276\001\n\025Crysta" +
+      "lLinkSettleInfo\022\033\n\023Unk3250_PPIHJFNMEFB\030\002" +
+      " \001(\r\022\036\n\026kill_elite_monster_num\030\n \001(\r\022\037\n\027" +
+      "kill_normal_mosnter_num\030\016 \001(\r\022\023\n\013final_s" +
+      "core\030\010 \001(\r\022\025\n\rdifficulty_id\030\t \001(\r\022\033\n\023Unk" +
+      "3250_PNLJLLCACHA\030\003 \001(\010B\033\n\031emu.grasscutte" +
+      "r.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -884,7 +884,7 @@ public final class CrystalLinkSettleInfoOuterClass {
     internal_static_CrystalLinkSettleInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CrystalLinkSettleInfo_descriptor,
-        new java.lang.String[] { "KillEliteMonsterNum", "FinalScore", "LevelId", "IsNewRecord", "DifficultyId", "KillNormalMosnterNum", });
+        new java.lang.String[] { "Unk3250PPIHJFNMEFB", "KillEliteMonsterNum", "KillNormalMosnterNum", "FinalScore", "DifficultyId", "Unk3250PNLJLLCACHA", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

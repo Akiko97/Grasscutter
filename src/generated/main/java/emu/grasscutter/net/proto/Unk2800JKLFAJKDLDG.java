@@ -19,16 +19,16 @@ public final class Unk2800JKLFAJKDLDG {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>uint32 quest_id = 13;</code>
-     * @return The questId.
-     */
-    int getQuestId();
-
-    /**
-     * <code>uint32 point_id = 6;</code>
+     * <code>uint32 point_id = 10;</code>
      * @return The pointId.
      */
     int getPointId();
+
+    /**
+     * <code>uint32 quest_id = 15;</code>
+     * @return The questId.
+     */
+    int getQuestId();
   }
   /**
    * Protobuf type {@code Unk2800_JKLFAJKDLDG}
@@ -75,12 +75,12 @@ public final class Unk2800JKLFAJKDLDG {
             case 0:
               done = true;
               break;
-            case 48: {
+            case 80: {
 
               pointId_ = input.readUInt32();
               break;
             }
-            case 104: {
+            case 120: {
 
               questId_ = input.readUInt32();
               break;
@@ -117,26 +117,26 @@ public final class Unk2800JKLFAJKDLDG {
               emu.grasscutter.net.proto.Unk2800JKLFAJKDLDG.Unk2800_JKLFAJKDLDG.class, emu.grasscutter.net.proto.Unk2800JKLFAJKDLDG.Unk2800_JKLFAJKDLDG.Builder.class);
     }
 
-    public static final int QUEST_ID_FIELD_NUMBER = 13;
-    private int questId_;
-    /**
-     * <code>uint32 quest_id = 13;</code>
-     * @return The questId.
-     */
-    @java.lang.Override
-    public int getQuestId() {
-      return questId_;
-    }
-
-    public static final int POINT_ID_FIELD_NUMBER = 6;
+    public static final int POINT_ID_FIELD_NUMBER = 10;
     private int pointId_;
     /**
-     * <code>uint32 point_id = 6;</code>
+     * <code>uint32 point_id = 10;</code>
      * @return The pointId.
      */
     @java.lang.Override
     public int getPointId() {
       return pointId_;
+    }
+
+    public static final int QUEST_ID_FIELD_NUMBER = 15;
+    private int questId_;
+    /**
+     * <code>uint32 quest_id = 15;</code>
+     * @return The questId.
+     */
+    @java.lang.Override
+    public int getQuestId() {
+      return questId_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -154,10 +154,10 @@ public final class Unk2800JKLFAJKDLDG {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (pointId_ != 0) {
-        output.writeUInt32(6, pointId_);
+        output.writeUInt32(10, pointId_);
       }
       if (questId_ != 0) {
-        output.writeUInt32(13, questId_);
+        output.writeUInt32(15, questId_);
       }
       unknownFields.writeTo(output);
     }
@@ -170,11 +170,11 @@ public final class Unk2800JKLFAJKDLDG {
       size = 0;
       if (pointId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(6, pointId_);
+          .computeUInt32Size(10, pointId_);
       }
       if (questId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(13, questId_);
+          .computeUInt32Size(15, questId_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -191,10 +191,10 @@ public final class Unk2800JKLFAJKDLDG {
       }
       emu.grasscutter.net.proto.Unk2800JKLFAJKDLDG.Unk2800_JKLFAJKDLDG other = (emu.grasscutter.net.proto.Unk2800JKLFAJKDLDG.Unk2800_JKLFAJKDLDG) obj;
 
-      if (getQuestId()
-          != other.getQuestId()) return false;
       if (getPointId()
           != other.getPointId()) return false;
+      if (getQuestId()
+          != other.getQuestId()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -206,10 +206,10 @@ public final class Unk2800JKLFAJKDLDG {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + QUEST_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getQuestId();
       hash = (37 * hash) + POINT_ID_FIELD_NUMBER;
       hash = (53 * hash) + getPointId();
+      hash = (37 * hash) + QUEST_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getQuestId();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -343,9 +343,9 @@ public final class Unk2800JKLFAJKDLDG {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        questId_ = 0;
-
         pointId_ = 0;
+
+        questId_ = 0;
 
         return this;
       }
@@ -373,8 +373,8 @@ public final class Unk2800JKLFAJKDLDG {
       @java.lang.Override
       public emu.grasscutter.net.proto.Unk2800JKLFAJKDLDG.Unk2800_JKLFAJKDLDG buildPartial() {
         emu.grasscutter.net.proto.Unk2800JKLFAJKDLDG.Unk2800_JKLFAJKDLDG result = new emu.grasscutter.net.proto.Unk2800JKLFAJKDLDG.Unk2800_JKLFAJKDLDG(this);
-        result.questId_ = questId_;
         result.pointId_ = pointId_;
+        result.questId_ = questId_;
         onBuilt();
         return result;
       }
@@ -423,11 +423,11 @@ public final class Unk2800JKLFAJKDLDG {
 
       public Builder mergeFrom(emu.grasscutter.net.proto.Unk2800JKLFAJKDLDG.Unk2800_JKLFAJKDLDG other) {
         if (other == emu.grasscutter.net.proto.Unk2800JKLFAJKDLDG.Unk2800_JKLFAJKDLDG.getDefaultInstance()) return this;
-        if (other.getQuestId() != 0) {
-          setQuestId(other.getQuestId());
-        }
         if (other.getPointId() != 0) {
           setPointId(other.getPointId());
+        }
+        if (other.getQuestId() != 0) {
+          setQuestId(other.getQuestId());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -458,40 +458,9 @@ public final class Unk2800JKLFAJKDLDG {
         return this;
       }
 
-      private int questId_ ;
-      /**
-       * <code>uint32 quest_id = 13;</code>
-       * @return The questId.
-       */
-      @java.lang.Override
-      public int getQuestId() {
-        return questId_;
-      }
-      /**
-       * <code>uint32 quest_id = 13;</code>
-       * @param value The questId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setQuestId(int value) {
-        
-        questId_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>uint32 quest_id = 13;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearQuestId() {
-        
-        questId_ = 0;
-        onChanged();
-        return this;
-      }
-
       private int pointId_ ;
       /**
-       * <code>uint32 point_id = 6;</code>
+       * <code>uint32 point_id = 10;</code>
        * @return The pointId.
        */
       @java.lang.Override
@@ -499,7 +468,7 @@ public final class Unk2800JKLFAJKDLDG {
         return pointId_;
       }
       /**
-       * <code>uint32 point_id = 6;</code>
+       * <code>uint32 point_id = 10;</code>
        * @param value The pointId to set.
        * @return This builder for chaining.
        */
@@ -510,12 +479,43 @@ public final class Unk2800JKLFAJKDLDG {
         return this;
       }
       /**
-       * <code>uint32 point_id = 6;</code>
+       * <code>uint32 point_id = 10;</code>
        * @return This builder for chaining.
        */
       public Builder clearPointId() {
         
         pointId_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int questId_ ;
+      /**
+       * <code>uint32 quest_id = 15;</code>
+       * @return The questId.
+       */
+      @java.lang.Override
+      public int getQuestId() {
+        return questId_;
+      }
+      /**
+       * <code>uint32 quest_id = 15;</code>
+       * @param value The questId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setQuestId(int value) {
+        
+        questId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 quest_id = 15;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearQuestId() {
+        
+        questId_ = 0;
         onChanged();
         return this;
       }
@@ -587,8 +587,8 @@ public final class Unk2800JKLFAJKDLDG {
   static {
     java.lang.String[] descriptorData = {
       "\n\031Unk2800_JKLFAJKDLDG.proto\"9\n\023Unk2800_J" +
-      "KLFAJKDLDG\022\020\n\010quest_id\030\r \001(\r\022\020\n\010point_id" +
-      "\030\006 \001(\rB\033\n\031emu.grasscutter.net.protob\006pro" +
+      "KLFAJKDLDG\022\020\n\010point_id\030\n \001(\r\022\020\n\010quest_id" +
+      "\030\017 \001(\rB\033\n\031emu.grasscutter.net.protob\006pro" +
       "to3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
@@ -600,7 +600,7 @@ public final class Unk2800JKLFAJKDLDG {
     internal_static_Unk2800_JKLFAJKDLDG_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_Unk2800_JKLFAJKDLDG_descriptor,
-        new java.lang.String[] { "QuestId", "PointId", });
+        new java.lang.String[] { "PointId", "QuestId", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

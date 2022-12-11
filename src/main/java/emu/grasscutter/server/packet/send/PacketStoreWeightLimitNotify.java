@@ -15,10 +15,10 @@ public class PacketStoreWeightLimitNotify extends BasePacket {
         StoreWeightLimitNotify p = StoreWeightLimitNotify.newBuilder()
                 .setStoreType(StoreType.STORE_TYPE_PACK)
                 .setWeightLimit(INVENTORY_LIMITS.all)
-                .setWeaponCountLimit(INVENTORY_LIMITS.weapons)
-                .setReliquaryCountLimit(INVENTORY_LIMITS.relics)
-                .setMaterialCountLimit(INVENTORY_LIMITS.materials)
-                .setFurnitureCountLimit(INVENTORY_LIMITS.furniture)
+                .setUnk3250NIKMCBLHFNJ(INVENTORY_LIMITS.weapons)
+                .setUnk3250ICDKCEOJKKG(INVENTORY_LIMITS.relics)
+                .setUnk3250JGPODDEKAPB(INVENTORY_LIMITS.materials)
+                .setUnk3250OONMFCGDMMF(INVENTORY_LIMITS.furniture)
                 .build();
 
         this.setData(p);

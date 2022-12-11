@@ -46,7 +46,6 @@ public class PlayerProgressManager extends BasePlayerDataManager {
         // that particular statue interactable.
         this.player.getUnlockedScenePoints(3).add(7);
         this.player.getUnlockedSceneAreas(3).add(1);
-
     }
 
     /******************************************************************************************************************
@@ -132,14 +131,14 @@ public class PlayerProgressManager extends BasePlayerDataManager {
         // Get the data for this open state.
         OpenStateData data = GameData.getOpenStateDataMap().get(openState);
         if (data == null) {
-            this.player.sendPacket(new PacketSetOpenStateRsp(Retcode.RET_FAIL));
+            this.player.sendPacket(new PacketSetOpenStateRsp(Retcode.RETCODE_RET_FAIL));
             return;
         }
 
         // Make sure that this is an open state that the client is allowed to set,
         // and that it doesn't have any further conditions attached.
         if (!data.isAllowClientOpen() || !this.areConditionsMet(data)) {
-            this.player.sendPacket(new PacketSetOpenStateRsp(Retcode.RET_FAIL));
+            this.player.sendPacket(new PacketSetOpenStateRsp(Retcode.RETCODE_RET_FAIL));
             return;
         }
 

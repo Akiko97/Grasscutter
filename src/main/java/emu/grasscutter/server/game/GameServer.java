@@ -28,6 +28,8 @@ import emu.grasscutter.game.world.World;
 import emu.grasscutter.game.world.WorldDataSystem;
 import emu.grasscutter.net.packet.PacketHandler;
 import emu.grasscutter.net.proto.SocialDetailOuterClass.SocialDetail;
+import emu.grasscutter.net.proto.ProfilePictureOuterClass.ProfilePicture;
+import emu.grasscutter.net.proto.BirthdayOuterClass.Birthday;
 import emu.grasscutter.server.event.types.ServerEvent;
 import emu.grasscutter.server.event.game.ServerTickEvent;
 import emu.grasscutter.server.event.internal.ServerStartEvent;
@@ -197,6 +199,23 @@ public final class GameServer extends KcpServer {
     }
 
     public SocialDetail.Builder getSocialDetailByUid(int id) {
+        if (id == GameConstants.SERVER_CONSOLE_UID) {
+            return SocialDetail.newBuilder()
+                .setUid(id)
+                .setProfilePicture(ProfilePicture.newBuilder().setAvatarId(GAME_INFO.serverAccount.avatarId).build())
+                .setNickname(GAME_INFO.serverAccount.nickName)
+                .setSignature(GAME_INFO.serverAccount.signature)
+                .setLevel(GAME_INFO.serverAccount.adventureRank)
+                .setBirthday(Birthday.newBuilder().setMonth(1).setDay(1).build())
+                .setWorldLevel(GAME_INFO.serverAccount.worldLevel)
+                .setNameCardId(GAME_INFO.serverAccount.nameCardId)
+                .setIsShowAvatar(false)
+                //.addAllShowAvatarInfoList(socialShowAvatarInfoList)
+                //.addAllShowNameCardIdList(this.getShowNameCardInfoList())
+                .setFinishAchievementNum(0)
+                .setFriendEnterHomeOptionValue(0);
+        }
+
         // Get from online players
         Player player = this.getPlayerByUid(id, true);
 

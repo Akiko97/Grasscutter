@@ -14,10 +14,8 @@ public class PacketBattlePassAllDataNotify extends BasePacket {
     public PacketBattlePassAllDataNotify(Player player) {
         super(PacketOpcodes.BattlePassAllDataNotify);
 
-        var proto = BattlePassAllDataNotify.newBuilder();
-        
-        proto
-        	.setHaveCurSchedule(true)
+        var proto = BattlePassAllDataNotify.newBuilder()
+			.setHaveCurSchedule(true)
         	.setCurSchedule(player.getBattlePassManager().getScheduleProto());
 
         for (var missionData : GameData.getBattlePassMissionDataMap().values()) {

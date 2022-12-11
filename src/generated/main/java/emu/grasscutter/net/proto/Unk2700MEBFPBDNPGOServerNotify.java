@@ -19,17 +19,17 @@ public final class Unk2700MEBFPBDNPGOServerNotify {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated uint32 Unk2700_ELJPLMIHNIP = 11;</code>
+     * <code>repeated uint32 Unk2700_ELJPLMIHNIP = 8;</code>
      * @return A list containing the unk2700ELJPLMIHNIP.
      */
     java.util.List<java.lang.Integer> getUnk2700ELJPLMIHNIPList();
     /**
-     * <code>repeated uint32 Unk2700_ELJPLMIHNIP = 11;</code>
+     * <code>repeated uint32 Unk2700_ELJPLMIHNIP = 8;</code>
      * @return The count of unk2700ELJPLMIHNIP.
      */
     int getUnk2700ELJPLMIHNIPCount();
     /**
-     * <code>repeated uint32 Unk2700_ELJPLMIHNIP = 11;</code>
+     * <code>repeated uint32 Unk2700_ELJPLMIHNIP = 8;</code>
      * @param index The index of the element to return.
      * @return The unk2700ELJPLMIHNIP at the given index.
      */
@@ -37,7 +37,7 @@ public final class Unk2700MEBFPBDNPGOServerNotify {
   }
   /**
    * <pre>
-   * CmdId: 4847
+   * CmdId: 4600
    * EnetChannelId: 0
    * EnetIsReliable: true
    * </pre>
@@ -88,7 +88,7 @@ public final class Unk2700MEBFPBDNPGOServerNotify {
             case 0:
               done = true;
               break;
-            case 88: {
+            case 64: {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 unk2700ELJPLMIHNIP_ = newIntList();
                 mutable_bitField0_ |= 0x00000001;
@@ -96,7 +96,7 @@ public final class Unk2700MEBFPBDNPGOServerNotify {
               unk2700ELJPLMIHNIP_.addInt(input.readUInt32());
               break;
             }
-            case 90: {
+            case 66: {
               int length = input.readRawVarint32();
               int limit = input.pushLimit(length);
               if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
@@ -144,10 +144,10 @@ public final class Unk2700MEBFPBDNPGOServerNotify {
               emu.grasscutter.net.proto.Unk2700MEBFPBDNPGOServerNotify.Unk2700_MEBFPBDNPGO_ServerNotify.class, emu.grasscutter.net.proto.Unk2700MEBFPBDNPGOServerNotify.Unk2700_MEBFPBDNPGO_ServerNotify.Builder.class);
     }
 
-    public static final int UNK2700_ELJPLMIHNIP_FIELD_NUMBER = 11;
+    public static final int UNK2700_ELJPLMIHNIP_FIELD_NUMBER = 8;
     private com.google.protobuf.Internal.IntList unk2700ELJPLMIHNIP_;
     /**
-     * <code>repeated uint32 Unk2700_ELJPLMIHNIP = 11;</code>
+     * <code>repeated uint32 Unk2700_ELJPLMIHNIP = 8;</code>
      * @return A list containing the unk2700ELJPLMIHNIP.
      */
     @java.lang.Override
@@ -156,14 +156,14 @@ public final class Unk2700MEBFPBDNPGOServerNotify {
       return unk2700ELJPLMIHNIP_;
     }
     /**
-     * <code>repeated uint32 Unk2700_ELJPLMIHNIP = 11;</code>
+     * <code>repeated uint32 Unk2700_ELJPLMIHNIP = 8;</code>
      * @return The count of unk2700ELJPLMIHNIP.
      */
     public int getUnk2700ELJPLMIHNIPCount() {
       return unk2700ELJPLMIHNIP_.size();
     }
     /**
-     * <code>repeated uint32 Unk2700_ELJPLMIHNIP = 11;</code>
+     * <code>repeated uint32 Unk2700_ELJPLMIHNIP = 8;</code>
      * @param index The index of the element to return.
      * @return The unk2700ELJPLMIHNIP at the given index.
      */
@@ -188,7 +188,7 @@ public final class Unk2700MEBFPBDNPGOServerNotify {
                         throws java.io.IOException {
       getSerializedSize();
       if (getUnk2700ELJPLMIHNIPList().size() > 0) {
-        output.writeUInt32NoTag(90);
+        output.writeUInt32NoTag(66);
         output.writeUInt32NoTag(unk2700ELJPLMIHNIPMemoizedSerializedSize);
       }
       for (int i = 0; i < unk2700ELJPLMIHNIP_.size(); i++) {
@@ -346,7 +346,7 @@ public final class Unk2700MEBFPBDNPGOServerNotify {
     }
     /**
      * <pre>
-     * CmdId: 4847
+     * CmdId: 4600
      * EnetChannelId: 0
      * EnetIsReliable: true
      * </pre>
@@ -518,7 +518,7 @@ public final class Unk2700MEBFPBDNPGOServerNotify {
          }
       }
       /**
-       * <code>repeated uint32 Unk2700_ELJPLMIHNIP = 11;</code>
+       * <code>repeated uint32 Unk2700_ELJPLMIHNIP = 8;</code>
        * @return A list containing the unk2700ELJPLMIHNIP.
        */
       public java.util.List<java.lang.Integer>
@@ -527,14 +527,14 @@ public final class Unk2700MEBFPBDNPGOServerNotify {
                  java.util.Collections.unmodifiableList(unk2700ELJPLMIHNIP_) : unk2700ELJPLMIHNIP_;
       }
       /**
-       * <code>repeated uint32 Unk2700_ELJPLMIHNIP = 11;</code>
+       * <code>repeated uint32 Unk2700_ELJPLMIHNIP = 8;</code>
        * @return The count of unk2700ELJPLMIHNIP.
        */
       public int getUnk2700ELJPLMIHNIPCount() {
         return unk2700ELJPLMIHNIP_.size();
       }
       /**
-       * <code>repeated uint32 Unk2700_ELJPLMIHNIP = 11;</code>
+       * <code>repeated uint32 Unk2700_ELJPLMIHNIP = 8;</code>
        * @param index The index of the element to return.
        * @return The unk2700ELJPLMIHNIP at the given index.
        */
@@ -542,7 +542,7 @@ public final class Unk2700MEBFPBDNPGOServerNotify {
         return unk2700ELJPLMIHNIP_.getInt(index);
       }
       /**
-       * <code>repeated uint32 Unk2700_ELJPLMIHNIP = 11;</code>
+       * <code>repeated uint32 Unk2700_ELJPLMIHNIP = 8;</code>
        * @param index The index to set the value at.
        * @param value The unk2700ELJPLMIHNIP to set.
        * @return This builder for chaining.
@@ -555,7 +555,7 @@ public final class Unk2700MEBFPBDNPGOServerNotify {
         return this;
       }
       /**
-       * <code>repeated uint32 Unk2700_ELJPLMIHNIP = 11;</code>
+       * <code>repeated uint32 Unk2700_ELJPLMIHNIP = 8;</code>
        * @param value The unk2700ELJPLMIHNIP to add.
        * @return This builder for chaining.
        */
@@ -566,7 +566,7 @@ public final class Unk2700MEBFPBDNPGOServerNotify {
         return this;
       }
       /**
-       * <code>repeated uint32 Unk2700_ELJPLMIHNIP = 11;</code>
+       * <code>repeated uint32 Unk2700_ELJPLMIHNIP = 8;</code>
        * @param values The unk2700ELJPLMIHNIP to add.
        * @return This builder for chaining.
        */
@@ -579,7 +579,7 @@ public final class Unk2700MEBFPBDNPGOServerNotify {
         return this;
       }
       /**
-       * <code>repeated uint32 Unk2700_ELJPLMIHNIP = 11;</code>
+       * <code>repeated uint32 Unk2700_ELJPLMIHNIP = 8;</code>
        * @return This builder for chaining.
        */
       public Builder clearUnk2700ELJPLMIHNIP() {
@@ -657,7 +657,7 @@ public final class Unk2700MEBFPBDNPGOServerNotify {
     java.lang.String[] descriptorData = {
       "\n&Unk2700_MEBFPBDNPGO_ServerNotify.proto" +
       "\"?\n Unk2700_MEBFPBDNPGO_ServerNotify\022\033\n\023" +
-      "Unk2700_ELJPLMIHNIP\030\013 \003(\rB\033\n\031emu.grasscu" +
+      "Unk2700_ELJPLMIHNIP\030\010 \003(\rB\033\n\031emu.grasscu" +
       "tter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor

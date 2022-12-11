@@ -43,7 +43,7 @@ public class PacketPlayerWorldSceneInfoListNotify extends BasePacket {
                                 .addSceneTagIdList(1166) // Pyramid (CWL_Trans_02)
 
                                 // Brute force
-                                //.addAllSceneTagIdList(IntStream.range(1150, 1250).boxed().toList())
+                                .addAllSceneTagIdList(IntStream.range(1100, 1550).boxed().toList())
                                 .build()
                 )
                 .addInfoList(

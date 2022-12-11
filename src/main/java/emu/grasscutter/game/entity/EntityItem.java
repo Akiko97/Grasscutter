@@ -25,31 +25,55 @@ import emu.grasscutter.net.proto.VectorOuterClass.Vector;
 import emu.grasscutter.server.packet.send.PacketGadgetInteractRsp;
 import emu.grasscutter.utils.Position;
 import emu.grasscutter.utils.ProtoHelper;
-import it.unimi.dsi.fastutil.ints.Int2FloatMap;
-import lombok.Getter;
+import it.unimi.dsi.fastutil.ints.Int2FloatOpenHashMap;
 
 public class EntityItem extends EntityBaseGadget {
-    @Getter private final GameItem item;
-    @Getter private final long guid;
-    @Getter private final boolean share;
+    private final Position pos;
+    private final Position rot;
+
+    private final GameItem item;
+    private final long guid;
+
+    private final boolean share;
 
     public EntityItem(Scene scene, Player player, ItemData itemData, Position pos, int count) {
-        this(scene, player, itemData, pos, count, true);
+        super(scene);
+        this.id = getScene().getWorld().getNextEntityId(EntityIdType.GADGET);
+        this.pos = new Position(pos);
+        this.rot = new Position();
+        this.guid = player == null ? scene.getWorld().getHost().getNextGameGuid() : player.getNextGameGuid();
+        this.item = new GameItem(itemData, count);
+        this.share = true;
     }
 
     // In official game, some drop items are shared to all players, and some other items are independent to all players
     // For example, if you killed a monster in MP mode, all players could get drops but rarity and number of them are different
     // but if you broke regional mine, when someone picked up the drop then it disappeared
     public EntityItem(Scene scene, Player player, ItemData itemData, Position pos, int count, boolean share) {
-        super(scene, pos, null);
+        super(scene);
         this.id = getScene().getWorld().getNextEntityId(EntityIdType.GADGET);
+        this.pos = new Position(pos);
+        this.rot = new Position();
         this.guid = player == null ? scene.getWorld().getHost().getNextGameGuid() : player.getNextGameGuid();
         this.item = new GameItem(itemData, count);
         this.share = share;
     }
 
+    @Override
+    public int getId() {
+        return this.id;
+    }
+
+    private GameItem getItem() {
+        return this.item;
+    }
+
     public ItemData getItemData() {
         return this.getItem().getItemData();
+    }
+
+    public long getGuid() {
+        return guid;
     }
 
     public int getCount() {
@@ -61,7 +85,24 @@ public class EntityItem extends EntityBaseGadget {
         return this.getItemData().getGadgetId();
     }
 
-    @Override public Int2FloatMap getFightProperties() {return null;}
+    @Override
+    public Position getPosition() {
+        return this.pos;
+    }
+
+    @Override
+    public Position getRotation() {
+        return this.rot;
+    }
+
+    @Override
+    public Int2FloatOpenHashMap getFightProperties() {
+        return null;
+    }
+
+    public boolean isShare() {
+        return share;
+    }
 
     @Override
     public void onInteract(Player player, GadgetInteractReq interactReq) {

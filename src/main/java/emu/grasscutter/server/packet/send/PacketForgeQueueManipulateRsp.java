@@ -18,7 +18,7 @@ public class PacketForgeQueueManipulateRsp extends BasePacket {
         ForgeQueueManipulateRsp.Builder builder = ForgeQueueManipulateRsp.newBuilder()
                 .setRetcode(retcode.getNumber())
                 .setManipulateType(type);
-        
+
         for (GameItem item : output) {
             ItemParam toAdd = ItemParam.newBuilder()
                 .setItemId(item.getItemId())
@@ -37,7 +37,7 @@ public class PacketForgeQueueManipulateRsp extends BasePacket {
             builder.addReturnItemList(toAdd);
         }
 
-        // ToDo: Add extra items when once we have handling for it.
+        // ToDo: Add extra items once we have handling for it.
 
         this.setData(builder.build());
     }

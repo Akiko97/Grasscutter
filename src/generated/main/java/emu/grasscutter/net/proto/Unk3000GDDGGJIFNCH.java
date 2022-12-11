@@ -19,34 +19,34 @@ public final class Unk3000GDDGGJIFNCH {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>uint32 Unk3000_CFDMLGKNLKL = 8;</code>
+     * <code>uint32 Unk3000_HPHLGFDHBON = 2;</code>
+     * @return The unk3000HPHLGFDHBON.
+     */
+    int getUnk3000HPHLGFDHBON();
+
+    /**
+     * <code>uint32 Unk3000_CFDMLGKNLKL = 12;</code>
      * @return The unk3000CFDMLGKNLKL.
      */
     int getUnk3000CFDMLGKNLKL();
 
     /**
-     * <code>bool Unk3000_HONINDEHLNO = 15;</code>
-     * @return The unk3000HONINDEHLNO.
+     * <code>bool Unk3250_BFOGKOHIEEJ = 7;</code>
+     * @return The unk3250BFOGKOHIEEJ.
      */
-    boolean getUnk3000HONINDEHLNO();
+    boolean getUnk3250BFOGKOHIEEJ();
 
     /**
-     * <code>bool Unk3000_FIMENALCAKG = 10;</code>
-     * @return The unk3000FIMENALCAKG.
+     * <code>bool Unk3250_PKBCAOHGNLM = 15;</code>
+     * @return The unk3250PKBCAOHGNLM.
      */
-    boolean getUnk3000FIMENALCAKG();
+    boolean getUnk3250PKBCAOHGNLM();
 
     /**
-     * <code>bool Unk3000_BJGNKDEGLGC = 6;</code>
-     * @return The unk3000BJGNKDEGLGC.
+     * <code>bool Unk3250_JPHLECOIGKF = 5;</code>
+     * @return The unk3250JPHLECOIGKF.
      */
-    boolean getUnk3000BJGNKDEGLGC();
-
-    /**
-     * <code>uint32 Unk3000_HPHLGFDHBON = 5;</code>
-     * @return The unk3000HPHLGFDHBON.
-     */
-    int getUnk3000HPHLGFDHBON();
+    boolean getUnk3250JPHLECOIGKF();
   }
   /**
    * Protobuf type {@code Unk3000_GDDGGJIFNCH}
@@ -93,29 +93,29 @@ public final class Unk3000GDDGGJIFNCH {
             case 0:
               done = true;
               break;
-            case 40: {
+            case 16: {
 
               unk3000HPHLGFDHBON_ = input.readUInt32();
               break;
             }
-            case 48: {
+            case 40: {
 
-              unk3000BJGNKDEGLGC_ = input.readBool();
+              unk3250JPHLECOIGKF_ = input.readBool();
               break;
             }
-            case 64: {
+            case 56: {
+
+              unk3250BFOGKOHIEEJ_ = input.readBool();
+              break;
+            }
+            case 96: {
 
               unk3000CFDMLGKNLKL_ = input.readUInt32();
               break;
             }
-            case 80: {
-
-              unk3000FIMENALCAKG_ = input.readBool();
-              break;
-            }
             case 120: {
 
-              unk3000HONINDEHLNO_ = input.readBool();
+              unk3250PKBCAOHGNLM_ = input.readBool();
               break;
             }
             default: {
@@ -150,10 +150,21 @@ public final class Unk3000GDDGGJIFNCH {
               emu.grasscutter.net.proto.Unk3000GDDGGJIFNCH.Unk3000_GDDGGJIFNCH.class, emu.grasscutter.net.proto.Unk3000GDDGGJIFNCH.Unk3000_GDDGGJIFNCH.Builder.class);
     }
 
-    public static final int UNK3000_CFDMLGKNLKL_FIELD_NUMBER = 8;
+    public static final int UNK3000_HPHLGFDHBON_FIELD_NUMBER = 2;
+    private int unk3000HPHLGFDHBON_;
+    /**
+     * <code>uint32 Unk3000_HPHLGFDHBON = 2;</code>
+     * @return The unk3000HPHLGFDHBON.
+     */
+    @java.lang.Override
+    public int getUnk3000HPHLGFDHBON() {
+      return unk3000HPHLGFDHBON_;
+    }
+
+    public static final int UNK3000_CFDMLGKNLKL_FIELD_NUMBER = 12;
     private int unk3000CFDMLGKNLKL_;
     /**
-     * <code>uint32 Unk3000_CFDMLGKNLKL = 8;</code>
+     * <code>uint32 Unk3000_CFDMLGKNLKL = 12;</code>
      * @return The unk3000CFDMLGKNLKL.
      */
     @java.lang.Override
@@ -161,48 +172,37 @@ public final class Unk3000GDDGGJIFNCH {
       return unk3000CFDMLGKNLKL_;
     }
 
-    public static final int UNK3000_HONINDEHLNO_FIELD_NUMBER = 15;
-    private boolean unk3000HONINDEHLNO_;
+    public static final int UNK3250_BFOGKOHIEEJ_FIELD_NUMBER = 7;
+    private boolean unk3250BFOGKOHIEEJ_;
     /**
-     * <code>bool Unk3000_HONINDEHLNO = 15;</code>
-     * @return The unk3000HONINDEHLNO.
+     * <code>bool Unk3250_BFOGKOHIEEJ = 7;</code>
+     * @return The unk3250BFOGKOHIEEJ.
      */
     @java.lang.Override
-    public boolean getUnk3000HONINDEHLNO() {
-      return unk3000HONINDEHLNO_;
+    public boolean getUnk3250BFOGKOHIEEJ() {
+      return unk3250BFOGKOHIEEJ_;
     }
 
-    public static final int UNK3000_FIMENALCAKG_FIELD_NUMBER = 10;
-    private boolean unk3000FIMENALCAKG_;
+    public static final int UNK3250_PKBCAOHGNLM_FIELD_NUMBER = 15;
+    private boolean unk3250PKBCAOHGNLM_;
     /**
-     * <code>bool Unk3000_FIMENALCAKG = 10;</code>
-     * @return The unk3000FIMENALCAKG.
+     * <code>bool Unk3250_PKBCAOHGNLM = 15;</code>
+     * @return The unk3250PKBCAOHGNLM.
      */
     @java.lang.Override
-    public boolean getUnk3000FIMENALCAKG() {
-      return unk3000FIMENALCAKG_;
+    public boolean getUnk3250PKBCAOHGNLM() {
+      return unk3250PKBCAOHGNLM_;
     }
 
-    public static final int UNK3000_BJGNKDEGLGC_FIELD_NUMBER = 6;
-    private boolean unk3000BJGNKDEGLGC_;
+    public static final int UNK3250_JPHLECOIGKF_FIELD_NUMBER = 5;
+    private boolean unk3250JPHLECOIGKF_;
     /**
-     * <code>bool Unk3000_BJGNKDEGLGC = 6;</code>
-     * @return The unk3000BJGNKDEGLGC.
+     * <code>bool Unk3250_JPHLECOIGKF = 5;</code>
+     * @return The unk3250JPHLECOIGKF.
      */
     @java.lang.Override
-    public boolean getUnk3000BJGNKDEGLGC() {
-      return unk3000BJGNKDEGLGC_;
-    }
-
-    public static final int UNK3000_HPHLGFDHBON_FIELD_NUMBER = 5;
-    private int unk3000HPHLGFDHBON_;
-    /**
-     * <code>uint32 Unk3000_HPHLGFDHBON = 5;</code>
-     * @return The unk3000HPHLGFDHBON.
-     */
-    @java.lang.Override
-    public int getUnk3000HPHLGFDHBON() {
-      return unk3000HPHLGFDHBON_;
+    public boolean getUnk3250JPHLECOIGKF() {
+      return unk3250JPHLECOIGKF_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -220,19 +220,19 @@ public final class Unk3000GDDGGJIFNCH {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (unk3000HPHLGFDHBON_ != 0) {
-        output.writeUInt32(5, unk3000HPHLGFDHBON_);
+        output.writeUInt32(2, unk3000HPHLGFDHBON_);
       }
-      if (unk3000BJGNKDEGLGC_ != false) {
-        output.writeBool(6, unk3000BJGNKDEGLGC_);
+      if (unk3250JPHLECOIGKF_ != false) {
+        output.writeBool(5, unk3250JPHLECOIGKF_);
+      }
+      if (unk3250BFOGKOHIEEJ_ != false) {
+        output.writeBool(7, unk3250BFOGKOHIEEJ_);
       }
       if (unk3000CFDMLGKNLKL_ != 0) {
-        output.writeUInt32(8, unk3000CFDMLGKNLKL_);
+        output.writeUInt32(12, unk3000CFDMLGKNLKL_);
       }
-      if (unk3000FIMENALCAKG_ != false) {
-        output.writeBool(10, unk3000FIMENALCAKG_);
-      }
-      if (unk3000HONINDEHLNO_ != false) {
-        output.writeBool(15, unk3000HONINDEHLNO_);
+      if (unk3250PKBCAOHGNLM_ != false) {
+        output.writeBool(15, unk3250PKBCAOHGNLM_);
       }
       unknownFields.writeTo(output);
     }
@@ -245,23 +245,23 @@ public final class Unk3000GDDGGJIFNCH {
       size = 0;
       if (unk3000HPHLGFDHBON_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(5, unk3000HPHLGFDHBON_);
+          .computeUInt32Size(2, unk3000HPHLGFDHBON_);
       }
-      if (unk3000BJGNKDEGLGC_ != false) {
+      if (unk3250JPHLECOIGKF_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(6, unk3000BJGNKDEGLGC_);
+          .computeBoolSize(5, unk3250JPHLECOIGKF_);
+      }
+      if (unk3250BFOGKOHIEEJ_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(7, unk3250BFOGKOHIEEJ_);
       }
       if (unk3000CFDMLGKNLKL_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(8, unk3000CFDMLGKNLKL_);
+          .computeUInt32Size(12, unk3000CFDMLGKNLKL_);
       }
-      if (unk3000FIMENALCAKG_ != false) {
+      if (unk3250PKBCAOHGNLM_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(10, unk3000FIMENALCAKG_);
-      }
-      if (unk3000HONINDEHLNO_ != false) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(15, unk3000HONINDEHLNO_);
+          .computeBoolSize(15, unk3250PKBCAOHGNLM_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -278,16 +278,16 @@ public final class Unk3000GDDGGJIFNCH {
       }
       emu.grasscutter.net.proto.Unk3000GDDGGJIFNCH.Unk3000_GDDGGJIFNCH other = (emu.grasscutter.net.proto.Unk3000GDDGGJIFNCH.Unk3000_GDDGGJIFNCH) obj;
 
-      if (getUnk3000CFDMLGKNLKL()
-          != other.getUnk3000CFDMLGKNLKL()) return false;
-      if (getUnk3000HONINDEHLNO()
-          != other.getUnk3000HONINDEHLNO()) return false;
-      if (getUnk3000FIMENALCAKG()
-          != other.getUnk3000FIMENALCAKG()) return false;
-      if (getUnk3000BJGNKDEGLGC()
-          != other.getUnk3000BJGNKDEGLGC()) return false;
       if (getUnk3000HPHLGFDHBON()
           != other.getUnk3000HPHLGFDHBON()) return false;
+      if (getUnk3000CFDMLGKNLKL()
+          != other.getUnk3000CFDMLGKNLKL()) return false;
+      if (getUnk3250BFOGKOHIEEJ()
+          != other.getUnk3250BFOGKOHIEEJ()) return false;
+      if (getUnk3250PKBCAOHGNLM()
+          != other.getUnk3250PKBCAOHGNLM()) return false;
+      if (getUnk3250JPHLECOIGKF()
+          != other.getUnk3250JPHLECOIGKF()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -299,19 +299,19 @@ public final class Unk3000GDDGGJIFNCH {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + UNK3000_CFDMLGKNLKL_FIELD_NUMBER;
-      hash = (53 * hash) + getUnk3000CFDMLGKNLKL();
-      hash = (37 * hash) + UNK3000_HONINDEHLNO_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getUnk3000HONINDEHLNO());
-      hash = (37 * hash) + UNK3000_FIMENALCAKG_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getUnk3000FIMENALCAKG());
-      hash = (37 * hash) + UNK3000_BJGNKDEGLGC_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getUnk3000BJGNKDEGLGC());
       hash = (37 * hash) + UNK3000_HPHLGFDHBON_FIELD_NUMBER;
       hash = (53 * hash) + getUnk3000HPHLGFDHBON();
+      hash = (37 * hash) + UNK3000_CFDMLGKNLKL_FIELD_NUMBER;
+      hash = (53 * hash) + getUnk3000CFDMLGKNLKL();
+      hash = (37 * hash) + UNK3250_BFOGKOHIEEJ_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getUnk3250BFOGKOHIEEJ());
+      hash = (37 * hash) + UNK3250_PKBCAOHGNLM_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getUnk3250PKBCAOHGNLM());
+      hash = (37 * hash) + UNK3250_JPHLECOIGKF_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getUnk3250JPHLECOIGKF());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -445,15 +445,15 @@ public final class Unk3000GDDGGJIFNCH {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        unk3000HPHLGFDHBON_ = 0;
+
         unk3000CFDMLGKNLKL_ = 0;
 
-        unk3000HONINDEHLNO_ = false;
+        unk3250BFOGKOHIEEJ_ = false;
 
-        unk3000FIMENALCAKG_ = false;
+        unk3250PKBCAOHGNLM_ = false;
 
-        unk3000BJGNKDEGLGC_ = false;
-
-        unk3000HPHLGFDHBON_ = 0;
+        unk3250JPHLECOIGKF_ = false;
 
         return this;
       }
@@ -481,11 +481,11 @@ public final class Unk3000GDDGGJIFNCH {
       @java.lang.Override
       public emu.grasscutter.net.proto.Unk3000GDDGGJIFNCH.Unk3000_GDDGGJIFNCH buildPartial() {
         emu.grasscutter.net.proto.Unk3000GDDGGJIFNCH.Unk3000_GDDGGJIFNCH result = new emu.grasscutter.net.proto.Unk3000GDDGGJIFNCH.Unk3000_GDDGGJIFNCH(this);
-        result.unk3000CFDMLGKNLKL_ = unk3000CFDMLGKNLKL_;
-        result.unk3000HONINDEHLNO_ = unk3000HONINDEHLNO_;
-        result.unk3000FIMENALCAKG_ = unk3000FIMENALCAKG_;
-        result.unk3000BJGNKDEGLGC_ = unk3000BJGNKDEGLGC_;
         result.unk3000HPHLGFDHBON_ = unk3000HPHLGFDHBON_;
+        result.unk3000CFDMLGKNLKL_ = unk3000CFDMLGKNLKL_;
+        result.unk3250BFOGKOHIEEJ_ = unk3250BFOGKOHIEEJ_;
+        result.unk3250PKBCAOHGNLM_ = unk3250PKBCAOHGNLM_;
+        result.unk3250JPHLECOIGKF_ = unk3250JPHLECOIGKF_;
         onBuilt();
         return result;
       }
@@ -534,20 +534,20 @@ public final class Unk3000GDDGGJIFNCH {
 
       public Builder mergeFrom(emu.grasscutter.net.proto.Unk3000GDDGGJIFNCH.Unk3000_GDDGGJIFNCH other) {
         if (other == emu.grasscutter.net.proto.Unk3000GDDGGJIFNCH.Unk3000_GDDGGJIFNCH.getDefaultInstance()) return this;
+        if (other.getUnk3000HPHLGFDHBON() != 0) {
+          setUnk3000HPHLGFDHBON(other.getUnk3000HPHLGFDHBON());
+        }
         if (other.getUnk3000CFDMLGKNLKL() != 0) {
           setUnk3000CFDMLGKNLKL(other.getUnk3000CFDMLGKNLKL());
         }
-        if (other.getUnk3000HONINDEHLNO() != false) {
-          setUnk3000HONINDEHLNO(other.getUnk3000HONINDEHLNO());
+        if (other.getUnk3250BFOGKOHIEEJ() != false) {
+          setUnk3250BFOGKOHIEEJ(other.getUnk3250BFOGKOHIEEJ());
         }
-        if (other.getUnk3000FIMENALCAKG() != false) {
-          setUnk3000FIMENALCAKG(other.getUnk3000FIMENALCAKG());
+        if (other.getUnk3250PKBCAOHGNLM() != false) {
+          setUnk3250PKBCAOHGNLM(other.getUnk3250PKBCAOHGNLM());
         }
-        if (other.getUnk3000BJGNKDEGLGC() != false) {
-          setUnk3000BJGNKDEGLGC(other.getUnk3000BJGNKDEGLGC());
-        }
-        if (other.getUnk3000HPHLGFDHBON() != 0) {
-          setUnk3000HPHLGFDHBON(other.getUnk3000HPHLGFDHBON());
+        if (other.getUnk3250JPHLECOIGKF() != false) {
+          setUnk3250JPHLECOIGKF(other.getUnk3250JPHLECOIGKF());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -578,133 +578,9 @@ public final class Unk3000GDDGGJIFNCH {
         return this;
       }
 
-      private int unk3000CFDMLGKNLKL_ ;
-      /**
-       * <code>uint32 Unk3000_CFDMLGKNLKL = 8;</code>
-       * @return The unk3000CFDMLGKNLKL.
-       */
-      @java.lang.Override
-      public int getUnk3000CFDMLGKNLKL() {
-        return unk3000CFDMLGKNLKL_;
-      }
-      /**
-       * <code>uint32 Unk3000_CFDMLGKNLKL = 8;</code>
-       * @param value The unk3000CFDMLGKNLKL to set.
-       * @return This builder for chaining.
-       */
-      public Builder setUnk3000CFDMLGKNLKL(int value) {
-        
-        unk3000CFDMLGKNLKL_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>uint32 Unk3000_CFDMLGKNLKL = 8;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearUnk3000CFDMLGKNLKL() {
-        
-        unk3000CFDMLGKNLKL_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private boolean unk3000HONINDEHLNO_ ;
-      /**
-       * <code>bool Unk3000_HONINDEHLNO = 15;</code>
-       * @return The unk3000HONINDEHLNO.
-       */
-      @java.lang.Override
-      public boolean getUnk3000HONINDEHLNO() {
-        return unk3000HONINDEHLNO_;
-      }
-      /**
-       * <code>bool Unk3000_HONINDEHLNO = 15;</code>
-       * @param value The unk3000HONINDEHLNO to set.
-       * @return This builder for chaining.
-       */
-      public Builder setUnk3000HONINDEHLNO(boolean value) {
-        
-        unk3000HONINDEHLNO_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>bool Unk3000_HONINDEHLNO = 15;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearUnk3000HONINDEHLNO() {
-        
-        unk3000HONINDEHLNO_ = false;
-        onChanged();
-        return this;
-      }
-
-      private boolean unk3000FIMENALCAKG_ ;
-      /**
-       * <code>bool Unk3000_FIMENALCAKG = 10;</code>
-       * @return The unk3000FIMENALCAKG.
-       */
-      @java.lang.Override
-      public boolean getUnk3000FIMENALCAKG() {
-        return unk3000FIMENALCAKG_;
-      }
-      /**
-       * <code>bool Unk3000_FIMENALCAKG = 10;</code>
-       * @param value The unk3000FIMENALCAKG to set.
-       * @return This builder for chaining.
-       */
-      public Builder setUnk3000FIMENALCAKG(boolean value) {
-        
-        unk3000FIMENALCAKG_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>bool Unk3000_FIMENALCAKG = 10;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearUnk3000FIMENALCAKG() {
-        
-        unk3000FIMENALCAKG_ = false;
-        onChanged();
-        return this;
-      }
-
-      private boolean unk3000BJGNKDEGLGC_ ;
-      /**
-       * <code>bool Unk3000_BJGNKDEGLGC = 6;</code>
-       * @return The unk3000BJGNKDEGLGC.
-       */
-      @java.lang.Override
-      public boolean getUnk3000BJGNKDEGLGC() {
-        return unk3000BJGNKDEGLGC_;
-      }
-      /**
-       * <code>bool Unk3000_BJGNKDEGLGC = 6;</code>
-       * @param value The unk3000BJGNKDEGLGC to set.
-       * @return This builder for chaining.
-       */
-      public Builder setUnk3000BJGNKDEGLGC(boolean value) {
-        
-        unk3000BJGNKDEGLGC_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>bool Unk3000_BJGNKDEGLGC = 6;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearUnk3000BJGNKDEGLGC() {
-        
-        unk3000BJGNKDEGLGC_ = false;
-        onChanged();
-        return this;
-      }
-
       private int unk3000HPHLGFDHBON_ ;
       /**
-       * <code>uint32 Unk3000_HPHLGFDHBON = 5;</code>
+       * <code>uint32 Unk3000_HPHLGFDHBON = 2;</code>
        * @return The unk3000HPHLGFDHBON.
        */
       @java.lang.Override
@@ -712,7 +588,7 @@ public final class Unk3000GDDGGJIFNCH {
         return unk3000HPHLGFDHBON_;
       }
       /**
-       * <code>uint32 Unk3000_HPHLGFDHBON = 5;</code>
+       * <code>uint32 Unk3000_HPHLGFDHBON = 2;</code>
        * @param value The unk3000HPHLGFDHBON to set.
        * @return This builder for chaining.
        */
@@ -723,12 +599,136 @@ public final class Unk3000GDDGGJIFNCH {
         return this;
       }
       /**
-       * <code>uint32 Unk3000_HPHLGFDHBON = 5;</code>
+       * <code>uint32 Unk3000_HPHLGFDHBON = 2;</code>
        * @return This builder for chaining.
        */
       public Builder clearUnk3000HPHLGFDHBON() {
         
         unk3000HPHLGFDHBON_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int unk3000CFDMLGKNLKL_ ;
+      /**
+       * <code>uint32 Unk3000_CFDMLGKNLKL = 12;</code>
+       * @return The unk3000CFDMLGKNLKL.
+       */
+      @java.lang.Override
+      public int getUnk3000CFDMLGKNLKL() {
+        return unk3000CFDMLGKNLKL_;
+      }
+      /**
+       * <code>uint32 Unk3000_CFDMLGKNLKL = 12;</code>
+       * @param value The unk3000CFDMLGKNLKL to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUnk3000CFDMLGKNLKL(int value) {
+        
+        unk3000CFDMLGKNLKL_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 Unk3000_CFDMLGKNLKL = 12;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUnk3000CFDMLGKNLKL() {
+        
+        unk3000CFDMLGKNLKL_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private boolean unk3250BFOGKOHIEEJ_ ;
+      /**
+       * <code>bool Unk3250_BFOGKOHIEEJ = 7;</code>
+       * @return The unk3250BFOGKOHIEEJ.
+       */
+      @java.lang.Override
+      public boolean getUnk3250BFOGKOHIEEJ() {
+        return unk3250BFOGKOHIEEJ_;
+      }
+      /**
+       * <code>bool Unk3250_BFOGKOHIEEJ = 7;</code>
+       * @param value The unk3250BFOGKOHIEEJ to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUnk3250BFOGKOHIEEJ(boolean value) {
+        
+        unk3250BFOGKOHIEEJ_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool Unk3250_BFOGKOHIEEJ = 7;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUnk3250BFOGKOHIEEJ() {
+        
+        unk3250BFOGKOHIEEJ_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean unk3250PKBCAOHGNLM_ ;
+      /**
+       * <code>bool Unk3250_PKBCAOHGNLM = 15;</code>
+       * @return The unk3250PKBCAOHGNLM.
+       */
+      @java.lang.Override
+      public boolean getUnk3250PKBCAOHGNLM() {
+        return unk3250PKBCAOHGNLM_;
+      }
+      /**
+       * <code>bool Unk3250_PKBCAOHGNLM = 15;</code>
+       * @param value The unk3250PKBCAOHGNLM to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUnk3250PKBCAOHGNLM(boolean value) {
+        
+        unk3250PKBCAOHGNLM_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool Unk3250_PKBCAOHGNLM = 15;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUnk3250PKBCAOHGNLM() {
+        
+        unk3250PKBCAOHGNLM_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean unk3250JPHLECOIGKF_ ;
+      /**
+       * <code>bool Unk3250_JPHLECOIGKF = 5;</code>
+       * @return The unk3250JPHLECOIGKF.
+       */
+      @java.lang.Override
+      public boolean getUnk3250JPHLECOIGKF() {
+        return unk3250JPHLECOIGKF_;
+      }
+      /**
+       * <code>bool Unk3250_JPHLECOIGKF = 5;</code>
+       * @param value The unk3250JPHLECOIGKF to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUnk3250JPHLECOIGKF(boolean value) {
+        
+        unk3250JPHLECOIGKF_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool Unk3250_JPHLECOIGKF = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUnk3250JPHLECOIGKF() {
+        
+        unk3250JPHLECOIGKF_ = false;
         onChanged();
         return this;
       }
@@ -800,10 +800,10 @@ public final class Unk3000GDDGGJIFNCH {
   static {
     java.lang.String[] descriptorData = {
       "\n\031Unk3000_GDDGGJIFNCH.proto\"\246\001\n\023Unk3000_" +
-      "GDDGGJIFNCH\022\033\n\023Unk3000_CFDMLGKNLKL\030\010 \001(\r" +
-      "\022\033\n\023Unk3000_HONINDEHLNO\030\017 \001(\010\022\033\n\023Unk3000" +
-      "_FIMENALCAKG\030\n \001(\010\022\033\n\023Unk3000_BJGNKDEGLG" +
-      "C\030\006 \001(\010\022\033\n\023Unk3000_HPHLGFDHBON\030\005 \001(\rB\033\n\031" +
+      "GDDGGJIFNCH\022\033\n\023Unk3000_HPHLGFDHBON\030\002 \001(\r" +
+      "\022\033\n\023Unk3000_CFDMLGKNLKL\030\014 \001(\r\022\033\n\023Unk3250" +
+      "_BFOGKOHIEEJ\030\007 \001(\010\022\033\n\023Unk3250_PKBCAOHGNL" +
+      "M\030\017 \001(\010\022\033\n\023Unk3250_JPHLECOIGKF\030\005 \001(\010B\033\n\031" +
       "emu.grasscutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
@@ -815,7 +815,7 @@ public final class Unk3000GDDGGJIFNCH {
     internal_static_Unk3000_GDDGGJIFNCH_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_Unk3000_GDDGGJIFNCH_descriptor,
-        new java.lang.String[] { "Unk3000CFDMLGKNLKL", "Unk3000HONINDEHLNO", "Unk3000FIMENALCAKG", "Unk3000BJGNKDEGLGC", "Unk3000HPHLGFDHBON", });
+        new java.lang.String[] { "Unk3000HPHLGFDHBON", "Unk3000CFDMLGKNLKL", "Unk3250BFOGKOHIEEJ", "Unk3250PKBCAOHGNLM", "Unk3250JPHLECOIGKF", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

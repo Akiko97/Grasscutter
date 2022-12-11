@@ -5,7 +5,7 @@ import emu.grasscutter.game.world.Scene;
 import emu.grasscutter.net.proto.SceneEntityInfoOuterClass;
 import emu.grasscutter.scripts.data.SceneRegion;
 import emu.grasscutter.utils.Position;
-import it.unimi.dsi.fastutil.ints.Int2FloatMap;
+import it.unimi.dsi.fastutil.ints.Int2FloatOpenHashMap;
 import lombok.Getter;
 
 import java.util.Set;
@@ -57,11 +57,20 @@ public class EntityRegion extends GameEntity{
     }
     public boolean entityLeave() {return this.entityLeave;}
     public void resetEntityLeave() {this.entityLeave = false;}
-    @Override public Int2FloatMap getFightProperties() {return null;}
+    @Override
+    public Int2FloatOpenHashMap getFightProperties() {
+        return null;
+    }
 
-    @Override public Position getPosition() {return position;}
+    @Override
+    public Position getPosition() {
+        return position;
+    }
 
-    @Override public Position getRotation() {return null;}
+    @Override
+    public Position getRotation() {
+        return null;
+    }
 
     @Override
     public SceneEntityInfoOuterClass.SceneEntityInfo toProto() {

@@ -71,14 +71,14 @@ public class CookingManager extends BasePlayerManager {
     public void handlePlayerCookReq(PlayerCookReq req) {
         // Get info from the request.
         int recipeId = req.getRecipeId();
-        int quality = req.getQteQuality();
-        int count = req.getCookCount();
+        int quality = req.getUnk3250JPICLIDLIEC();
+        int count = req.getUnk3250NDPHNNOFEBL();
         int avatar = req.getAssistAvatar();
 
         // Get recipe data.
         var recipeData = GameData.getCookRecipeDataMap().get(recipeId);
         if (recipeData == null) {
-            this.player.sendPacket(new PacketPlayerCookRsp(Retcode.RET_FAIL));
+            this.player.sendPacket(new PacketPlayerCookRsp(Retcode.RETCODE_RET_FAIL));
             return;
         }
 
@@ -88,7 +88,7 @@ public class CookingManager extends BasePlayerManager {
         // Try consuming materials.
         boolean success = player.getInventory().payItems(recipeData.getInputVec(), count, ActionReason.Cook);
         if (!success) {
-            this.player.sendPacket(new PacketPlayerCookRsp(Retcode.RET_FAIL));
+            this.player.sendPacket(new PacketPlayerCookRsp(Retcode.RETCODE_RET_FAIL));
         }
 
         // Get result item information.

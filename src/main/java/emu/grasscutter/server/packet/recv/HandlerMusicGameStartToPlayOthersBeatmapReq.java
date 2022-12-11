@@ -7,14 +7,15 @@ import emu.grasscutter.net.proto.MusicGameStartToPlayOthersBeatmapReqOuterClass;
 import emu.grasscutter.server.game.GameSession;
 import emu.grasscutter.server.packet.send.PacketMusicGameStartToPlayOthersBeatmapRsp;
 
-@Opcodes(PacketOpcodes.MusicGameStartToPlayOthersBeatmapReq)
+// ToDo: Figure out what packet this is.
+// @Opcodes(PacketOpcodes.MusicGameStartToPlayOthersBeatmapReq)
 public class HandlerMusicGameStartToPlayOthersBeatmapReq extends PacketHandler {
 
 	@Override
 	public void handle(GameSession session, byte[] header, byte[] payload) throws Exception {
-        var req = MusicGameStartToPlayOthersBeatmapReqOuterClass.MusicGameStartToPlayOthersBeatmapReq.parseFrom(payload);
+        /*var req = MusicGameStartToPlayOthersBeatmapReqOuterClass.MusicGameStartToPlayOthersBeatmapReq.parseFrom(payload);
 
-		session.send(new PacketMusicGameStartToPlayOthersBeatmapRsp(req.getUnknownEnum1()));
+		session.send(new PacketMusicGameStartToPlayOthersBeatmapRsp(req.getUnknownEnum1()));*/
 	}
 
 }

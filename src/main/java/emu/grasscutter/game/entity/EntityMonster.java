@@ -1,12 +1,14 @@
 package emu.grasscutter.game.entity;
 
-import java.util.Optional;
-
+import emu.grasscutter.Grasscutter;
 import emu.grasscutter.data.GameData;
+import emu.grasscutter.data.common.ItemParamData;
 import emu.grasscutter.data.common.PropGrowCurve;
 import emu.grasscutter.data.excels.EnvAnimalGatherConfigData;
+import emu.grasscutter.data.excels.ItemData;
 import emu.grasscutter.data.excels.MonsterCurveData;
 import emu.grasscutter.data.excels.MonsterData;
+import emu.grasscutter.game.inventory.GameItem;
 import emu.grasscutter.game.player.Player;
 import emu.grasscutter.game.props.ActionReason;
 import emu.grasscutter.game.props.EntityIdType;
@@ -14,11 +16,13 @@ import emu.grasscutter.game.props.FightProperty;
 import emu.grasscutter.game.props.PlayerProperty;
 import emu.grasscutter.game.props.WatcherTriggerType;
 import emu.grasscutter.game.world.Scene;
+import emu.grasscutter.net.proto.VisionTypeOuterClass;
 import emu.grasscutter.net.proto.AbilitySyncStateInfoOuterClass.AbilitySyncStateInfo;
 import emu.grasscutter.net.proto.AnimatorParameterValueInfoPairOuterClass.AnimatorParameterValueInfoPair;
 import emu.grasscutter.net.proto.EntityAuthorityInfoOuterClass.EntityAuthorityInfo;
 import emu.grasscutter.net.proto.EntityClientDataOuterClass.EntityClientData;
 import emu.grasscutter.net.proto.EntityRendererChangedInfoOuterClass.EntityRendererChangedInfo;
+import emu.grasscutter.net.proto.FightPropPairOuterClass.FightPropPair;
 import emu.grasscutter.net.proto.GadgetInteractReqOuterClass.GadgetInteractReq;
 import emu.grasscutter.net.proto.MonsterBornTypeOuterClass.MonsterBornType;
 import emu.grasscutter.net.proto.PropPairOuterClass.PropPair;
@@ -31,32 +35,31 @@ import emu.grasscutter.scripts.constants.EventType;
 import emu.grasscutter.scripts.data.ScriptArgs;
 import emu.grasscutter.utils.Position;
 import emu.grasscutter.utils.ProtoHelper;
+import it.unimi.dsi.fastutil.ints.Int2FloatMap;
 import it.unimi.dsi.fastutil.ints.Int2FloatOpenHashMap;
 import lombok.Getter;
 import lombok.Setter;
 
 public class EntityMonster extends GameEntity {
-    @Getter private final MonsterData monsterData;
-    @Getter(onMethod = @__(@Override))
-    private final Int2FloatOpenHashMap fightProperties;
+    private final MonsterData monsterData;
+    private final Int2FloatOpenHashMap fightProp;
 
-    @Getter(onMethod = @__(@Override))
-    private final Position position;
-    @Getter(onMethod = @__(@Override))
-    private final Position rotation;
-    @Getter private final Position bornPos;
-    @Getter private final int level;
+    private final Position pos;
+    private final Position rot;
+    private final Position bornPos;
+    private final int level;
     private int weaponEntityId;
-    @Getter @Setter private int poseId;
-    @Getter @Setter private int aiId = -1;
+    private int poseId;
+    @Getter @Setter
+    private int aiId=-1;
 
     public EntityMonster(Scene scene, MonsterData monsterData, Position pos, int level) {
         super(scene);
         this.id = getWorld().getNextEntityId(EntityIdType.MONSTER);
         this.monsterData = monsterData;
-        this.fightProperties = new Int2FloatOpenHashMap();
-        this.position = new Position(pos);
-        this.rotation = new Position();
+        this.fightProp = new Int2FloatOpenHashMap();
+        this.pos = new Position(pos);
+        this.rot = new Position();
         this.bornPos = getPosition().clone();
         this.level = level;
 
@@ -68,17 +71,57 @@ public class EntityMonster extends GameEntity {
         this.recalcStats();
     }
 
+    @Override
+    public int getId() {
+        return this.id;
+    }
+
+    public MonsterData getMonsterData() {
+        return monsterData;
+    }
+
     public int getMonsterWeaponId() {
-        return this.getMonsterData().getWeaponId();
+        return getMonsterData().getWeaponId();
     }
 
     private int getMonsterId() {
         return this.getMonsterData().getId();
     }
 
+    public int getLevel() {
+        return level;
+    }
+
+    @Override
+    public Position getPosition() {
+        return this.pos;
+    }
+
+    @Override
+    public Position getRotation() {
+        return this.rot;
+    }
+
+    public Position getBornPos() {
+        return bornPos;
+    }
+
+    @Override
+    public Int2FloatOpenHashMap getFightProperties() {
+        return fightProp;
+    }
+
     @Override
     public boolean isAlive() {
         return this.getFightProperty(FightProperty.FIGHT_PROP_CUR_HP) > 0f;
+    }
+
+    public int getPoseId() {
+        return poseId;
+    }
+
+    public void setPoseId(int poseId) {
+        this.poseId = poseId;
     }
 
     @Override
@@ -120,24 +163,27 @@ public class EntityMonster extends GameEntity {
     @Override
     public void onDeath(int killerId) {
         super.onDeath(killerId); // Invoke super class's onDeath() method.
-        var scene = this.getScene();
-        var challenge = Optional.ofNullable(scene.getChallenge());
-        var scriptManager = scene.getScriptManager();
 
-        Optional.ofNullable(this.getSpawnEntry()).ifPresent(scene.getDeadSpawnedEntities()::add);
-
+        if (this.getSpawnEntry() != null) {
+            this.getScene().getDeadSpawnedEntities().add(getSpawnEntry());
+        }
         // first set the challenge data
-        challenge.ifPresent(c -> c.onMonsterDeath(this));
-
-        if (scriptManager.isInit() && this.getGroupId() > 0) {
-            Optional.ofNullable(scriptManager.getScriptMonsterSpawnService()).ifPresent(s -> s.onMonsterDead(this));
-
+        if (getScene().getChallenge() != null) {
+            getScene().getChallenge().onMonsterDeath(this);
+        }
+        if (getScene().getScriptManager().isInit() && this.getGroupId() > 0) {
+            if (getScene().getScriptManager().getScriptMonsterSpawnService() != null) {
+                getScene().getScriptManager().getScriptMonsterSpawnService().onMonsterDead(this);
+            }
             // prevent spawn monster after success
-            if (challenge.map(c -> c.inProgress()).orElse(true))
-                scriptManager.callEvent(EventType.EVENT_ANY_MONSTER_DIE, new ScriptArgs().setParam1(this.getConfigId()));
+            if (getScene().getChallenge() != null && getScene().getChallenge().inProgress()) {
+                getScene().getScriptManager().callEvent(EventType.EVENT_ANY_MONSTER_DIE, new ScriptArgs().setParam1(this.getConfigId()));
+            }else if (getScene().getChallenge() == null) {
+                getScene().getScriptManager().callEvent(EventType.EVENT_ANY_MONSTER_DIE, new ScriptArgs().setParam1(this.getConfigId()));
+            }
         }
         // Battle Pass trigger
-        scene.getPlayers().forEach(p -> p.getBattlePassManager().triggerMission(WatcherTriggerType.TRIGGER_MONSTER_DIE, this.getMonsterId(), 1));
+        getScene().getPlayers().forEach(p -> p.getBattlePassManager().triggerMission(WatcherTriggerType.TRIGGER_MONSTER_DIE, this.getMonsterId(), 1));
     }
 
     public void recalcStats() {
@@ -151,20 +197,41 @@ public class EntityMonster extends GameEntity {
         this.getFightProperties().clear();
 
         // Base stats
-        MonsterData.definedFightProperties.forEach(prop -> this.setFightProperty(prop, data.getFightProperty(prop)));
+        this.setFightProperty(FightProperty.FIGHT_PROP_BASE_HP, data.getBaseHp());
+        this.setFightProperty(FightProperty.FIGHT_PROP_BASE_ATTACK, data.getBaseAttack());
+        this.setFightProperty(FightProperty.FIGHT_PROP_BASE_DEFENSE, data.getBaseDefense());
+
+        this.setFightProperty(FightProperty.FIGHT_PROP_PHYSICAL_SUB_HURT, data.getPhysicalSubHurt());
+        this.setFightProperty(FightProperty.FIGHT_PROP_FIRE_SUB_HURT, .1f);
+        this.setFightProperty(FightProperty.FIGHT_PROP_ELEC_SUB_HURT, data.getElecSubHurt());
+        this.setFightProperty(FightProperty.FIGHT_PROP_WATER_SUB_HURT, data.getWaterSubHurt());
+        this.setFightProperty(FightProperty.FIGHT_PROP_GRASS_SUB_HURT, data.getGrassSubHurt());
+        this.setFightProperty(FightProperty.FIGHT_PROP_WIND_SUB_HURT, data.getWindSubHurt());
+        this.setFightProperty(FightProperty.FIGHT_PROP_ROCK_SUB_HURT, .1f);
+        this.setFightProperty(FightProperty.FIGHT_PROP_ICE_SUB_HURT, data.getIceSubHurt());
 
         // Level curve
         MonsterCurveData curve = GameData.getMonsterCurveDataMap().get(this.getLevel());
         if (curve != null) {
             for (PropGrowCurve growCurve : data.getPropGrowCurves()) {
-                FightProperty prop = FightProperty.getPropByName(growCurve.getType());
+                FightProperty prop = /*FightProperty.getPropByName(*/growCurve.getType()/*)*/;
                 this.setFightProperty(prop, this.getFightProperty(prop) * curve.getMultByProp(growCurve.getGrowCurve()));
             }
         }
 
         // Set % stats
-        FightProperty.forEachCompoundProperty(c -> this.setFightProperty(c.getResult(),
-            this.getFightProperty(c.getFlat()) + (this.getFightProperty(c.getBase()) * (1f + this.getFightProperty(c.getPercent())))));
+        this.setFightProperty(
+            FightProperty.FIGHT_PROP_MAX_HP,
+            (getFightProperty(FightProperty.FIGHT_PROP_BASE_HP) * (1f + getFightProperty(FightProperty.FIGHT_PROP_HP_PERCENT))) + getFightProperty(FightProperty.FIGHT_PROP_HP)
+        );
+        this.setFightProperty(
+            FightProperty.FIGHT_PROP_CUR_ATTACK,
+            (getFightProperty(FightProperty.FIGHT_PROP_BASE_ATTACK) * (1f + getFightProperty(FightProperty.FIGHT_PROP_ATTACK_PERCENT))) + getFightProperty(FightProperty.FIGHT_PROP_ATTACK)
+        );
+        this.setFightProperty(
+            FightProperty.FIGHT_PROP_CUR_DEFENSE,
+            (getFightProperty(FightProperty.FIGHT_PROP_BASE_DEFENSE) * (1f + getFightProperty(FightProperty.FIGHT_PROP_DEFENSE_PERCENT))) + getFightProperty(FightProperty.FIGHT_PROP_DEFENSE)
+        );
 
         // Set current hp
         this.setFightProperty(FightProperty.FIGHT_PROP_CUR_HP, this.getFightProperty(FightProperty.FIGHT_PROP_MAX_HP) * hpPercent);
@@ -172,14 +239,14 @@ public class EntityMonster extends GameEntity {
 
     @Override
     public SceneEntityInfo toProto() {
-        var authority = EntityAuthorityInfo.newBuilder()
+        EntityAuthorityInfo authority = EntityAuthorityInfo.newBuilder()
                 .setAbilityInfo(AbilitySyncStateInfo.newBuilder())
                 .setRendererChangedInfo(EntityRendererChangedInfo.newBuilder())
                 .setAiInfo(SceneEntityAiInfo.newBuilder().setIsAiOpen(true).setBornPos(this.getBornPos().toProto()))
                 .setBornPos(this.getBornPos().toProto())
                 .build();
 
-        var entityInfo = SceneEntityInfo.newBuilder()
+        SceneEntityInfo.Builder entityInfo = SceneEntityInfo.newBuilder()
                 .setEntityId(getId())
                 .setEntityType(ProtEntityType.PROT_ENTITY_TYPE_MONSTER)
                 .setMotionInfo(this.getMotionInfo())
@@ -190,12 +257,13 @@ public class EntityMonster extends GameEntity {
 
         this.addAllFightPropsToEntityInfo(entityInfo);
 
-        entityInfo.addPropList(PropPair.newBuilder()
-            .setType(PlayerProperty.PROP_LEVEL.getId())
-            .setPropValue(ProtoHelper.newPropValue(PlayerProperty.PROP_LEVEL, getLevel()))
-            .build());
+        PropPair pair = PropPair.newBuilder()
+                .setType(PlayerProperty.PROP_LEVEL.getId())
+                .setPropValue(ProtoHelper.newPropValue(PlayerProperty.PROP_LEVEL, getLevel()))
+                .build();
+        entityInfo.addPropList(pair);
 
-        var monsterInfo = SceneMonsterInfo.newBuilder()
+        SceneMonsterInfo.Builder monsterInfo = SceneMonsterInfo.newBuilder()
                 .setMonsterId(getMonsterId())
                 .setGroupId(this.getGroupId())
                 .setConfigId(this.getConfigId())

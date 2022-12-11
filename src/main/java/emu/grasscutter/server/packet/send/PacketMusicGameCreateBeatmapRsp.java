@@ -8,13 +8,13 @@ import emu.grasscutter.net.proto.MusicGameUnknown1EnumOuterClass;
 public class PacketMusicGameCreateBeatmapRsp extends BasePacket {
 
 	public PacketMusicGameCreateBeatmapRsp(long musicShareId, MusicGameUnknown1EnumOuterClass.MusicGameUnknown1Enum unknownEnum1) {
-		super(PacketOpcodes.MusicGameCreateBeatmapRsp);
+		super(PacketOpcodes.NONE);
 
-        var proto = MusicGameCreateBeatmapRspOuterClass.MusicGameCreateBeatmapRsp.newBuilder();
+        /*var proto = MusicGameCreateBeatmapRspOuterClass.MusicGameCreateBeatmapRsp.newBuilder();
 
         proto.setMusicShareId(musicShareId)
             .setUnknownEnum1(unknownEnum1);
 
-        this.setData(proto);
+        this.setData(proto);*/
 	}
 }

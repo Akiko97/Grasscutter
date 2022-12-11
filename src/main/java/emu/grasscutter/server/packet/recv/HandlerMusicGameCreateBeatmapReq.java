@@ -16,12 +16,13 @@ import emu.grasscutter.utils.Utils;
 
 import java.util.Objects;
 
-@Opcodes(PacketOpcodes.MusicGameCreateBeatmapReq)
+// ToDo: Figure out what packet this is.
+// @Opcodes(PacketOpcodes.MusicGameCreateBeatmapReq)
 public class HandlerMusicGameCreateBeatmapReq extends PacketHandler {
 
 	@Override
 	public void handle(GameSession session, byte[] header, byte[] payload) throws Exception {
-		var req = MusicGameCreateBeatmapReqOuterClass.MusicGameCreateBeatmapReq.parseFrom(payload);
+		/*var req = MusicGameCreateBeatmapReqOuterClass.MusicGameCreateBeatmapReq.parseFrom(payload);
 
         var musicGameBeatmap = MusicGameBeatmap.of()
             .musicId(req.getMusicBriefInfo().getMusicId())
@@ -60,7 +61,7 @@ public class HandlerMusicGameCreateBeatmapReq extends PacketHandler {
         handler.addPersonalBeatmap(playerData.get(), musicGameBeatmap);
 
         session.send(new PacketActivityInfoNotify(handler.toProto(playerData.get())));
-        session.send(new PacketMusicGameCreateBeatmapRsp(musicGameBeatmap.getMusicShareId(), req.getUnknownEnum1()));
+        session.send(new PacketMusicGameCreateBeatmapRsp(musicGameBeatmap.getMusicShareId(), req.getUnknownEnum1()));*/
 	}
 
 }

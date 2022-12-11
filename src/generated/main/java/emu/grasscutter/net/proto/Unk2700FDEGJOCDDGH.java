@@ -19,22 +19,22 @@ public final class Unk2700FDEGJOCDDGH {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>uint32 cur_progress = 9;</code>
-     * @return The curProgress.
+     * <code>bool is_success = 14;</code>
+     * @return The isSuccess.
      */
-    int getCurProgress();
+    boolean getIsSuccess();
 
     /**
-     * <code>uint32 challenge_index = 10;</code>
+     * <code>uint32 challenge_index = 6;</code>
      * @return The challengeIndex.
      */
     int getChallengeIndex();
 
     /**
-     * <code>bool is_success = 4;</code>
-     * @return The isSuccess.
+     * <code>uint32 cur_progress = 3;</code>
+     * @return The curProgress.
      */
-    boolean getIsSuccess();
+    int getCurProgress();
 
     /**
      * <code>uint32 challenge_id = 8;</code>
@@ -87,9 +87,14 @@ public final class Unk2700FDEGJOCDDGH {
             case 0:
               done = true;
               break;
-            case 32: {
+            case 24: {
 
-              isSuccess_ = input.readBool();
+              curProgress_ = input.readUInt32();
+              break;
+            }
+            case 48: {
+
+              challengeIndex_ = input.readUInt32();
               break;
             }
             case 64: {
@@ -97,14 +102,9 @@ public final class Unk2700FDEGJOCDDGH {
               challengeId_ = input.readUInt32();
               break;
             }
-            case 72: {
+            case 112: {
 
-              curProgress_ = input.readUInt32();
-              break;
-            }
-            case 80: {
-
-              challengeIndex_ = input.readUInt32();
+              isSuccess_ = input.readBool();
               break;
             }
             default: {
@@ -139,21 +139,21 @@ public final class Unk2700FDEGJOCDDGH {
               emu.grasscutter.net.proto.Unk2700FDEGJOCDDGH.Unk2700_FDEGJOCDDGH.class, emu.grasscutter.net.proto.Unk2700FDEGJOCDDGH.Unk2700_FDEGJOCDDGH.Builder.class);
     }
 
-    public static final int CUR_PROGRESS_FIELD_NUMBER = 9;
-    private int curProgress_;
+    public static final int IS_SUCCESS_FIELD_NUMBER = 14;
+    private boolean isSuccess_;
     /**
-     * <code>uint32 cur_progress = 9;</code>
-     * @return The curProgress.
+     * <code>bool is_success = 14;</code>
+     * @return The isSuccess.
      */
     @java.lang.Override
-    public int getCurProgress() {
-      return curProgress_;
+    public boolean getIsSuccess() {
+      return isSuccess_;
     }
 
-    public static final int CHALLENGE_INDEX_FIELD_NUMBER = 10;
+    public static final int CHALLENGE_INDEX_FIELD_NUMBER = 6;
     private int challengeIndex_;
     /**
-     * <code>uint32 challenge_index = 10;</code>
+     * <code>uint32 challenge_index = 6;</code>
      * @return The challengeIndex.
      */
     @java.lang.Override
@@ -161,15 +161,15 @@ public final class Unk2700FDEGJOCDDGH {
       return challengeIndex_;
     }
 
-    public static final int IS_SUCCESS_FIELD_NUMBER = 4;
-    private boolean isSuccess_;
+    public static final int CUR_PROGRESS_FIELD_NUMBER = 3;
+    private int curProgress_;
     /**
-     * <code>bool is_success = 4;</code>
-     * @return The isSuccess.
+     * <code>uint32 cur_progress = 3;</code>
+     * @return The curProgress.
      */
     @java.lang.Override
-    public boolean getIsSuccess() {
-      return isSuccess_;
+    public int getCurProgress() {
+      return curProgress_;
     }
 
     public static final int CHALLENGE_ID_FIELD_NUMBER = 8;
@@ -197,17 +197,17 @@ public final class Unk2700FDEGJOCDDGH {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (isSuccess_ != false) {
-        output.writeBool(4, isSuccess_);
+      if (curProgress_ != 0) {
+        output.writeUInt32(3, curProgress_);
+      }
+      if (challengeIndex_ != 0) {
+        output.writeUInt32(6, challengeIndex_);
       }
       if (challengeId_ != 0) {
         output.writeUInt32(8, challengeId_);
       }
-      if (curProgress_ != 0) {
-        output.writeUInt32(9, curProgress_);
-      }
-      if (challengeIndex_ != 0) {
-        output.writeUInt32(10, challengeIndex_);
+      if (isSuccess_ != false) {
+        output.writeBool(14, isSuccess_);
       }
       unknownFields.writeTo(output);
     }
@@ -218,21 +218,21 @@ public final class Unk2700FDEGJOCDDGH {
       if (size != -1) return size;
 
       size = 0;
-      if (isSuccess_ != false) {
+      if (curProgress_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(4, isSuccess_);
+          .computeUInt32Size(3, curProgress_);
+      }
+      if (challengeIndex_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(6, challengeIndex_);
       }
       if (challengeId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(8, challengeId_);
       }
-      if (curProgress_ != 0) {
+      if (isSuccess_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(9, curProgress_);
-      }
-      if (challengeIndex_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(10, challengeIndex_);
+          .computeBoolSize(14, isSuccess_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -249,12 +249,12 @@ public final class Unk2700FDEGJOCDDGH {
       }
       emu.grasscutter.net.proto.Unk2700FDEGJOCDDGH.Unk2700_FDEGJOCDDGH other = (emu.grasscutter.net.proto.Unk2700FDEGJOCDDGH.Unk2700_FDEGJOCDDGH) obj;
 
-      if (getCurProgress()
-          != other.getCurProgress()) return false;
-      if (getChallengeIndex()
-          != other.getChallengeIndex()) return false;
       if (getIsSuccess()
           != other.getIsSuccess()) return false;
+      if (getChallengeIndex()
+          != other.getChallengeIndex()) return false;
+      if (getCurProgress()
+          != other.getCurProgress()) return false;
       if (getChallengeId()
           != other.getChallengeId()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
@@ -268,13 +268,13 @@ public final class Unk2700FDEGJOCDDGH {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + CUR_PROGRESS_FIELD_NUMBER;
-      hash = (53 * hash) + getCurProgress();
-      hash = (37 * hash) + CHALLENGE_INDEX_FIELD_NUMBER;
-      hash = (53 * hash) + getChallengeIndex();
       hash = (37 * hash) + IS_SUCCESS_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getIsSuccess());
+      hash = (37 * hash) + CHALLENGE_INDEX_FIELD_NUMBER;
+      hash = (53 * hash) + getChallengeIndex();
+      hash = (37 * hash) + CUR_PROGRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getCurProgress();
       hash = (37 * hash) + CHALLENGE_ID_FIELD_NUMBER;
       hash = (53 * hash) + getChallengeId();
       hash = (29 * hash) + unknownFields.hashCode();
@@ -410,11 +410,11 @@ public final class Unk2700FDEGJOCDDGH {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        curProgress_ = 0;
+        isSuccess_ = false;
 
         challengeIndex_ = 0;
 
-        isSuccess_ = false;
+        curProgress_ = 0;
 
         challengeId_ = 0;
 
@@ -444,9 +444,9 @@ public final class Unk2700FDEGJOCDDGH {
       @java.lang.Override
       public emu.grasscutter.net.proto.Unk2700FDEGJOCDDGH.Unk2700_FDEGJOCDDGH buildPartial() {
         emu.grasscutter.net.proto.Unk2700FDEGJOCDDGH.Unk2700_FDEGJOCDDGH result = new emu.grasscutter.net.proto.Unk2700FDEGJOCDDGH.Unk2700_FDEGJOCDDGH(this);
-        result.curProgress_ = curProgress_;
-        result.challengeIndex_ = challengeIndex_;
         result.isSuccess_ = isSuccess_;
+        result.challengeIndex_ = challengeIndex_;
+        result.curProgress_ = curProgress_;
         result.challengeId_ = challengeId_;
         onBuilt();
         return result;
@@ -496,14 +496,14 @@ public final class Unk2700FDEGJOCDDGH {
 
       public Builder mergeFrom(emu.grasscutter.net.proto.Unk2700FDEGJOCDDGH.Unk2700_FDEGJOCDDGH other) {
         if (other == emu.grasscutter.net.proto.Unk2700FDEGJOCDDGH.Unk2700_FDEGJOCDDGH.getDefaultInstance()) return this;
-        if (other.getCurProgress() != 0) {
-          setCurProgress(other.getCurProgress());
+        if (other.getIsSuccess() != false) {
+          setIsSuccess(other.getIsSuccess());
         }
         if (other.getChallengeIndex() != 0) {
           setChallengeIndex(other.getChallengeIndex());
         }
-        if (other.getIsSuccess() != false) {
-          setIsSuccess(other.getIsSuccess());
+        if (other.getCurProgress() != 0) {
+          setCurProgress(other.getCurProgress());
         }
         if (other.getChallengeId() != 0) {
           setChallengeId(other.getChallengeId());
@@ -537,71 +537,9 @@ public final class Unk2700FDEGJOCDDGH {
         return this;
       }
 
-      private int curProgress_ ;
-      /**
-       * <code>uint32 cur_progress = 9;</code>
-       * @return The curProgress.
-       */
-      @java.lang.Override
-      public int getCurProgress() {
-        return curProgress_;
-      }
-      /**
-       * <code>uint32 cur_progress = 9;</code>
-       * @param value The curProgress to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCurProgress(int value) {
-        
-        curProgress_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>uint32 cur_progress = 9;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearCurProgress() {
-        
-        curProgress_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private int challengeIndex_ ;
-      /**
-       * <code>uint32 challenge_index = 10;</code>
-       * @return The challengeIndex.
-       */
-      @java.lang.Override
-      public int getChallengeIndex() {
-        return challengeIndex_;
-      }
-      /**
-       * <code>uint32 challenge_index = 10;</code>
-       * @param value The challengeIndex to set.
-       * @return This builder for chaining.
-       */
-      public Builder setChallengeIndex(int value) {
-        
-        challengeIndex_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>uint32 challenge_index = 10;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearChallengeIndex() {
-        
-        challengeIndex_ = 0;
-        onChanged();
-        return this;
-      }
-
       private boolean isSuccess_ ;
       /**
-       * <code>bool is_success = 4;</code>
+       * <code>bool is_success = 14;</code>
        * @return The isSuccess.
        */
       @java.lang.Override
@@ -609,7 +547,7 @@ public final class Unk2700FDEGJOCDDGH {
         return isSuccess_;
       }
       /**
-       * <code>bool is_success = 4;</code>
+       * <code>bool is_success = 14;</code>
        * @param value The isSuccess to set.
        * @return This builder for chaining.
        */
@@ -620,12 +558,74 @@ public final class Unk2700FDEGJOCDDGH {
         return this;
       }
       /**
-       * <code>bool is_success = 4;</code>
+       * <code>bool is_success = 14;</code>
        * @return This builder for chaining.
        */
       public Builder clearIsSuccess() {
         
         isSuccess_ = false;
+        onChanged();
+        return this;
+      }
+
+      private int challengeIndex_ ;
+      /**
+       * <code>uint32 challenge_index = 6;</code>
+       * @return The challengeIndex.
+       */
+      @java.lang.Override
+      public int getChallengeIndex() {
+        return challengeIndex_;
+      }
+      /**
+       * <code>uint32 challenge_index = 6;</code>
+       * @param value The challengeIndex to set.
+       * @return This builder for chaining.
+       */
+      public Builder setChallengeIndex(int value) {
+        
+        challengeIndex_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 challenge_index = 6;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearChallengeIndex() {
+        
+        challengeIndex_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int curProgress_ ;
+      /**
+       * <code>uint32 cur_progress = 3;</code>
+       * @return The curProgress.
+       */
+      @java.lang.Override
+      public int getCurProgress() {
+        return curProgress_;
+      }
+      /**
+       * <code>uint32 cur_progress = 3;</code>
+       * @param value The curProgress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCurProgress(int value) {
+        
+        curProgress_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 cur_progress = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCurProgress() {
+        
+        curProgress_ = 0;
         onChanged();
         return this;
       }
@@ -728,8 +728,8 @@ public final class Unk2700FDEGJOCDDGH {
   static {
     java.lang.String[] descriptorData = {
       "\n\031Unk2700_FDEGJOCDDGH.proto\"n\n\023Unk2700_F" +
-      "DEGJOCDDGH\022\024\n\014cur_progress\030\t \001(\r\022\027\n\017chal" +
-      "lenge_index\030\n \001(\r\022\022\n\nis_success\030\004 \001(\010\022\024\n" +
+      "DEGJOCDDGH\022\022\n\nis_success\030\016 \001(\010\022\027\n\017challe" +
+      "nge_index\030\006 \001(\r\022\024\n\014cur_progress\030\003 \001(\r\022\024\n" +
       "\014challenge_id\030\010 \001(\rB\033\n\031emu.grasscutter.n" +
       "et.protob\006proto3"
     };
@@ -742,7 +742,7 @@ public final class Unk2700FDEGJOCDDGH {
     internal_static_Unk2700_FDEGJOCDDGH_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_Unk2700_FDEGJOCDDGH_descriptor,
-        new java.lang.String[] { "CurProgress", "ChallengeIndex", "IsSuccess", "ChallengeId", });
+        new java.lang.String[] { "IsSuccess", "ChallengeIndex", "CurProgress", "ChallengeId", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

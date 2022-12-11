@@ -19,31 +19,31 @@ public final class Unk2700GOHMLAFNBGF {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>uint32 Unk2700_OALCFEGIBOL = 8;</code>
+     * <code>uint32 Unk2700_OALCFEGIBOL = 3;</code>
      * @return The unk2700OALCFEGIBOL.
      */
     int getUnk2700OALCFEGIBOL();
 
     /**
-     * <code>repeated .HomeFurnitureData Unk2700_CKPNCKDIJMB = 3;</code>
+     * <code>repeated .HomeFurnitureData Unk2700_CKPNCKDIJMB = 11;</code>
      */
     java.util.List<emu.grasscutter.net.proto.HomeFurnitureDataOuterClass.HomeFurnitureData> 
         getUnk2700CKPNCKDIJMBList();
     /**
-     * <code>repeated .HomeFurnitureData Unk2700_CKPNCKDIJMB = 3;</code>
+     * <code>repeated .HomeFurnitureData Unk2700_CKPNCKDIJMB = 11;</code>
      */
     emu.grasscutter.net.proto.HomeFurnitureDataOuterClass.HomeFurnitureData getUnk2700CKPNCKDIJMB(int index);
     /**
-     * <code>repeated .HomeFurnitureData Unk2700_CKPNCKDIJMB = 3;</code>
+     * <code>repeated .HomeFurnitureData Unk2700_CKPNCKDIJMB = 11;</code>
      */
     int getUnk2700CKPNCKDIJMBCount();
     /**
-     * <code>repeated .HomeFurnitureData Unk2700_CKPNCKDIJMB = 3;</code>
+     * <code>repeated .HomeFurnitureData Unk2700_CKPNCKDIJMB = 11;</code>
      */
     java.util.List<? extends emu.grasscutter.net.proto.HomeFurnitureDataOuterClass.HomeFurnitureDataOrBuilder> 
         getUnk2700CKPNCKDIJMBOrBuilderList();
     /**
-     * <code>repeated .HomeFurnitureData Unk2700_CKPNCKDIJMB = 3;</code>
+     * <code>repeated .HomeFurnitureData Unk2700_CKPNCKDIJMB = 11;</code>
      */
     emu.grasscutter.net.proto.HomeFurnitureDataOuterClass.HomeFurnitureDataOrBuilder getUnk2700CKPNCKDIJMBOrBuilder(
         int index);
@@ -95,18 +95,18 @@ public final class Unk2700GOHMLAFNBGF {
             case 0:
               done = true;
               break;
-            case 26: {
+            case 24: {
+
+              unk2700OALCFEGIBOL_ = input.readUInt32();
+              break;
+            }
+            case 90: {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 unk2700CKPNCKDIJMB_ = new java.util.ArrayList<emu.grasscutter.net.proto.HomeFurnitureDataOuterClass.HomeFurnitureData>();
                 mutable_bitField0_ |= 0x00000001;
               }
               unk2700CKPNCKDIJMB_.add(
                   input.readMessage(emu.grasscutter.net.proto.HomeFurnitureDataOuterClass.HomeFurnitureData.parser(), extensionRegistry));
-              break;
-            }
-            case 64: {
-
-              unk2700OALCFEGIBOL_ = input.readUInt32();
               break;
             }
             default: {
@@ -144,10 +144,10 @@ public final class Unk2700GOHMLAFNBGF {
               emu.grasscutter.net.proto.Unk2700GOHMLAFNBGF.Unk2700_GOHMLAFNBGF.class, emu.grasscutter.net.proto.Unk2700GOHMLAFNBGF.Unk2700_GOHMLAFNBGF.Builder.class);
     }
 
-    public static final int UNK2700_OALCFEGIBOL_FIELD_NUMBER = 8;
+    public static final int UNK2700_OALCFEGIBOL_FIELD_NUMBER = 3;
     private int unk2700OALCFEGIBOL_;
     /**
-     * <code>uint32 Unk2700_OALCFEGIBOL = 8;</code>
+     * <code>uint32 Unk2700_OALCFEGIBOL = 3;</code>
      * @return The unk2700OALCFEGIBOL.
      */
     @java.lang.Override
@@ -155,17 +155,17 @@ public final class Unk2700GOHMLAFNBGF {
       return unk2700OALCFEGIBOL_;
     }
 
-    public static final int UNK2700_CKPNCKDIJMB_FIELD_NUMBER = 3;
+    public static final int UNK2700_CKPNCKDIJMB_FIELD_NUMBER = 11;
     private java.util.List<emu.grasscutter.net.proto.HomeFurnitureDataOuterClass.HomeFurnitureData> unk2700CKPNCKDIJMB_;
     /**
-     * <code>repeated .HomeFurnitureData Unk2700_CKPNCKDIJMB = 3;</code>
+     * <code>repeated .HomeFurnitureData Unk2700_CKPNCKDIJMB = 11;</code>
      */
     @java.lang.Override
     public java.util.List<emu.grasscutter.net.proto.HomeFurnitureDataOuterClass.HomeFurnitureData> getUnk2700CKPNCKDIJMBList() {
       return unk2700CKPNCKDIJMB_;
     }
     /**
-     * <code>repeated .HomeFurnitureData Unk2700_CKPNCKDIJMB = 3;</code>
+     * <code>repeated .HomeFurnitureData Unk2700_CKPNCKDIJMB = 11;</code>
      */
     @java.lang.Override
     public java.util.List<? extends emu.grasscutter.net.proto.HomeFurnitureDataOuterClass.HomeFurnitureDataOrBuilder> 
@@ -173,21 +173,21 @@ public final class Unk2700GOHMLAFNBGF {
       return unk2700CKPNCKDIJMB_;
     }
     /**
-     * <code>repeated .HomeFurnitureData Unk2700_CKPNCKDIJMB = 3;</code>
+     * <code>repeated .HomeFurnitureData Unk2700_CKPNCKDIJMB = 11;</code>
      */
     @java.lang.Override
     public int getUnk2700CKPNCKDIJMBCount() {
       return unk2700CKPNCKDIJMB_.size();
     }
     /**
-     * <code>repeated .HomeFurnitureData Unk2700_CKPNCKDIJMB = 3;</code>
+     * <code>repeated .HomeFurnitureData Unk2700_CKPNCKDIJMB = 11;</code>
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.HomeFurnitureDataOuterClass.HomeFurnitureData getUnk2700CKPNCKDIJMB(int index) {
       return unk2700CKPNCKDIJMB_.get(index);
     }
     /**
-     * <code>repeated .HomeFurnitureData Unk2700_CKPNCKDIJMB = 3;</code>
+     * <code>repeated .HomeFurnitureData Unk2700_CKPNCKDIJMB = 11;</code>
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.HomeFurnitureDataOuterClass.HomeFurnitureDataOrBuilder getUnk2700CKPNCKDIJMBOrBuilder(
@@ -209,11 +209,11 @@ public final class Unk2700GOHMLAFNBGF {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      for (int i = 0; i < unk2700CKPNCKDIJMB_.size(); i++) {
-        output.writeMessage(3, unk2700CKPNCKDIJMB_.get(i));
-      }
       if (unk2700OALCFEGIBOL_ != 0) {
-        output.writeUInt32(8, unk2700OALCFEGIBOL_);
+        output.writeUInt32(3, unk2700OALCFEGIBOL_);
+      }
+      for (int i = 0; i < unk2700CKPNCKDIJMB_.size(); i++) {
+        output.writeMessage(11, unk2700CKPNCKDIJMB_.get(i));
       }
       unknownFields.writeTo(output);
     }
@@ -224,13 +224,13 @@ public final class Unk2700GOHMLAFNBGF {
       if (size != -1) return size;
 
       size = 0;
-      for (int i = 0; i < unk2700CKPNCKDIJMB_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, unk2700CKPNCKDIJMB_.get(i));
-      }
       if (unk2700OALCFEGIBOL_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(8, unk2700OALCFEGIBOL_);
+          .computeUInt32Size(3, unk2700OALCFEGIBOL_);
+      }
+      for (int i = 0; i < unk2700CKPNCKDIJMB_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(11, unk2700CKPNCKDIJMB_.get(i));
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -556,7 +556,7 @@ public final class Unk2700GOHMLAFNBGF {
 
       private int unk2700OALCFEGIBOL_ ;
       /**
-       * <code>uint32 Unk2700_OALCFEGIBOL = 8;</code>
+       * <code>uint32 Unk2700_OALCFEGIBOL = 3;</code>
        * @return The unk2700OALCFEGIBOL.
        */
       @java.lang.Override
@@ -564,7 +564,7 @@ public final class Unk2700GOHMLAFNBGF {
         return unk2700OALCFEGIBOL_;
       }
       /**
-       * <code>uint32 Unk2700_OALCFEGIBOL = 8;</code>
+       * <code>uint32 Unk2700_OALCFEGIBOL = 3;</code>
        * @param value The unk2700OALCFEGIBOL to set.
        * @return This builder for chaining.
        */
@@ -575,7 +575,7 @@ public final class Unk2700GOHMLAFNBGF {
         return this;
       }
       /**
-       * <code>uint32 Unk2700_OALCFEGIBOL = 8;</code>
+       * <code>uint32 Unk2700_OALCFEGIBOL = 3;</code>
        * @return This builder for chaining.
        */
       public Builder clearUnk2700OALCFEGIBOL() {
@@ -598,7 +598,7 @@ public final class Unk2700GOHMLAFNBGF {
           emu.grasscutter.net.proto.HomeFurnitureDataOuterClass.HomeFurnitureData, emu.grasscutter.net.proto.HomeFurnitureDataOuterClass.HomeFurnitureData.Builder, emu.grasscutter.net.proto.HomeFurnitureDataOuterClass.HomeFurnitureDataOrBuilder> unk2700CKPNCKDIJMBBuilder_;
 
       /**
-       * <code>repeated .HomeFurnitureData Unk2700_CKPNCKDIJMB = 3;</code>
+       * <code>repeated .HomeFurnitureData Unk2700_CKPNCKDIJMB = 11;</code>
        */
       public java.util.List<emu.grasscutter.net.proto.HomeFurnitureDataOuterClass.HomeFurnitureData> getUnk2700CKPNCKDIJMBList() {
         if (unk2700CKPNCKDIJMBBuilder_ == null) {
@@ -608,7 +608,7 @@ public final class Unk2700GOHMLAFNBGF {
         }
       }
       /**
-       * <code>repeated .HomeFurnitureData Unk2700_CKPNCKDIJMB = 3;</code>
+       * <code>repeated .HomeFurnitureData Unk2700_CKPNCKDIJMB = 11;</code>
        */
       public int getUnk2700CKPNCKDIJMBCount() {
         if (unk2700CKPNCKDIJMBBuilder_ == null) {
@@ -618,7 +618,7 @@ public final class Unk2700GOHMLAFNBGF {
         }
       }
       /**
-       * <code>repeated .HomeFurnitureData Unk2700_CKPNCKDIJMB = 3;</code>
+       * <code>repeated .HomeFurnitureData Unk2700_CKPNCKDIJMB = 11;</code>
        */
       public emu.grasscutter.net.proto.HomeFurnitureDataOuterClass.HomeFurnitureData getUnk2700CKPNCKDIJMB(int index) {
         if (unk2700CKPNCKDIJMBBuilder_ == null) {
@@ -628,7 +628,7 @@ public final class Unk2700GOHMLAFNBGF {
         }
       }
       /**
-       * <code>repeated .HomeFurnitureData Unk2700_CKPNCKDIJMB = 3;</code>
+       * <code>repeated .HomeFurnitureData Unk2700_CKPNCKDIJMB = 11;</code>
        */
       public Builder setUnk2700CKPNCKDIJMB(
           int index, emu.grasscutter.net.proto.HomeFurnitureDataOuterClass.HomeFurnitureData value) {
@@ -645,7 +645,7 @@ public final class Unk2700GOHMLAFNBGF {
         return this;
       }
       /**
-       * <code>repeated .HomeFurnitureData Unk2700_CKPNCKDIJMB = 3;</code>
+       * <code>repeated .HomeFurnitureData Unk2700_CKPNCKDIJMB = 11;</code>
        */
       public Builder setUnk2700CKPNCKDIJMB(
           int index, emu.grasscutter.net.proto.HomeFurnitureDataOuterClass.HomeFurnitureData.Builder builderForValue) {
@@ -659,7 +659,7 @@ public final class Unk2700GOHMLAFNBGF {
         return this;
       }
       /**
-       * <code>repeated .HomeFurnitureData Unk2700_CKPNCKDIJMB = 3;</code>
+       * <code>repeated .HomeFurnitureData Unk2700_CKPNCKDIJMB = 11;</code>
        */
       public Builder addUnk2700CKPNCKDIJMB(emu.grasscutter.net.proto.HomeFurnitureDataOuterClass.HomeFurnitureData value) {
         if (unk2700CKPNCKDIJMBBuilder_ == null) {
@@ -675,7 +675,7 @@ public final class Unk2700GOHMLAFNBGF {
         return this;
       }
       /**
-       * <code>repeated .HomeFurnitureData Unk2700_CKPNCKDIJMB = 3;</code>
+       * <code>repeated .HomeFurnitureData Unk2700_CKPNCKDIJMB = 11;</code>
        */
       public Builder addUnk2700CKPNCKDIJMB(
           int index, emu.grasscutter.net.proto.HomeFurnitureDataOuterClass.HomeFurnitureData value) {
@@ -692,7 +692,7 @@ public final class Unk2700GOHMLAFNBGF {
         return this;
       }
       /**
-       * <code>repeated .HomeFurnitureData Unk2700_CKPNCKDIJMB = 3;</code>
+       * <code>repeated .HomeFurnitureData Unk2700_CKPNCKDIJMB = 11;</code>
        */
       public Builder addUnk2700CKPNCKDIJMB(
           emu.grasscutter.net.proto.HomeFurnitureDataOuterClass.HomeFurnitureData.Builder builderForValue) {
@@ -706,7 +706,7 @@ public final class Unk2700GOHMLAFNBGF {
         return this;
       }
       /**
-       * <code>repeated .HomeFurnitureData Unk2700_CKPNCKDIJMB = 3;</code>
+       * <code>repeated .HomeFurnitureData Unk2700_CKPNCKDIJMB = 11;</code>
        */
       public Builder addUnk2700CKPNCKDIJMB(
           int index, emu.grasscutter.net.proto.HomeFurnitureDataOuterClass.HomeFurnitureData.Builder builderForValue) {
@@ -720,7 +720,7 @@ public final class Unk2700GOHMLAFNBGF {
         return this;
       }
       /**
-       * <code>repeated .HomeFurnitureData Unk2700_CKPNCKDIJMB = 3;</code>
+       * <code>repeated .HomeFurnitureData Unk2700_CKPNCKDIJMB = 11;</code>
        */
       public Builder addAllUnk2700CKPNCKDIJMB(
           java.lang.Iterable<? extends emu.grasscutter.net.proto.HomeFurnitureDataOuterClass.HomeFurnitureData> values) {
@@ -735,7 +735,7 @@ public final class Unk2700GOHMLAFNBGF {
         return this;
       }
       /**
-       * <code>repeated .HomeFurnitureData Unk2700_CKPNCKDIJMB = 3;</code>
+       * <code>repeated .HomeFurnitureData Unk2700_CKPNCKDIJMB = 11;</code>
        */
       public Builder clearUnk2700CKPNCKDIJMB() {
         if (unk2700CKPNCKDIJMBBuilder_ == null) {
@@ -748,7 +748,7 @@ public final class Unk2700GOHMLAFNBGF {
         return this;
       }
       /**
-       * <code>repeated .HomeFurnitureData Unk2700_CKPNCKDIJMB = 3;</code>
+       * <code>repeated .HomeFurnitureData Unk2700_CKPNCKDIJMB = 11;</code>
        */
       public Builder removeUnk2700CKPNCKDIJMB(int index) {
         if (unk2700CKPNCKDIJMBBuilder_ == null) {
@@ -761,14 +761,14 @@ public final class Unk2700GOHMLAFNBGF {
         return this;
       }
       /**
-       * <code>repeated .HomeFurnitureData Unk2700_CKPNCKDIJMB = 3;</code>
+       * <code>repeated .HomeFurnitureData Unk2700_CKPNCKDIJMB = 11;</code>
        */
       public emu.grasscutter.net.proto.HomeFurnitureDataOuterClass.HomeFurnitureData.Builder getUnk2700CKPNCKDIJMBBuilder(
           int index) {
         return getUnk2700CKPNCKDIJMBFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .HomeFurnitureData Unk2700_CKPNCKDIJMB = 3;</code>
+       * <code>repeated .HomeFurnitureData Unk2700_CKPNCKDIJMB = 11;</code>
        */
       public emu.grasscutter.net.proto.HomeFurnitureDataOuterClass.HomeFurnitureDataOrBuilder getUnk2700CKPNCKDIJMBOrBuilder(
           int index) {
@@ -778,7 +778,7 @@ public final class Unk2700GOHMLAFNBGF {
         }
       }
       /**
-       * <code>repeated .HomeFurnitureData Unk2700_CKPNCKDIJMB = 3;</code>
+       * <code>repeated .HomeFurnitureData Unk2700_CKPNCKDIJMB = 11;</code>
        */
       public java.util.List<? extends emu.grasscutter.net.proto.HomeFurnitureDataOuterClass.HomeFurnitureDataOrBuilder> 
            getUnk2700CKPNCKDIJMBOrBuilderList() {
@@ -789,14 +789,14 @@ public final class Unk2700GOHMLAFNBGF {
         }
       }
       /**
-       * <code>repeated .HomeFurnitureData Unk2700_CKPNCKDIJMB = 3;</code>
+       * <code>repeated .HomeFurnitureData Unk2700_CKPNCKDIJMB = 11;</code>
        */
       public emu.grasscutter.net.proto.HomeFurnitureDataOuterClass.HomeFurnitureData.Builder addUnk2700CKPNCKDIJMBBuilder() {
         return getUnk2700CKPNCKDIJMBFieldBuilder().addBuilder(
             emu.grasscutter.net.proto.HomeFurnitureDataOuterClass.HomeFurnitureData.getDefaultInstance());
       }
       /**
-       * <code>repeated .HomeFurnitureData Unk2700_CKPNCKDIJMB = 3;</code>
+       * <code>repeated .HomeFurnitureData Unk2700_CKPNCKDIJMB = 11;</code>
        */
       public emu.grasscutter.net.proto.HomeFurnitureDataOuterClass.HomeFurnitureData.Builder addUnk2700CKPNCKDIJMBBuilder(
           int index) {
@@ -804,7 +804,7 @@ public final class Unk2700GOHMLAFNBGF {
             index, emu.grasscutter.net.proto.HomeFurnitureDataOuterClass.HomeFurnitureData.getDefaultInstance());
       }
       /**
-       * <code>repeated .HomeFurnitureData Unk2700_CKPNCKDIJMB = 3;</code>
+       * <code>repeated .HomeFurnitureData Unk2700_CKPNCKDIJMB = 11;</code>
        */
       public java.util.List<emu.grasscutter.net.proto.HomeFurnitureDataOuterClass.HomeFurnitureData.Builder> 
            getUnk2700CKPNCKDIJMBBuilderList() {
@@ -893,8 +893,8 @@ public final class Unk2700GOHMLAFNBGF {
     java.lang.String[] descriptorData = {
       "\n\031Unk2700_GOHMLAFNBGF.proto\032\027HomeFurnitu" +
       "reData.proto\"c\n\023Unk2700_GOHMLAFNBGF\022\033\n\023U" +
-      "nk2700_OALCFEGIBOL\030\010 \001(\r\022/\n\023Unk2700_CKPN" +
-      "CKDIJMB\030\003 \003(\0132\022.HomeFurnitureDataB\033\n\031emu" +
+      "nk2700_OALCFEGIBOL\030\003 \001(\r\022/\n\023Unk2700_CKPN" +
+      "CKDIJMB\030\013 \003(\0132\022.HomeFurnitureDataB\033\n\031emu" +
       ".grasscutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor

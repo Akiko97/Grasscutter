@@ -19,22 +19,22 @@ public final class ClientCollectorDataOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>uint32 material_id = 10;</code>
+     * <code>uint32 Unk3250_PPAOJCGAAEA = 2;</code>
+     * @return The unk3250PPAOJCGAAEA.
+     */
+    int getUnk3250PPAOJCGAAEA();
+
+    /**
+     * <code>uint32 Unk3250_MFCHJHPJALD = 3;</code>
+     * @return The unk3250MFCHJHPJALD.
+     */
+    int getUnk3250MFCHJHPJALD();
+
+    /**
+     * <code>uint32 material_id = 9;</code>
      * @return The materialId.
      */
     int getMaterialId();
-
-    /**
-     * <code>uint32 max_points = 8;</code>
-     * @return The maxPoints.
-     */
-    int getMaxPoints();
-
-    /**
-     * <code>uint32 curr_points = 13;</code>
-     * @return The currPoints.
-     */
-    int getCurrPoints();
   }
   /**
    * Protobuf type {@code ClientCollectorData}
@@ -81,19 +81,19 @@ public final class ClientCollectorDataOuterClass {
             case 0:
               done = true;
               break;
-            case 64: {
+            case 16: {
 
-              maxPoints_ = input.readUInt32();
+              unk3250PPAOJCGAAEA_ = input.readUInt32();
               break;
             }
-            case 80: {
+            case 24: {
+
+              unk3250MFCHJHPJALD_ = input.readUInt32();
+              break;
+            }
+            case 72: {
 
               materialId_ = input.readUInt32();
-              break;
-            }
-            case 104: {
-
-              currPoints_ = input.readUInt32();
               break;
             }
             default: {
@@ -128,37 +128,37 @@ public final class ClientCollectorDataOuterClass {
               emu.grasscutter.net.proto.ClientCollectorDataOuterClass.ClientCollectorData.class, emu.grasscutter.net.proto.ClientCollectorDataOuterClass.ClientCollectorData.Builder.class);
     }
 
-    public static final int MATERIAL_ID_FIELD_NUMBER = 10;
+    public static final int UNK3250_PPAOJCGAAEA_FIELD_NUMBER = 2;
+    private int unk3250PPAOJCGAAEA_;
+    /**
+     * <code>uint32 Unk3250_PPAOJCGAAEA = 2;</code>
+     * @return The unk3250PPAOJCGAAEA.
+     */
+    @java.lang.Override
+    public int getUnk3250PPAOJCGAAEA() {
+      return unk3250PPAOJCGAAEA_;
+    }
+
+    public static final int UNK3250_MFCHJHPJALD_FIELD_NUMBER = 3;
+    private int unk3250MFCHJHPJALD_;
+    /**
+     * <code>uint32 Unk3250_MFCHJHPJALD = 3;</code>
+     * @return The unk3250MFCHJHPJALD.
+     */
+    @java.lang.Override
+    public int getUnk3250MFCHJHPJALD() {
+      return unk3250MFCHJHPJALD_;
+    }
+
+    public static final int MATERIAL_ID_FIELD_NUMBER = 9;
     private int materialId_;
     /**
-     * <code>uint32 material_id = 10;</code>
+     * <code>uint32 material_id = 9;</code>
      * @return The materialId.
      */
     @java.lang.Override
     public int getMaterialId() {
       return materialId_;
-    }
-
-    public static final int MAX_POINTS_FIELD_NUMBER = 8;
-    private int maxPoints_;
-    /**
-     * <code>uint32 max_points = 8;</code>
-     * @return The maxPoints.
-     */
-    @java.lang.Override
-    public int getMaxPoints() {
-      return maxPoints_;
-    }
-
-    public static final int CURR_POINTS_FIELD_NUMBER = 13;
-    private int currPoints_;
-    /**
-     * <code>uint32 curr_points = 13;</code>
-     * @return The currPoints.
-     */
-    @java.lang.Override
-    public int getCurrPoints() {
-      return currPoints_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -175,14 +175,14 @@ public final class ClientCollectorDataOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (maxPoints_ != 0) {
-        output.writeUInt32(8, maxPoints_);
+      if (unk3250PPAOJCGAAEA_ != 0) {
+        output.writeUInt32(2, unk3250PPAOJCGAAEA_);
+      }
+      if (unk3250MFCHJHPJALD_ != 0) {
+        output.writeUInt32(3, unk3250MFCHJHPJALD_);
       }
       if (materialId_ != 0) {
-        output.writeUInt32(10, materialId_);
-      }
-      if (currPoints_ != 0) {
-        output.writeUInt32(13, currPoints_);
+        output.writeUInt32(9, materialId_);
       }
       unknownFields.writeTo(output);
     }
@@ -193,17 +193,17 @@ public final class ClientCollectorDataOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (maxPoints_ != 0) {
+      if (unk3250PPAOJCGAAEA_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(8, maxPoints_);
+          .computeUInt32Size(2, unk3250PPAOJCGAAEA_);
+      }
+      if (unk3250MFCHJHPJALD_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(3, unk3250MFCHJHPJALD_);
       }
       if (materialId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(10, materialId_);
-      }
-      if (currPoints_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(13, currPoints_);
+          .computeUInt32Size(9, materialId_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -220,12 +220,12 @@ public final class ClientCollectorDataOuterClass {
       }
       emu.grasscutter.net.proto.ClientCollectorDataOuterClass.ClientCollectorData other = (emu.grasscutter.net.proto.ClientCollectorDataOuterClass.ClientCollectorData) obj;
 
+      if (getUnk3250PPAOJCGAAEA()
+          != other.getUnk3250PPAOJCGAAEA()) return false;
+      if (getUnk3250MFCHJHPJALD()
+          != other.getUnk3250MFCHJHPJALD()) return false;
       if (getMaterialId()
           != other.getMaterialId()) return false;
-      if (getMaxPoints()
-          != other.getMaxPoints()) return false;
-      if (getCurrPoints()
-          != other.getCurrPoints()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -237,12 +237,12 @@ public final class ClientCollectorDataOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + UNK3250_PPAOJCGAAEA_FIELD_NUMBER;
+      hash = (53 * hash) + getUnk3250PPAOJCGAAEA();
+      hash = (37 * hash) + UNK3250_MFCHJHPJALD_FIELD_NUMBER;
+      hash = (53 * hash) + getUnk3250MFCHJHPJALD();
       hash = (37 * hash) + MATERIAL_ID_FIELD_NUMBER;
       hash = (53 * hash) + getMaterialId();
-      hash = (37 * hash) + MAX_POINTS_FIELD_NUMBER;
-      hash = (53 * hash) + getMaxPoints();
-      hash = (37 * hash) + CURR_POINTS_FIELD_NUMBER;
-      hash = (53 * hash) + getCurrPoints();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -376,11 +376,11 @@ public final class ClientCollectorDataOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        unk3250PPAOJCGAAEA_ = 0;
+
+        unk3250MFCHJHPJALD_ = 0;
+
         materialId_ = 0;
-
-        maxPoints_ = 0;
-
-        currPoints_ = 0;
 
         return this;
       }
@@ -408,9 +408,9 @@ public final class ClientCollectorDataOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.ClientCollectorDataOuterClass.ClientCollectorData buildPartial() {
         emu.grasscutter.net.proto.ClientCollectorDataOuterClass.ClientCollectorData result = new emu.grasscutter.net.proto.ClientCollectorDataOuterClass.ClientCollectorData(this);
+        result.unk3250PPAOJCGAAEA_ = unk3250PPAOJCGAAEA_;
+        result.unk3250MFCHJHPJALD_ = unk3250MFCHJHPJALD_;
         result.materialId_ = materialId_;
-        result.maxPoints_ = maxPoints_;
-        result.currPoints_ = currPoints_;
         onBuilt();
         return result;
       }
@@ -459,14 +459,14 @@ public final class ClientCollectorDataOuterClass {
 
       public Builder mergeFrom(emu.grasscutter.net.proto.ClientCollectorDataOuterClass.ClientCollectorData other) {
         if (other == emu.grasscutter.net.proto.ClientCollectorDataOuterClass.ClientCollectorData.getDefaultInstance()) return this;
+        if (other.getUnk3250PPAOJCGAAEA() != 0) {
+          setUnk3250PPAOJCGAAEA(other.getUnk3250PPAOJCGAAEA());
+        }
+        if (other.getUnk3250MFCHJHPJALD() != 0) {
+          setUnk3250MFCHJHPJALD(other.getUnk3250MFCHJHPJALD());
+        }
         if (other.getMaterialId() != 0) {
           setMaterialId(other.getMaterialId());
-        }
-        if (other.getMaxPoints() != 0) {
-          setMaxPoints(other.getMaxPoints());
-        }
-        if (other.getCurrPoints() != 0) {
-          setCurrPoints(other.getCurrPoints());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -497,9 +497,71 @@ public final class ClientCollectorDataOuterClass {
         return this;
       }
 
+      private int unk3250PPAOJCGAAEA_ ;
+      /**
+       * <code>uint32 Unk3250_PPAOJCGAAEA = 2;</code>
+       * @return The unk3250PPAOJCGAAEA.
+       */
+      @java.lang.Override
+      public int getUnk3250PPAOJCGAAEA() {
+        return unk3250PPAOJCGAAEA_;
+      }
+      /**
+       * <code>uint32 Unk3250_PPAOJCGAAEA = 2;</code>
+       * @param value The unk3250PPAOJCGAAEA to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUnk3250PPAOJCGAAEA(int value) {
+        
+        unk3250PPAOJCGAAEA_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 Unk3250_PPAOJCGAAEA = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUnk3250PPAOJCGAAEA() {
+        
+        unk3250PPAOJCGAAEA_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int unk3250MFCHJHPJALD_ ;
+      /**
+       * <code>uint32 Unk3250_MFCHJHPJALD = 3;</code>
+       * @return The unk3250MFCHJHPJALD.
+       */
+      @java.lang.Override
+      public int getUnk3250MFCHJHPJALD() {
+        return unk3250MFCHJHPJALD_;
+      }
+      /**
+       * <code>uint32 Unk3250_MFCHJHPJALD = 3;</code>
+       * @param value The unk3250MFCHJHPJALD to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUnk3250MFCHJHPJALD(int value) {
+        
+        unk3250MFCHJHPJALD_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 Unk3250_MFCHJHPJALD = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUnk3250MFCHJHPJALD() {
+        
+        unk3250MFCHJHPJALD_ = 0;
+        onChanged();
+        return this;
+      }
+
       private int materialId_ ;
       /**
-       * <code>uint32 material_id = 10;</code>
+       * <code>uint32 material_id = 9;</code>
        * @return The materialId.
        */
       @java.lang.Override
@@ -507,7 +569,7 @@ public final class ClientCollectorDataOuterClass {
         return materialId_;
       }
       /**
-       * <code>uint32 material_id = 10;</code>
+       * <code>uint32 material_id = 9;</code>
        * @param value The materialId to set.
        * @return This builder for chaining.
        */
@@ -518,74 +580,12 @@ public final class ClientCollectorDataOuterClass {
         return this;
       }
       /**
-       * <code>uint32 material_id = 10;</code>
+       * <code>uint32 material_id = 9;</code>
        * @return This builder for chaining.
        */
       public Builder clearMaterialId() {
         
         materialId_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private int maxPoints_ ;
-      /**
-       * <code>uint32 max_points = 8;</code>
-       * @return The maxPoints.
-       */
-      @java.lang.Override
-      public int getMaxPoints() {
-        return maxPoints_;
-      }
-      /**
-       * <code>uint32 max_points = 8;</code>
-       * @param value The maxPoints to set.
-       * @return This builder for chaining.
-       */
-      public Builder setMaxPoints(int value) {
-        
-        maxPoints_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>uint32 max_points = 8;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearMaxPoints() {
-        
-        maxPoints_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private int currPoints_ ;
-      /**
-       * <code>uint32 curr_points = 13;</code>
-       * @return The currPoints.
-       */
-      @java.lang.Override
-      public int getCurrPoints() {
-        return currPoints_;
-      }
-      /**
-       * <code>uint32 curr_points = 13;</code>
-       * @param value The currPoints to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCurrPoints(int value) {
-        
-        currPoints_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>uint32 curr_points = 13;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearCurrPoints() {
-        
-        currPoints_ = 0;
         onChanged();
         return this;
       }
@@ -656,10 +656,11 @@ public final class ClientCollectorDataOuterClass {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\031ClientCollectorData.proto\"S\n\023ClientCol" +
-      "lectorData\022\023\n\013material_id\030\n \001(\r\022\022\n\nmax_p" +
-      "oints\030\010 \001(\r\022\023\n\013curr_points\030\r \001(\rB\033\n\031emu." +
-      "grasscutter.net.protob\006proto3"
+      "\n\031ClientCollectorData.proto\"d\n\023ClientCol" +
+      "lectorData\022\033\n\023Unk3250_PPAOJCGAAEA\030\002 \001(\r\022" +
+      "\033\n\023Unk3250_MFCHJHPJALD\030\003 \001(\r\022\023\n\013material" +
+      "_id\030\t \001(\rB\033\n\031emu.grasscutter.net.protob\006" +
+      "proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -670,7 +671,7 @@ public final class ClientCollectorDataOuterClass {
     internal_static_ClientCollectorData_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ClientCollectorData_descriptor,
-        new java.lang.String[] { "MaterialId", "MaxPoints", "CurrPoints", });
+        new java.lang.String[] { "Unk3250PPAOJCGAAEA", "Unk3250MFCHJHPJALD", "MaterialId", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

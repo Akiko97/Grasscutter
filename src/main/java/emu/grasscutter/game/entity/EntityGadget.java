@@ -6,6 +6,8 @@ import emu.grasscutter.data.excels.GadgetData;
 import emu.grasscutter.game.entity.gadget.*;
 import emu.grasscutter.game.player.Player;
 import emu.grasscutter.game.props.EntityIdType;
+import emu.grasscutter.game.props.EntityType;
+import emu.grasscutter.game.props.FightProperty;
 import emu.grasscutter.game.props.PlayerProperty;
 import emu.grasscutter.game.world.Scene;
 import emu.grasscutter.net.proto.AbilitySyncStateInfoOuterClass.AbilitySyncStateInfo;
@@ -27,47 +29,77 @@ import emu.grasscutter.scripts.data.ScriptArgs;
 import emu.grasscutter.server.packet.send.PacketGadgetStateNotify;
 import emu.grasscutter.utils.Position;
 import emu.grasscutter.utils.ProtoHelper;
-import it.unimi.dsi.fastutil.ints.Int2FloatMap;
 import it.unimi.dsi.fastutil.ints.Int2FloatOpenHashMap;
 import lombok.Getter;
-import lombok.Setter;
 import lombok.ToString;
-
-import java.util.Optional;
 
 import javax.annotation.Nullable;
 
 @ToString(callSuper = true)
 public class EntityGadget extends EntityBaseGadget {
-    @Getter private final GadgetData gadgetData;
-    @Getter(onMethod = @__(@Override)) @Setter
+    private final GadgetData data;
+    private final Position pos;
+    private final Position rot;
     private int gadgetId;
 
-    @Getter @Setter private int state;
-    @Getter @Setter private int pointType;
-    @Getter private GadgetContent content;
-    @Getter(onMethod = @__(@Override), lazy = true)
-    private final Int2FloatMap fightProperties = new Int2FloatOpenHashMap();
-    @Getter @Setter private SceneGadget metaGadget;
+    private int state;
+    private int pointType;
+    private GadgetContent content;
+    private Int2FloatOpenHashMap fightProp;
+    private SceneGadget metaGadget;
     @Nullable @Getter
     private ConfigGadget configGadget;
 
-    public EntityGadget(Scene scene, int gadgetId, Position pos) {
-        this(scene, gadgetId, pos, null, null);
+    public EntityGadget(Scene scene, int gadgetId, Position pos, Position rot) {
+        super(scene);
+        this.data = GameData.getGadgetDataMap().get(gadgetId);
+        if (data!=null && data.getJsonName()!=null) {
+            this.configGadget = GameData.getGadgetConfigData().get(data.getJsonName());
+        }
+        this.id = getScene().getWorld().getNextEntityId(EntityIdType.GADGET);
+        this.gadgetId = gadgetId;
+        this.pos = pos.clone();
+        this.rot = rot != null ? rot.clone() : new Position();
+        fillFightProps(configGadget);
     }
 
-    public EntityGadget(Scene scene, int gadgetId, Position pos, Position rot) {
-        this(scene, gadgetId, pos, rot, null);
+    public EntityGadget(Scene scene, int gadgetId, Position pos) {
+        this(scene, gadgetId, pos, new Position());
     }
 
     public EntityGadget(Scene scene, int gadgetId, Position pos, Position rot, GadgetContent content) {
-        super(scene, pos, rot);
-        this.gadgetData = GameData.getGadgetDataMap().get(gadgetId);
-        this.configGadget = Optional.ofNullable(this.gadgetData).map(GadgetData::getJsonName).map(GameData.getGadgetConfigData()::get).orElse(null);
-        this.id = this.getScene().getWorld().getNextEntityId(EntityIdType.GADGET);
-        this.gadgetId = gadgetId;
+        this(scene, gadgetId, pos, rot);
         this.content = content;
-        fillFightProps(configGadget);
+    }
+
+    public GadgetData getGadgetData() {
+        return data;
+    }
+
+    @Override
+    public Position getPosition() {
+        return this.pos;
+    }
+
+    @Override
+    public Position getRotation() {
+        return this.rot;
+    }
+
+    public int getGadgetId() {
+        return gadgetId;
+    }
+
+    public void setGadgetId(int gadgetId) {
+        this.gadgetId = gadgetId;
+    }
+
+    public int getState() {
+        return state;
+    }
+
+    public void setState(int state) {
+        this.state = state;
     }
 
     public void updateState(int state) {
@@ -76,18 +108,39 @@ public class EntityGadget extends EntityBaseGadget {
         getScene().getScriptManager().callEvent(EventType.EVENT_GADGET_STATE_CHANGE, new ScriptArgs(state, this.getConfigId()));
     }
 
-    @Deprecated(forRemoval = true) // Dont use!
+    public int getPointType() {
+        return pointType;
+    }
+
+    public void setPointType(int pointType) {
+        this.pointType = pointType;
+    }
+
+    public GadgetContent getContent() {
+        return content;
+    }
+
+    @Deprecated // Dont use!
     public void setContent(GadgetContent content) {
         this.content = this.content == null ? content : this.content;
     }
 
+    public SceneGadget getMetaGadget() {
+        return metaGadget;
+    }
+
+    public void setMetaGadget(SceneGadget metaGadget) {
+        this.metaGadget = metaGadget;
+    }
+
     // TODO refactor
     public void buildContent() {
-        if (this.getContent() != null || this.getGadgetData() == null || this.getGadgetData().getType() == null) {
+        if (getContent() != null || getGadgetData() == null || getGadgetData().getType() == null) {
             return;
         }
 
-        this.content = switch (this.getGadgetData().getType()) {
+        EntityType type = getGadgetData().getType();
+        GadgetContent content = switch (type) {
             case GatherPoint -> new GadgetGatherPoint(this);
             case GatherObject -> new GadgetGatherObject(this);
             case Worktop -> new GadgetWorktop(this);
@@ -96,6 +149,14 @@ public class EntityGadget extends EntityBaseGadget {
             case Gadget -> new GadgetObject(this);
             default -> null;
         };
+
+        this.content = content;
+    }
+
+    @Override
+    public Int2FloatOpenHashMap getFightProperties() {
+        if (this.fightProp == null) this.fightProp = new Int2FloatOpenHashMap();
+        return this.fightProp;
     }
 
     @Override
@@ -155,7 +216,7 @@ public class EntityGadget extends EntityBaseGadget {
         entityInfo.addPropList(pair);
 
         // We do not use the getter to null check because the getter will create a fight prop map if it is null
-        if (this.fightProperties != null) {
+        if (this.fightProp != null) {
             addAllFightPropsToEntityInfo(entityInfo);
         }
 

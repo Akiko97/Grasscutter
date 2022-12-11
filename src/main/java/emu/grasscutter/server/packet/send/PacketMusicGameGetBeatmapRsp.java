@@ -10,9 +10,9 @@ import emu.grasscutter.net.proto.MusicGameGetBeatmapRspOuterClass;
 public class PacketMusicGameGetBeatmapRsp extends BasePacket {
 
     public PacketMusicGameGetBeatmapRsp(MusicBriefInfoOuterClass.MusicBriefInfo briefInfo, MusicBeatmapOuterClass.MusicBeatmap musicRecord, MusicGameGetBeatmapReqOuterClass.MusicGameGetBeatmapReq req) {
-        super(PacketOpcodes.MusicGameGetBeatmapRsp);
+        super(PacketOpcodes.NONE);
 
-        var proto = MusicGameGetBeatmapRspOuterClass.MusicGameGetBeatmapRsp.newBuilder();
+        /*var proto = MusicGameGetBeatmapRspOuterClass.MusicGameGetBeatmapRsp.newBuilder();
 
         proto.setMusicBriefInfo(briefInfo)
             .setMusicShareId(briefInfo.getMusicShareId())
@@ -22,6 +22,6 @@ public class PacketMusicGameGetBeatmapRsp extends BasePacket {
         ;
 
 
-        this.setData(proto);
+        this.setData(proto);*/
     }
 }

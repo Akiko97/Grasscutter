@@ -23,10 +23,10 @@ public class PacketHomeBasicInfoNotify extends BasePacket {
         var homeScene = player.getHome().getHomeSceneItem(sceneId);
 
         proto.setBasicInfo(HomeBasicInfoOuterClass.HomeBasicInfo.newBuilder()
-                .setCurModuleId(player.getCurrentRealmId())
-                .setCurRoomSceneId(homeScene.getRoomSceneId())
+                //.setCurModuleId(player.getCurrentRealmId())
+                //.setCurRoomSceneId(homeScene.getRoomSceneId())
                 .setIsInEditMode(editMode)
-                .setHomeOwnerUid(player.getUid())
+                //.setHomeOwnerUid(player.getUid())
                 .setLevel(player.getHome().getLevel())
                 .setOwnerNickName(player.getNickname())
                 // TODO limit shop

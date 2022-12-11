@@ -19,14 +19,14 @@ public final class Unk2700FJEHHCPCBLGServerNotify {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>uint32 Unk2700_BJHAMKKECEI = 12;</code>
+     * <code>uint32 Unk2700_BJHAMKKECEI = 5;</code>
      * @return The unk2700BJHAMKKECEI.
      */
     int getUnk2700BJHAMKKECEI();
   }
   /**
    * <pre>
-   * CmdId: 4872
+   * CmdId: 4458
    * EnetChannelId: 0
    * EnetIsReliable: true
    * </pre>
@@ -75,7 +75,7 @@ public final class Unk2700FJEHHCPCBLGServerNotify {
             case 0:
               done = true;
               break;
-            case 96: {
+            case 40: {
 
               unk2700BJHAMKKECEI_ = input.readUInt32();
               break;
@@ -112,10 +112,10 @@ public final class Unk2700FJEHHCPCBLGServerNotify {
               emu.grasscutter.net.proto.Unk2700FJEHHCPCBLGServerNotify.Unk2700_FJEHHCPCBLG_ServerNotify.class, emu.grasscutter.net.proto.Unk2700FJEHHCPCBLGServerNotify.Unk2700_FJEHHCPCBLG_ServerNotify.Builder.class);
     }
 
-    public static final int UNK2700_BJHAMKKECEI_FIELD_NUMBER = 12;
+    public static final int UNK2700_BJHAMKKECEI_FIELD_NUMBER = 5;
     private int unk2700BJHAMKKECEI_;
     /**
-     * <code>uint32 Unk2700_BJHAMKKECEI = 12;</code>
+     * <code>uint32 Unk2700_BJHAMKKECEI = 5;</code>
      * @return The unk2700BJHAMKKECEI.
      */
     @java.lang.Override
@@ -138,7 +138,7 @@ public final class Unk2700FJEHHCPCBLGServerNotify {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (unk2700BJHAMKKECEI_ != 0) {
-        output.writeUInt32(12, unk2700BJHAMKKECEI_);
+        output.writeUInt32(5, unk2700BJHAMKKECEI_);
       }
       unknownFields.writeTo(output);
     }
@@ -151,7 +151,7 @@ public final class Unk2700FJEHHCPCBLGServerNotify {
       size = 0;
       if (unk2700BJHAMKKECEI_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(12, unk2700BJHAMKKECEI_);
+          .computeUInt32Size(5, unk2700BJHAMKKECEI_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -280,7 +280,7 @@ public final class Unk2700FJEHHCPCBLGServerNotify {
     }
     /**
      * <pre>
-     * CmdId: 4872
+     * CmdId: 4458
      * EnetChannelId: 0
      * EnetIsReliable: true
      * </pre>
@@ -433,7 +433,7 @@ public final class Unk2700FJEHHCPCBLGServerNotify {
 
       private int unk2700BJHAMKKECEI_ ;
       /**
-       * <code>uint32 Unk2700_BJHAMKKECEI = 12;</code>
+       * <code>uint32 Unk2700_BJHAMKKECEI = 5;</code>
        * @return The unk2700BJHAMKKECEI.
        */
       @java.lang.Override
@@ -441,7 +441,7 @@ public final class Unk2700FJEHHCPCBLGServerNotify {
         return unk2700BJHAMKKECEI_;
       }
       /**
-       * <code>uint32 Unk2700_BJHAMKKECEI = 12;</code>
+       * <code>uint32 Unk2700_BJHAMKKECEI = 5;</code>
        * @param value The unk2700BJHAMKKECEI to set.
        * @return This builder for chaining.
        */
@@ -452,7 +452,7 @@ public final class Unk2700FJEHHCPCBLGServerNotify {
         return this;
       }
       /**
-       * <code>uint32 Unk2700_BJHAMKKECEI = 12;</code>
+       * <code>uint32 Unk2700_BJHAMKKECEI = 5;</code>
        * @return This builder for chaining.
        */
       public Builder clearUnk2700BJHAMKKECEI() {
@@ -530,7 +530,7 @@ public final class Unk2700FJEHHCPCBLGServerNotify {
     java.lang.String[] descriptorData = {
       "\n&Unk2700_FJEHHCPCBLG_ServerNotify.proto" +
       "\"?\n Unk2700_FJEHHCPCBLG_ServerNotify\022\033\n\023" +
-      "Unk2700_BJHAMKKECEI\030\014 \001(\rB\033\n\031emu.grasscu" +
+      "Unk2700_BJHAMKKECEI\030\005 \001(\rB\033\n\031emu.grasscu" +
       "tter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor

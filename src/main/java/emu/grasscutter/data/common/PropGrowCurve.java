@@ -1,10 +1,12 @@
 package emu.grasscutter.data.common;
 
+import emu.grasscutter.game.props.FightProperty;
+
 public class PropGrowCurve {
-    private String type;
+    private FightProperty type;
     private String growCurve;
 
-    public String getType(){
+    public FightProperty getType(){
         return this.type;
     }
     

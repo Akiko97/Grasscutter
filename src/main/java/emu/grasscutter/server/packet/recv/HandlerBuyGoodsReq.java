@@ -31,7 +31,7 @@ public class HandlerBuyGoodsReq extends PacketHandler {
 
         // Don't trust your users' input
         var player = session.getPlayer();
-        List<Integer> targetShopGoodsId = List.of(buyGoodsReq.getGoods().getGoodsId());
+        List<Integer> targetShopGoodsId = List.of(buyGoodsReq.getGoods().getUnk3250MICPGJCIAPE());
         for (int goodsId : targetShopGoodsId) {
             Optional<ShopInfo> sg2 = configShop.stream().filter(x -> x.getGoodsId() == goodsId).findFirst();
             if (sg2.isEmpty())
@@ -65,7 +65,7 @@ public class HandlerBuyGoodsReq extends PacketHandler {
             player.addShopLimit(sg.getGoodsId(), buyGoodsReq.getBuyCount(), ShopSystem.getShopNextRefreshTime(sg));
             GameItem item = new GameItem(sg.getGoodsItem().getId(), buyGoodsReq.getBuyCount() * sg.getGoodsItem().getCount());
             player.getInventory().addItem(item, ActionReason.Shop, true); // fix: not notify when got virtual item from shop
-            session.send(new PacketBuyGoodsRsp(buyGoodsReq.getShopType(), player.getGoodsLimit(sg.getGoodsId()).getHasBoughtInPeriod(), Stream.of(buyGoodsReq.getGoods()).filter(x -> x.getGoodsId() == goodsId).findFirst().get()));
+            session.send(new PacketBuyGoodsRsp(buyGoodsReq.getShopType(), player.getGoodsLimit(sg.getGoodsId()).getHasBoughtInPeriod(), Stream.of(buyGoodsReq.getGoods()).filter(x -> x.getUnk3250MICPGJCIAPE() == goodsId).findFirst().get()));
         }
 
         player.save();

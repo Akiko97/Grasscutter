@@ -8,12 +8,13 @@ import emu.grasscutter.net.proto.MusicGameSearchBeatmapReqOuterClass;
 import emu.grasscutter.server.game.GameSession;
 import emu.grasscutter.server.packet.send.PacketMusicGameSearchBeatmapRsp;
 
-@Opcodes(PacketOpcodes.MusicGameSearchBeatmapReq)
+// ToDo: Figure out what packet this is.
+// @Opcodes(PacketOpcodes.MusicGameSearchBeatmapReq)
 public class HandlerMusicGameSearchBeatmapReq extends PacketHandler {
 
 	@Override
 	public void handle(GameSession session, byte[] header, byte[] payload) throws Exception {
-		var req = MusicGameSearchBeatmapReqOuterClass.MusicGameSearchBeatmapReq.parseFrom(payload);
+		/*var req = MusicGameSearchBeatmapReqOuterClass.MusicGameSearchBeatmapReq.parseFrom(payload);
 
 		var musicGameBeatmap = MusicGameBeatmap.getByShareId(req.getMusicShareId());
 
@@ -22,7 +23,7 @@ public class HandlerMusicGameSearchBeatmapReq extends PacketHandler {
 			return;
 		}
 
-        session.send(new PacketMusicGameSearchBeatmapRsp(musicGameBeatmap.toBriefProto().build(), req.getUnknownEnum1()));
+        session.send(new PacketMusicGameSearchBeatmapRsp(musicGameBeatmap.toBriefProto().build(), req.getUnknownEnum1()));*/
 	}
 
 }

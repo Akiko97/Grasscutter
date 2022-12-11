@@ -19,7 +19,7 @@ public final class Unk3000HKHFFDEMNKN {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>uint32 uid = 14;</code>
+     * <code>uint32 uid = 2;</code>
      * @return The uid.
      */
     int getUid();
@@ -95,6 +95,11 @@ public final class Unk3000HKHFFDEMNKN {
             case 0:
               done = true;
               break;
+            case 16: {
+
+              uid_ = input.readUInt32();
+              break;
+            }
             case 106: {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 slotList_ = new java.util.ArrayList<emu.grasscutter.net.proto.WidgetSlotDataOuterClass.WidgetSlotData>();
@@ -102,11 +107,6 @@ public final class Unk3000HKHFFDEMNKN {
               }
               slotList_.add(
                   input.readMessage(emu.grasscutter.net.proto.WidgetSlotDataOuterClass.WidgetSlotData.parser(), extensionRegistry));
-              break;
-            }
-            case 112: {
-
-              uid_ = input.readUInt32();
               break;
             }
             default: {
@@ -144,10 +144,10 @@ public final class Unk3000HKHFFDEMNKN {
               emu.grasscutter.net.proto.Unk3000HKHFFDEMNKN.Unk3000_HKHFFDEMNKN.class, emu.grasscutter.net.proto.Unk3000HKHFFDEMNKN.Unk3000_HKHFFDEMNKN.Builder.class);
     }
 
-    public static final int UID_FIELD_NUMBER = 14;
+    public static final int UID_FIELD_NUMBER = 2;
     private int uid_;
     /**
-     * <code>uint32 uid = 14;</code>
+     * <code>uint32 uid = 2;</code>
      * @return The uid.
      */
     @java.lang.Override
@@ -209,11 +209,11 @@ public final class Unk3000HKHFFDEMNKN {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      if (uid_ != 0) {
+        output.writeUInt32(2, uid_);
+      }
       for (int i = 0; i < slotList_.size(); i++) {
         output.writeMessage(13, slotList_.get(i));
-      }
-      if (uid_ != 0) {
-        output.writeUInt32(14, uid_);
       }
       unknownFields.writeTo(output);
     }
@@ -224,13 +224,13 @@ public final class Unk3000HKHFFDEMNKN {
       if (size != -1) return size;
 
       size = 0;
+      if (uid_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(2, uid_);
+      }
       for (int i = 0; i < slotList_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(13, slotList_.get(i));
-      }
-      if (uid_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(14, uid_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -556,7 +556,7 @@ public final class Unk3000HKHFFDEMNKN {
 
       private int uid_ ;
       /**
-       * <code>uint32 uid = 14;</code>
+       * <code>uint32 uid = 2;</code>
        * @return The uid.
        */
       @java.lang.Override
@@ -564,7 +564,7 @@ public final class Unk3000HKHFFDEMNKN {
         return uid_;
       }
       /**
-       * <code>uint32 uid = 14;</code>
+       * <code>uint32 uid = 2;</code>
        * @param value The uid to set.
        * @return This builder for chaining.
        */
@@ -575,7 +575,7 @@ public final class Unk3000HKHFFDEMNKN {
         return this;
       }
       /**
-       * <code>uint32 uid = 14;</code>
+       * <code>uint32 uid = 2;</code>
        * @return This builder for chaining.
        */
       public Builder clearUid() {
@@ -893,7 +893,7 @@ public final class Unk3000HKHFFDEMNKN {
     java.lang.String[] descriptorData = {
       "\n\031Unk3000_HKHFFDEMNKN.proto\032\024WidgetSlotD" +
       "ata.proto\"F\n\023Unk3000_HKHFFDEMNKN\022\013\n\003uid\030" +
-      "\016 \001(\r\022\"\n\tslot_list\030\r \003(\0132\017.WidgetSlotDat" +
+      "\002 \001(\r\022\"\n\tslot_list\030\r \003(\0132\017.WidgetSlotDat" +
       "aB\033\n\031emu.grasscutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor

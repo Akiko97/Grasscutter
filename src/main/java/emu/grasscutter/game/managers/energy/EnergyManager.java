@@ -229,7 +229,7 @@ public class EnergyManager extends BasePlayerManager {
         }
 
         // Make sure the target is an actual enemy.
-        GameEntity targetEntity = this.player.getScene().getEntityById(attackRes.getDefenseId());
+        GameEntity targetEntity = this.player.getScene().getEntityById(attackRes.getUnk3250CJFKCNCGJLB());
         if (!(targetEntity instanceof EntityMonster targetMonster)) {
             return;
         }

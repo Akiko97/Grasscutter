@@ -8,12 +8,13 @@ import emu.grasscutter.net.proto.MusicGameGetBeatmapReqOuterClass;
 import emu.grasscutter.server.game.GameSession;
 import emu.grasscutter.server.packet.send.PacketMusicGameGetBeatmapRsp;
 
-@Opcodes(PacketOpcodes.MusicGameGetBeatmapReq)
+// ToDo: Figure out what packet this is.
+// @Opcodes(PacketOpcodes.MusicGameGetBeatmapReq)
 public class HandlerMusicGameGetBeatmapReq extends PacketHandler {
 
 	@Override
 	public void handle(GameSession session, byte[] header, byte[] payload) throws Exception {
-		var req = MusicGameGetBeatmapReqOuterClass.MusicGameGetBeatmapReq.parseFrom(payload);
+		/*var req = MusicGameGetBeatmapReqOuterClass.MusicGameGetBeatmapReq.parseFrom(payload);
 
 		var musicGameBeatmap = MusicGameBeatmap.getByShareId(req.getMusicShareId());
 
@@ -25,7 +26,7 @@ public class HandlerMusicGameGetBeatmapReq extends PacketHandler {
             musicGameBeatmap.toBriefProto().build(),
             musicGameBeatmap.toProto(),
             req
-        ));
+        ));*/
 	}
 
 }

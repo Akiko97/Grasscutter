@@ -16,7 +16,7 @@ public class PacketPullPrivateChatRsp extends BasePacket {
         PullPrivateChatRsp.Builder builder = PullPrivateChatRsp.newBuilder();
 
         if (history == null) {
-            builder.setRetcode(Retcode.RET_FAIL_VALUE);
+            builder.setRetcode(Retcode.RETCODE_RET_FAIL_VALUE);
         }
         else {
             for (var info : history) {

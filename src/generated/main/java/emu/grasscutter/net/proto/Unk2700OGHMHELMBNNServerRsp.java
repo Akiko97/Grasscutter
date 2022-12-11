@@ -19,14 +19,14 @@ public final class Unk2700OGHMHELMBNNServerRsp {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>int32 retcode = 7;</code>
+     * <code>int32 retcode = 1;</code>
      * @return The retcode.
      */
     int getRetcode();
   }
   /**
    * <pre>
-   * CmdId: 4488
+   * CmdId: 4451
    * EnetChannelId: 0
    * EnetIsReliable: true
    * </pre>
@@ -75,7 +75,7 @@ public final class Unk2700OGHMHELMBNNServerRsp {
             case 0:
               done = true;
               break;
-            case 56: {
+            case 8: {
 
               retcode_ = input.readInt32();
               break;
@@ -112,10 +112,10 @@ public final class Unk2700OGHMHELMBNNServerRsp {
               emu.grasscutter.net.proto.Unk2700OGHMHELMBNNServerRsp.Unk2700_OGHMHELMBNN_ServerRsp.class, emu.grasscutter.net.proto.Unk2700OGHMHELMBNNServerRsp.Unk2700_OGHMHELMBNN_ServerRsp.Builder.class);
     }
 
-    public static final int RETCODE_FIELD_NUMBER = 7;
+    public static final int RETCODE_FIELD_NUMBER = 1;
     private int retcode_;
     /**
-     * <code>int32 retcode = 7;</code>
+     * <code>int32 retcode = 1;</code>
      * @return The retcode.
      */
     @java.lang.Override
@@ -138,7 +138,7 @@ public final class Unk2700OGHMHELMBNNServerRsp {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (retcode_ != 0) {
-        output.writeInt32(7, retcode_);
+        output.writeInt32(1, retcode_);
       }
       unknownFields.writeTo(output);
     }
@@ -151,7 +151,7 @@ public final class Unk2700OGHMHELMBNNServerRsp {
       size = 0;
       if (retcode_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(7, retcode_);
+          .computeInt32Size(1, retcode_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -280,7 +280,7 @@ public final class Unk2700OGHMHELMBNNServerRsp {
     }
     /**
      * <pre>
-     * CmdId: 4488
+     * CmdId: 4451
      * EnetChannelId: 0
      * EnetIsReliable: true
      * </pre>
@@ -433,7 +433,7 @@ public final class Unk2700OGHMHELMBNNServerRsp {
 
       private int retcode_ ;
       /**
-       * <code>int32 retcode = 7;</code>
+       * <code>int32 retcode = 1;</code>
        * @return The retcode.
        */
       @java.lang.Override
@@ -441,7 +441,7 @@ public final class Unk2700OGHMHELMBNNServerRsp {
         return retcode_;
       }
       /**
-       * <code>int32 retcode = 7;</code>
+       * <code>int32 retcode = 1;</code>
        * @param value The retcode to set.
        * @return This builder for chaining.
        */
@@ -452,7 +452,7 @@ public final class Unk2700OGHMHELMBNNServerRsp {
         return this;
       }
       /**
-       * <code>int32 retcode = 7;</code>
+       * <code>int32 retcode = 1;</code>
        * @return This builder for chaining.
        */
       public Builder clearRetcode() {
@@ -530,7 +530,7 @@ public final class Unk2700OGHMHELMBNNServerRsp {
     java.lang.String[] descriptorData = {
       "\n#Unk2700_OGHMHELMBNN_ServerRsp.proto\"0\n" +
       "\035Unk2700_OGHMHELMBNN_ServerRsp\022\017\n\007retcod" +
-      "e\030\007 \001(\005B\033\n\031emu.grasscutter.net.protob\006pr" +
+      "e\030\001 \001(\005B\033\n\031emu.grasscutter.net.protob\006pr" +
       "oto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor

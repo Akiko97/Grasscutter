@@ -50,8 +50,8 @@ public class CookingCompoundManager extends BasePlayerManager {
         List<CompoundQueueData> compoundQueueData = new ArrayList<>(player.getActiveCookCompounds().size());
         int currentTime = Utils.getCurrentSeconds();
         for (var item : player.getActiveCookCompounds().values()) {
-            var data = CompoundQueueData.newBuilder().setCompoundId(item.getCompoundId()).setOutputCount(item.getOutputCount(currentTime)).setOutputTime(item.getOutputTime(currentTime)).setWaitCount(item.getWaitCount(currentTime)).build();
-            compoundQueueData.add(data);
+            // var data = CompoundQueueData.newBuilder().setCompoundId(item.getCompoundId()).setOutputCount(item.getOutputCount(currentTime)).setOutputTime(item.getOutputTime(currentTime)).setWaitCount(item.getWaitCount(currentTime)).build();
+            // compoundQueueData.add(data);
         }
         return compoundQueueData;
     }
@@ -68,18 +68,18 @@ public class CookingCompoundManager extends BasePlayerManager {
         //check whether the compound is available
         //TODO:add other compounds,see my pr for detail
         if (!unlocked.contains(id)) {
-            player.sendPacket(new PacketPlayerCompoundMaterialRsp(Retcode.RET_FAIL_VALUE));
+            player.sendPacket(new PacketPlayerCompoundMaterialRsp(Retcode.RETCODE_RET_FAIL_VALUE));
             return;
         }
         //check whether the queue is full
         if (activeCompounds.containsKey(id) && activeCompounds.get(id).getTotalCount() + count > compound.getQueueSize()) {
-            player.sendPacket(new PacketPlayerCompoundMaterialRsp(Retcode.RET_COMPOUND_QUEUE_FULL_VALUE));
+            player.sendPacket(new PacketPlayerCompoundMaterialRsp(Retcode.RETCODE_RET_COMPOUND_QUEUE_FULL_VALUE));
             return;
         }
         //try to consume raw materials
         if (!player.getInventory().payItems(compound.getInputVec(), count)) {
             //TODO:I'm not sure whether retcode is correct.
-            player.sendPacket(new PacketPlayerCompoundMaterialRsp(Retcode.RET_ITEM_COUNT_NOT_ENOUGH_VALUE));
+            player.sendPacket(new PacketPlayerCompoundMaterialRsp(Retcode.RETCODE_RET_ITEM_COUNT_NOT_ENOUGH_VALUE));
             return;
         }
         ActiveCookCompoundData c;
@@ -91,8 +91,8 @@ public class CookingCompoundManager extends BasePlayerManager {
             c = new ActiveCookCompoundData(id, compound.getCostTime(), count, currentTime);
             activeCompounds.put(id, c);
         }
-        var data = CompoundQueueData.newBuilder().setCompoundId(id).setOutputCount(c.getOutputCount(currentTime)).setOutputTime(c.getOutputTime(currentTime)).setWaitCount(c.getWaitCount(currentTime)).build();
-        player.sendPacket(new PacketPlayerCompoundMaterialRsp(data));
+        // var data = CompoundQueueData.newBuilder().setCompoundId(id).setOutputCount(c.getOutputCount(currentTime)).setOutputTime(c.getOutputTime(currentTime)).setWaitCount(c.getWaitCount(currentTime)).build();
+        //player.sendPacket(new PacketPlayerCompoundMaterialRsp(data));
     }
 
     public synchronized void handleTakeCompoundOutputReq(TakeCompoundOutputReq req) {
@@ -123,9 +123,9 @@ public class CookingCompoundManager extends BasePlayerManager {
         //give player the rewards
         if (success) {
             player.getInventory().addItems(allRewards.values(), ActionReason.Compound);
-            player.sendPacket(new PackageTakeCompoundOutputRsp(allRewards.values().stream().map(i -> ItemParam.newBuilder().setItemId(i.getItemId()).setCount(i.getCount()).build()).toList(), Retcode.RET_SUCC_VALUE));
+            player.sendPacket(new PackageTakeCompoundOutputRsp(allRewards.values().stream().map(i -> ItemParam.newBuilder().setItemId(i.getItemId()).setCount(i.getCount()).build()).toList(), Retcode.RETCODE_RET_SUCC_VALUE));
         } else {
-            player.sendPacket(new PackageTakeCompoundOutputRsp(null, Retcode.RET_COMPOUND_NOT_FINISH_VALUE));
+            player.sendPacket(new PackageTakeCompoundOutputRsp(null, Retcode.RETCODE_RET_COMPOUND_NOT_FINISH_VALUE));
         }
     }
 

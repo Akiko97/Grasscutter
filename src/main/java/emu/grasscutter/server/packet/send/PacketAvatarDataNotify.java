@@ -5,6 +5,7 @@ import emu.grasscutter.game.player.Player;
 import emu.grasscutter.net.packet.BasePacket;
 import emu.grasscutter.net.packet.PacketOpcodes;
 import emu.grasscutter.net.proto.AvatarDataNotifyOuterClass.AvatarDataNotify;
+import emu.grasscutter.net.proto.AvatarRenameInfoOuterClass.AvatarRenameInfo;
 
 public class PacketAvatarDataNotify extends BasePacket {
 
@@ -13,16 +14,17 @@ public class PacketAvatarDataNotify extends BasePacket {
 
         AvatarDataNotify.Builder proto = AvatarDataNotify.newBuilder()
                 .setCurAvatarTeamId(player.getTeamManager().getCurrentTeamId())
-                //.setChooseAvatarGuid(player.getTeamManager().getCurrentCharacterGuid())
+                .setChooseAvatarGuid(player.getTeamManager().getCurrentCharacterGuid())
                 .addAllOwnedFlycloakList(player.getFlyCloakList())
                 .addAllOwnedCostumeList(player.getCostumeList());
 
         player.getAvatars().forEach(avatar -> proto.addAvatarList(avatar.toProto()));
+        player.getAvatars().forEach(avatar -> proto.addAvatarRenameList(AvatarRenameInfo.newBuilder().setAvatarId(avatar.getAvatarId()).setAvatarName("Balls")));
 
         player.getTeamManager().getTeams().forEach((id, teamInfo) -> {
             proto.putAvatarTeamMap(id, teamInfo.toProto(player));
             if (id > 4) {  // Add the id list for custom teams.
-                proto.addCustomTeamIds(id);
+                proto.addBackupAvatarTeamOrderList(id);
             }
         });
 

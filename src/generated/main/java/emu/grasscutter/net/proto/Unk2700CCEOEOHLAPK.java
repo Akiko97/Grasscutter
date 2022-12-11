@@ -19,37 +19,37 @@ public final class Unk2700CCEOEOHLAPK {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>bool is_hint_valid = 3;</code>
-     * @return The isHintValid.
-     */
-    boolean getIsHintValid();
-
-    /**
-     * <code>.Vector hint_center_pos = 8;</code>
-     * @return Whether the hintCenterPos field is set.
-     */
-    boolean hasHintCenterPos();
-    /**
-     * <code>.Vector hint_center_pos = 8;</code>
-     * @return The hintCenterPos.
-     */
-    emu.grasscutter.net.proto.VectorOuterClass.Vector getHintCenterPos();
-    /**
-     * <code>.Vector hint_center_pos = 8;</code>
-     */
-    emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder getHintCenterPosOrBuilder();
-
-    /**
-     * <code>uint32 group_id = 6;</code>
+     * <code>uint32 group_id = 4;</code>
      * @return The groupId.
      */
     int getGroupId();
 
     /**
-     * <code>uint32 config_id = 9;</code>
+     * <code>.Vector hint_center_pos = 15;</code>
+     * @return Whether the hintCenterPos field is set.
+     */
+    boolean hasHintCenterPos();
+    /**
+     * <code>.Vector hint_center_pos = 15;</code>
+     * @return The hintCenterPos.
+     */
+    emu.grasscutter.net.proto.VectorOuterClass.Vector getHintCenterPos();
+    /**
+     * <code>.Vector hint_center_pos = 15;</code>
+     */
+    emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder getHintCenterPosOrBuilder();
+
+    /**
+     * <code>uint32 config_id = 13;</code>
      * @return The configId.
      */
     int getConfigId();
+
+    /**
+     * <code>bool is_hint_valid = 8;</code>
+     * @return The isHintValid.
+     */
+    boolean getIsHintValid();
   }
   /**
    * Protobuf type {@code Unk2700_CCEOEOHLAPK}
@@ -96,17 +96,22 @@ public final class Unk2700CCEOEOHLAPK {
             case 0:
               done = true;
               break;
-            case 24: {
-
-              isHintValid_ = input.readBool();
-              break;
-            }
-            case 48: {
+            case 32: {
 
               groupId_ = input.readUInt32();
               break;
             }
-            case 66: {
+            case 64: {
+
+              isHintValid_ = input.readBool();
+              break;
+            }
+            case 104: {
+
+              configId_ = input.readUInt32();
+              break;
+            }
+            case 122: {
               emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder subBuilder = null;
               if (hintCenterPos_ != null) {
                 subBuilder = hintCenterPos_.toBuilder();
@@ -117,11 +122,6 @@ public final class Unk2700CCEOEOHLAPK {
                 hintCenterPos_ = subBuilder.buildPartial();
               }
 
-              break;
-            }
-            case 72: {
-
-              configId_ = input.readUInt32();
               break;
             }
             default: {
@@ -156,47 +156,10 @@ public final class Unk2700CCEOEOHLAPK {
               emu.grasscutter.net.proto.Unk2700CCEOEOHLAPK.Unk2700_CCEOEOHLAPK.class, emu.grasscutter.net.proto.Unk2700CCEOEOHLAPK.Unk2700_CCEOEOHLAPK.Builder.class);
     }
 
-    public static final int IS_HINT_VALID_FIELD_NUMBER = 3;
-    private boolean isHintValid_;
-    /**
-     * <code>bool is_hint_valid = 3;</code>
-     * @return The isHintValid.
-     */
-    @java.lang.Override
-    public boolean getIsHintValid() {
-      return isHintValid_;
-    }
-
-    public static final int HINT_CENTER_POS_FIELD_NUMBER = 8;
-    private emu.grasscutter.net.proto.VectorOuterClass.Vector hintCenterPos_;
-    /**
-     * <code>.Vector hint_center_pos = 8;</code>
-     * @return Whether the hintCenterPos field is set.
-     */
-    @java.lang.Override
-    public boolean hasHintCenterPos() {
-      return hintCenterPos_ != null;
-    }
-    /**
-     * <code>.Vector hint_center_pos = 8;</code>
-     * @return The hintCenterPos.
-     */
-    @java.lang.Override
-    public emu.grasscutter.net.proto.VectorOuterClass.Vector getHintCenterPos() {
-      return hintCenterPos_ == null ? emu.grasscutter.net.proto.VectorOuterClass.Vector.getDefaultInstance() : hintCenterPos_;
-    }
-    /**
-     * <code>.Vector hint_center_pos = 8;</code>
-     */
-    @java.lang.Override
-    public emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder getHintCenterPosOrBuilder() {
-      return getHintCenterPos();
-    }
-
-    public static final int GROUP_ID_FIELD_NUMBER = 6;
+    public static final int GROUP_ID_FIELD_NUMBER = 4;
     private int groupId_;
     /**
-     * <code>uint32 group_id = 6;</code>
+     * <code>uint32 group_id = 4;</code>
      * @return The groupId.
      */
     @java.lang.Override
@@ -204,15 +167,52 @@ public final class Unk2700CCEOEOHLAPK {
       return groupId_;
     }
 
-    public static final int CONFIG_ID_FIELD_NUMBER = 9;
+    public static final int HINT_CENTER_POS_FIELD_NUMBER = 15;
+    private emu.grasscutter.net.proto.VectorOuterClass.Vector hintCenterPos_;
+    /**
+     * <code>.Vector hint_center_pos = 15;</code>
+     * @return Whether the hintCenterPos field is set.
+     */
+    @java.lang.Override
+    public boolean hasHintCenterPos() {
+      return hintCenterPos_ != null;
+    }
+    /**
+     * <code>.Vector hint_center_pos = 15;</code>
+     * @return The hintCenterPos.
+     */
+    @java.lang.Override
+    public emu.grasscutter.net.proto.VectorOuterClass.Vector getHintCenterPos() {
+      return hintCenterPos_ == null ? emu.grasscutter.net.proto.VectorOuterClass.Vector.getDefaultInstance() : hintCenterPos_;
+    }
+    /**
+     * <code>.Vector hint_center_pos = 15;</code>
+     */
+    @java.lang.Override
+    public emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder getHintCenterPosOrBuilder() {
+      return getHintCenterPos();
+    }
+
+    public static final int CONFIG_ID_FIELD_NUMBER = 13;
     private int configId_;
     /**
-     * <code>uint32 config_id = 9;</code>
+     * <code>uint32 config_id = 13;</code>
      * @return The configId.
      */
     @java.lang.Override
     public int getConfigId() {
       return configId_;
+    }
+
+    public static final int IS_HINT_VALID_FIELD_NUMBER = 8;
+    private boolean isHintValid_;
+    /**
+     * <code>bool is_hint_valid = 8;</code>
+     * @return The isHintValid.
+     */
+    @java.lang.Override
+    public boolean getIsHintValid() {
+      return isHintValid_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -229,17 +229,17 @@ public final class Unk2700CCEOEOHLAPK {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (isHintValid_ != false) {
-        output.writeBool(3, isHintValid_);
-      }
       if (groupId_ != 0) {
-        output.writeUInt32(6, groupId_);
+        output.writeUInt32(4, groupId_);
       }
-      if (hintCenterPos_ != null) {
-        output.writeMessage(8, getHintCenterPos());
+      if (isHintValid_ != false) {
+        output.writeBool(8, isHintValid_);
       }
       if (configId_ != 0) {
-        output.writeUInt32(9, configId_);
+        output.writeUInt32(13, configId_);
+      }
+      if (hintCenterPos_ != null) {
+        output.writeMessage(15, getHintCenterPos());
       }
       unknownFields.writeTo(output);
     }
@@ -250,21 +250,21 @@ public final class Unk2700CCEOEOHLAPK {
       if (size != -1) return size;
 
       size = 0;
-      if (isHintValid_ != false) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(3, isHintValid_);
-      }
       if (groupId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(6, groupId_);
+          .computeUInt32Size(4, groupId_);
       }
-      if (hintCenterPos_ != null) {
+      if (isHintValid_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(8, getHintCenterPos());
+          .computeBoolSize(8, isHintValid_);
       }
       if (configId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(9, configId_);
+          .computeUInt32Size(13, configId_);
+      }
+      if (hintCenterPos_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(15, getHintCenterPos());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -281,17 +281,17 @@ public final class Unk2700CCEOEOHLAPK {
       }
       emu.grasscutter.net.proto.Unk2700CCEOEOHLAPK.Unk2700_CCEOEOHLAPK other = (emu.grasscutter.net.proto.Unk2700CCEOEOHLAPK.Unk2700_CCEOEOHLAPK) obj;
 
-      if (getIsHintValid()
-          != other.getIsHintValid()) return false;
+      if (getGroupId()
+          != other.getGroupId()) return false;
       if (hasHintCenterPos() != other.hasHintCenterPos()) return false;
       if (hasHintCenterPos()) {
         if (!getHintCenterPos()
             .equals(other.getHintCenterPos())) return false;
       }
-      if (getGroupId()
-          != other.getGroupId()) return false;
       if (getConfigId()
           != other.getConfigId()) return false;
+      if (getIsHintValid()
+          != other.getIsHintValid()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -303,17 +303,17 @@ public final class Unk2700CCEOEOHLAPK {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + IS_HINT_VALID_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getIsHintValid());
+      hash = (37 * hash) + GROUP_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getGroupId();
       if (hasHintCenterPos()) {
         hash = (37 * hash) + HINT_CENTER_POS_FIELD_NUMBER;
         hash = (53 * hash) + getHintCenterPos().hashCode();
       }
-      hash = (37 * hash) + GROUP_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getGroupId();
       hash = (37 * hash) + CONFIG_ID_FIELD_NUMBER;
       hash = (53 * hash) + getConfigId();
+      hash = (37 * hash) + IS_HINT_VALID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getIsHintValid());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -447,7 +447,7 @@ public final class Unk2700CCEOEOHLAPK {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        isHintValid_ = false;
+        groupId_ = 0;
 
         if (hintCenterPosBuilder_ == null) {
           hintCenterPos_ = null;
@@ -455,9 +455,9 @@ public final class Unk2700CCEOEOHLAPK {
           hintCenterPos_ = null;
           hintCenterPosBuilder_ = null;
         }
-        groupId_ = 0;
-
         configId_ = 0;
+
+        isHintValid_ = false;
 
         return this;
       }
@@ -485,14 +485,14 @@ public final class Unk2700CCEOEOHLAPK {
       @java.lang.Override
       public emu.grasscutter.net.proto.Unk2700CCEOEOHLAPK.Unk2700_CCEOEOHLAPK buildPartial() {
         emu.grasscutter.net.proto.Unk2700CCEOEOHLAPK.Unk2700_CCEOEOHLAPK result = new emu.grasscutter.net.proto.Unk2700CCEOEOHLAPK.Unk2700_CCEOEOHLAPK(this);
-        result.isHintValid_ = isHintValid_;
+        result.groupId_ = groupId_;
         if (hintCenterPosBuilder_ == null) {
           result.hintCenterPos_ = hintCenterPos_;
         } else {
           result.hintCenterPos_ = hintCenterPosBuilder_.build();
         }
-        result.groupId_ = groupId_;
         result.configId_ = configId_;
+        result.isHintValid_ = isHintValid_;
         onBuilt();
         return result;
       }
@@ -541,17 +541,17 @@ public final class Unk2700CCEOEOHLAPK {
 
       public Builder mergeFrom(emu.grasscutter.net.proto.Unk2700CCEOEOHLAPK.Unk2700_CCEOEOHLAPK other) {
         if (other == emu.grasscutter.net.proto.Unk2700CCEOEOHLAPK.Unk2700_CCEOEOHLAPK.getDefaultInstance()) return this;
-        if (other.getIsHintValid() != false) {
-          setIsHintValid(other.getIsHintValid());
+        if (other.getGroupId() != 0) {
+          setGroupId(other.getGroupId());
         }
         if (other.hasHintCenterPos()) {
           mergeHintCenterPos(other.getHintCenterPos());
         }
-        if (other.getGroupId() != 0) {
-          setGroupId(other.getGroupId());
-        }
         if (other.getConfigId() != 0) {
           setConfigId(other.getConfigId());
+        }
+        if (other.getIsHintValid() != false) {
+          setIsHintValid(other.getIsHintValid());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -582,33 +582,33 @@ public final class Unk2700CCEOEOHLAPK {
         return this;
       }
 
-      private boolean isHintValid_ ;
+      private int groupId_ ;
       /**
-       * <code>bool is_hint_valid = 3;</code>
-       * @return The isHintValid.
+       * <code>uint32 group_id = 4;</code>
+       * @return The groupId.
        */
       @java.lang.Override
-      public boolean getIsHintValid() {
-        return isHintValid_;
+      public int getGroupId() {
+        return groupId_;
       }
       /**
-       * <code>bool is_hint_valid = 3;</code>
-       * @param value The isHintValid to set.
+       * <code>uint32 group_id = 4;</code>
+       * @param value The groupId to set.
        * @return This builder for chaining.
        */
-      public Builder setIsHintValid(boolean value) {
+      public Builder setGroupId(int value) {
         
-        isHintValid_ = value;
+        groupId_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>bool is_hint_valid = 3;</code>
+       * <code>uint32 group_id = 4;</code>
        * @return This builder for chaining.
        */
-      public Builder clearIsHintValid() {
+      public Builder clearGroupId() {
         
-        isHintValid_ = false;
+        groupId_ = 0;
         onChanged();
         return this;
       }
@@ -617,14 +617,14 @@ public final class Unk2700CCEOEOHLAPK {
       private com.google.protobuf.SingleFieldBuilderV3<
           emu.grasscutter.net.proto.VectorOuterClass.Vector, emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder, emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder> hintCenterPosBuilder_;
       /**
-       * <code>.Vector hint_center_pos = 8;</code>
+       * <code>.Vector hint_center_pos = 15;</code>
        * @return Whether the hintCenterPos field is set.
        */
       public boolean hasHintCenterPos() {
         return hintCenterPosBuilder_ != null || hintCenterPos_ != null;
       }
       /**
-       * <code>.Vector hint_center_pos = 8;</code>
+       * <code>.Vector hint_center_pos = 15;</code>
        * @return The hintCenterPos.
        */
       public emu.grasscutter.net.proto.VectorOuterClass.Vector getHintCenterPos() {
@@ -635,7 +635,7 @@ public final class Unk2700CCEOEOHLAPK {
         }
       }
       /**
-       * <code>.Vector hint_center_pos = 8;</code>
+       * <code>.Vector hint_center_pos = 15;</code>
        */
       public Builder setHintCenterPos(emu.grasscutter.net.proto.VectorOuterClass.Vector value) {
         if (hintCenterPosBuilder_ == null) {
@@ -651,7 +651,7 @@ public final class Unk2700CCEOEOHLAPK {
         return this;
       }
       /**
-       * <code>.Vector hint_center_pos = 8;</code>
+       * <code>.Vector hint_center_pos = 15;</code>
        */
       public Builder setHintCenterPos(
           emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder builderForValue) {
@@ -665,7 +665,7 @@ public final class Unk2700CCEOEOHLAPK {
         return this;
       }
       /**
-       * <code>.Vector hint_center_pos = 8;</code>
+       * <code>.Vector hint_center_pos = 15;</code>
        */
       public Builder mergeHintCenterPos(emu.grasscutter.net.proto.VectorOuterClass.Vector value) {
         if (hintCenterPosBuilder_ == null) {
@@ -683,7 +683,7 @@ public final class Unk2700CCEOEOHLAPK {
         return this;
       }
       /**
-       * <code>.Vector hint_center_pos = 8;</code>
+       * <code>.Vector hint_center_pos = 15;</code>
        */
       public Builder clearHintCenterPos() {
         if (hintCenterPosBuilder_ == null) {
@@ -697,7 +697,7 @@ public final class Unk2700CCEOEOHLAPK {
         return this;
       }
       /**
-       * <code>.Vector hint_center_pos = 8;</code>
+       * <code>.Vector hint_center_pos = 15;</code>
        */
       public emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder getHintCenterPosBuilder() {
         
@@ -705,7 +705,7 @@ public final class Unk2700CCEOEOHLAPK {
         return getHintCenterPosFieldBuilder().getBuilder();
       }
       /**
-       * <code>.Vector hint_center_pos = 8;</code>
+       * <code>.Vector hint_center_pos = 15;</code>
        */
       public emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder getHintCenterPosOrBuilder() {
         if (hintCenterPosBuilder_ != null) {
@@ -716,7 +716,7 @@ public final class Unk2700CCEOEOHLAPK {
         }
       }
       /**
-       * <code>.Vector hint_center_pos = 8;</code>
+       * <code>.Vector hint_center_pos = 15;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           emu.grasscutter.net.proto.VectorOuterClass.Vector, emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder, emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder> 
@@ -732,40 +732,9 @@ public final class Unk2700CCEOEOHLAPK {
         return hintCenterPosBuilder_;
       }
 
-      private int groupId_ ;
-      /**
-       * <code>uint32 group_id = 6;</code>
-       * @return The groupId.
-       */
-      @java.lang.Override
-      public int getGroupId() {
-        return groupId_;
-      }
-      /**
-       * <code>uint32 group_id = 6;</code>
-       * @param value The groupId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setGroupId(int value) {
-        
-        groupId_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>uint32 group_id = 6;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearGroupId() {
-        
-        groupId_ = 0;
-        onChanged();
-        return this;
-      }
-
       private int configId_ ;
       /**
-       * <code>uint32 config_id = 9;</code>
+       * <code>uint32 config_id = 13;</code>
        * @return The configId.
        */
       @java.lang.Override
@@ -773,7 +742,7 @@ public final class Unk2700CCEOEOHLAPK {
         return configId_;
       }
       /**
-       * <code>uint32 config_id = 9;</code>
+       * <code>uint32 config_id = 13;</code>
        * @param value The configId to set.
        * @return This builder for chaining.
        */
@@ -784,12 +753,43 @@ public final class Unk2700CCEOEOHLAPK {
         return this;
       }
       /**
-       * <code>uint32 config_id = 9;</code>
+       * <code>uint32 config_id = 13;</code>
        * @return This builder for chaining.
        */
       public Builder clearConfigId() {
         
         configId_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private boolean isHintValid_ ;
+      /**
+       * <code>bool is_hint_valid = 8;</code>
+       * @return The isHintValid.
+       */
+      @java.lang.Override
+      public boolean getIsHintValid() {
+        return isHintValid_;
+      }
+      /**
+       * <code>bool is_hint_valid = 8;</code>
+       * @param value The isHintValid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIsHintValid(boolean value) {
+        
+        isHintValid_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool is_hint_valid = 8;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIsHintValid() {
+        
+        isHintValid_ = false;
         onChanged();
         return this;
       }
@@ -861,9 +861,9 @@ public final class Unk2700CCEOEOHLAPK {
   static {
     java.lang.String[] descriptorData = {
       "\n\031Unk2700_CCEOEOHLAPK.proto\032\014Vector.prot" +
-      "o\"s\n\023Unk2700_CCEOEOHLAPK\022\025\n\ris_hint_vali" +
-      "d\030\003 \001(\010\022 \n\017hint_center_pos\030\010 \001(\0132\007.Vecto" +
-      "r\022\020\n\010group_id\030\006 \001(\r\022\021\n\tconfig_id\030\t \001(\rB\033" +
+      "o\"s\n\023Unk2700_CCEOEOHLAPK\022\020\n\010group_id\030\004 \001" +
+      "(\r\022 \n\017hint_center_pos\030\017 \001(\0132\007.Vector\022\021\n\t" +
+      "config_id\030\r \001(\r\022\025\n\ris_hint_valid\030\010 \001(\010B\033" +
       "\n\031emu.grasscutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
@@ -876,7 +876,7 @@ public final class Unk2700CCEOEOHLAPK {
     internal_static_Unk2700_CCEOEOHLAPK_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_Unk2700_CCEOEOHLAPK_descriptor,
-        new java.lang.String[] { "IsHintValid", "HintCenterPos", "GroupId", "ConfigId", });
+        new java.lang.String[] { "GroupId", "HintCenterPos", "ConfigId", "IsHintValid", });
     emu.grasscutter.net.proto.VectorOuterClass.getDescriptor();
   }
 

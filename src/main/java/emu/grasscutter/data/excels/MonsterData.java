@@ -1,6 +1,7 @@
 package emu.grasscutter.data.excels;
 
 import java.util.List;
+import java.util.ArrayList;
 import java.util.Set;
 
 import com.google.gson.annotations.SerializedName;
@@ -93,6 +94,10 @@ public class MonsterData extends GameResource {
             if (gadget.getItemJsonName().equals("Default_MonsterWeapon")) {
                 this.weaponId = id;
             }
+        }
+
+        if (this.affix == null) {
+            this.affix = new ArrayList<>();
         }
     }
 

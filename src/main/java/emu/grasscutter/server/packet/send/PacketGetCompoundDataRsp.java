@@ -14,8 +14,8 @@ public class PacketGetCompoundDataRsp extends BasePacket {
         super(PacketOpcodes.GetCompoundDataRsp);
         var proto = GetCompoundDataRsp.newBuilder()
             .addAllUnlockCompoundList(unlockedCompounds)
-            .addAllCompoundQueDataList(compoundQueueData)
-            .setRetcode(Retcode.RET_SUCC_VALUE)
+            //.addAllCompoundQueDataList(compoundQueueData)
+            .setRetcode(Retcode.RETCODE_RET_SUCC_VALUE)
             .build();
         setData(proto);
     }

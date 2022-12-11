@@ -190,13 +190,13 @@ public class GachaBanner {
                 .setGachaRecordUrl(record)
                 .setGachaRecordUrlOversea(record)
                 .setLeftGachaTimes(leftGachaTimes)
-                .setGachaTimesLimit(gachaTimesLimit)
+                // .setGachaTimesLimit(gachaTimesLimit)
                 .setGachaSortId(this.getSortId());
 
         if (hasEpitomized()) {
-            info.setWishItemId(gachaInfo.getWishItemId())
+            /*info.setWishItemId(gachaInfo.getWishItemId())
                 .setWishProgress(gachaInfo.getFailedChosenItemPulls())
-                .setWishMaxProgress(this.getWishMaxProgress());
+                .setWishMaxProgress(this.getWishMaxProgress());*/
         }
 
         if (this.getTitlePath() != null) {

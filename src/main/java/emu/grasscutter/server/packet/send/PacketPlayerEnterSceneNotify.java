@@ -27,9 +27,9 @@ public class PacketPlayerEnterSceneNotify extends BasePacket {
                 .setTargetUid(player.getUid())
                 .setEnterSceneToken(player.getEnterSceneToken())
                 .setWorldLevel(player.getWorldLevel())
-                .setEnterReason(EnterReason.Login.getValue())
-                .setIsFirstLoginEnterScene(player.isFirstLoginEnterScene())
-                .setWorldType(1)
+                //.setUnk3250LFFBNEBMAAG(EnterReason.Login.getValue())
+                .setUnk3250OKMNOFOHKOB(player.isFirstLoginEnterScene())
+                .setUnk3250LIDGFMDDOOM(1)
                 .setSceneTransaction("3-" + player.getUid() + "-" + (int) (System.currentTimeMillis() / 1000) + "-" + 18402);
 
         this.setData(proto);
@@ -47,7 +47,7 @@ public class PacketPlayerEnterSceneNotify extends BasePacket {
         player.setEnterSceneToken(Utils.randomRange(1000, 99999));
 
         PlayerEnterSceneNotify.Builder proto = PlayerEnterSceneNotify.newBuilder()
-                .setPrevSceneId(player.getSceneId())
+                .setUnk3250LLHABHMLNAH(player.getSceneId())
                 .setPrevPos(player.getPosition().toProto())
                 .setSceneId(newScene)
                 .setPos(newPos.toProto())
@@ -56,8 +56,8 @@ public class PacketPlayerEnterSceneNotify extends BasePacket {
                 .setTargetUid(target.getUid())
                 .setEnterSceneToken(player.getEnterSceneToken())
                 .setWorldLevel(target.getWorld().getWorldLevel())
-                .setEnterReason(reason.getValue())
-                .setWorldType(1)
+                // .setEnterReason(reason.getValue())
+                .setUnk3250LIDGFMDDOOM(1)
                 .setSceneTransaction(newScene + "-" + target.getUid() + "-" + (int) (System.currentTimeMillis() / 1000) + "-" + 18402);
 
         this.setData(proto);

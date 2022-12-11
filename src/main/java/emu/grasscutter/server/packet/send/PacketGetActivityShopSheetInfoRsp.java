@@ -28,7 +28,7 @@ public class PacketGetActivityShopSheetInfoRsp extends BasePacket {
         if (sheetInfo == null || activityConfigItem == null) {
             setData(GetActivityShopSheetInfoRsp.newBuilder()
                 .setShopType(shopType)
-                .setRetcode(RetcodeOuterClass.Retcode.RET_SHOP_NOT_OPEN_VALUE)
+                .setRetcode(RetcodeOuterClass.Retcode.RETCODE_RET_SHOP_NOT_OPEN_VALUE)
                 .build());
             return;
         }
